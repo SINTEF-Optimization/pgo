@@ -132,7 +132,7 @@ The procedure for making a new release (x.y.z) is as follows:
 4. Create the release branch `release/x.y` from the selected commit.
 5. Review the functionality that is present on the relase branch. You may change what's included in the release by cherry picking
   from other branches (e.g. bugfixes), or exclude things by using `git revert`.
-6. Update `Changelog.txt` (in OpfREST/wwwroot). Make sure that all changes since the last version are recorded. Then
+6. Update `Changelog.txt` (in `Sintef.Pgo.REST/wwwroot`). Make sure that all changes since the last version are recorded. Then
   add a new line to the top with the version number of the new release.
   **Changelog format**:
   *The most recent version is on top. Each version has a heading 'Version x.y.z', and
