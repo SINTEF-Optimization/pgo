@@ -1,0 +1,212 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sintef.Pgo", "Sintef.Pgo", "{25DF3519-262D-40D5-B6C8-E95CC11AC555}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0E9EB53-2095-48E8-9690-AA5B8AC6759F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitlab-ci.yml = .gitlab-ci.yml
+		Sintef.Pgo\REST API\Sintef.Pgo.REST\wwwroot\Changelog.txt = Sintef.Pgo\REST API\Sintef.Pgo.REST\wwwroot\Changelog.txt
+		Dockerfile = Dockerfile
+		Scripts\Publish_docker.sh = Scripts\Publish_docker.sh
+		Scripts\Publish_nuget.sh = Scripts\Publish_nuget.sh
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "REST API", "REST API", "{E70A0682-14FA-4BDB-80CD-4C1CFC68BFBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example data", "Example data", "{9157ABDD-E528-4754-9464-922D439045C4}"
+	ProjectSection(SolutionItems) = preProject
+		Examples\baran-wu-modified.json = Examples\baran-wu-modified.json
+		Examples\baran-wu-modified_forecast-multiperiod.json = Examples\baran-wu-modified_forecast-multiperiod.json
+		Examples\baran-wu-modified_forecast.json = Examples\baran-wu-modified_forecast.json
+		Examples\baran-wu-modified_solution.json = Examples\baran-wu-modified_solution.json
+		Examples\baran-wu-modified_startconfig.json = Examples\baran-wu-modified_startconfig.json
+		Examples\baran-wu.json = Examples\baran-wu.json
+		Examples\baran-wu_forecast.json = Examples\baran-wu_forecast.json
+		Examples\bw10-5-10-c.json = Examples\bw10-5-10-c.json
+		Examples\bw10-5-10.json = Examples\bw10-5-10.json
+		Examples\bw10-5-10_forecast.json = Examples\bw10-5-10_forecast.json
+		Examples\bw10-5-10_startConfig.json = Examples\bw10-5-10_startConfig.json
+		Examples\bw20-3-10.json = Examples\bw20-3-10.json
+		Examples\bw20-3-10_forecast.json = Examples\bw20-3-10_forecast.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET API", ".NET API", "{F53081FF-CB6F-4619-A879-6A1811B27CC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B53587B6-5C5E-4E0B-BCB3-BD3A982E284C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7E8C0049-B472-4B8F-886B-338068336D88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Core", "Sintef.Pgo\Core\Sintef.Pgo.Core\Sintef.Pgo.Core.csproj", "{9A9F748A-3DB7-4257-B9EF-17AE449E95B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.DataContracts", "Sintef.Pgo\Core\Sintef.Pgo.DataContracts\Sintef.Pgo.DataContracts.csproj", "{038CE191-538E-4DD1-9BED-B022677EBFE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Server", "Sintef.Pgo\Core\Sintef.Pgo.Server\Sintef.Pgo.Server.csproj", "{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Api", "Sintef.Pgo\.NET API\Sintef.Pgo.Api\Sintef.Pgo.Api.csproj", "{2797004D-ADB0-4693-B6A7-90B1510B6A21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Api.Impl", "Sintef.Pgo\.NET API\Sintef.Pgo.Api.Impl\Sintef.Pgo.Api.Impl.csproj", "{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Api.Factory", "Sintef.Pgo\.NET API\Sintef.Pgo.Api.Factory\Sintef.Pgo.Api.Factory.csproj", "{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Core.Tests", "Sintef.Pgo\Tests\Sintef.Pgo.Core.Tests\Sintef.Pgo.Core.Tests.csproj", "{63EE3464-08BB-4906-B0FE-9545FFC0F646}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.Api.Tests", "Sintef.Pgo\Tests\Sintef.Pgo.Api.Tests\Sintef.Pgo.Api.Tests.csproj", "{46413BF8-736F-4242-B6DB-03BBE0965697}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.REST.Tests", "Sintef.Pgo\Tests\Sintef.Pgo.REST.Tests\Sintef.Pgo.REST.Tests.csproj", "{218366D5-4D33-474C-A93E-30778F08B777}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.REST.Client", "Sintef.Pgo\REST API\Sintef.Pgo.REST.Client\Sintef.Pgo.REST.Client.csproj", "{40B98B28-4F2C-41A6-8546-59CE91EBCB58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.REST", "Sintef.Pgo\REST API\Sintef.Pgo.REST\Sintef.Pgo.REST.csproj", "{C0A1A28D-4C97-4599-A623-70D6E8BAAF56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sintef.Pgo.REST.Doc", "Sintef.Pgo\REST API\Sintef.Pgo.REST.Doc\Sintef.Pgo.REST.Doc.csproj", "{BABA074F-EFBE-4789-9B0D-2EB31692F836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{284AE429-1BDC-4432-9C57-070076312EBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PgoRestClientDemo", "Sintef.Pgo\Examples\PgoRestClientDemo\PgoRestClientDemo.csproj", "{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PgoRestApiDemo", "Sintef.Pgo\Examples\PgoRestApiDemo\PgoRestApiDemo.csproj", "{E60825A8-02D9-4901-B013-52025DA65C0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PgoNetApiDemo", "Sintef.Pgo\Examples\PgoNetApiDemo\PgoNetApiDemo.csproj", "{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PgoRestClientCimDemo", "Sintef.Pgo\Examples\PgoRestClientCimDemo\PgoRestClientCimDemo.csproj", "{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A9F748A-3DB7-4257-B9EF-17AE449E95B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9F748A-3DB7-4257-B9EF-17AE449E95B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9F748A-3DB7-4257-B9EF-17AE449E95B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9F748A-3DB7-4257-B9EF-17AE449E95B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{038CE191-538E-4DD1-9BED-B022677EBFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038CE191-538E-4DD1-9BED-B022677EBFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038CE191-538E-4DD1-9BED-B022677EBFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038CE191-538E-4DD1-9BED-B022677EBFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2797004D-ADB0-4693-B6A7-90B1510B6A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2797004D-ADB0-4693-B6A7-90B1510B6A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2797004D-ADB0-4693-B6A7-90B1510B6A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2797004D-ADB0-4693-B6A7-90B1510B6A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EE3464-08BB-4906-B0FE-9545FFC0F646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EE3464-08BB-4906-B0FE-9545FFC0F646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EE3464-08BB-4906-B0FE-9545FFC0F646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EE3464-08BB-4906-B0FE-9545FFC0F646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46413BF8-736F-4242-B6DB-03BBE0965697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46413BF8-736F-4242-B6DB-03BBE0965697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46413BF8-736F-4242-B6DB-03BBE0965697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46413BF8-736F-4242-B6DB-03BBE0965697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{218366D5-4D33-474C-A93E-30778F08B777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218366D5-4D33-474C-A93E-30778F08B777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218366D5-4D33-474C-A93E-30778F08B777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218366D5-4D33-474C-A93E-30778F08B777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B98B28-4F2C-41A6-8546-59CE91EBCB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B98B28-4F2C-41A6-8546-59CE91EBCB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B98B28-4F2C-41A6-8546-59CE91EBCB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B98B28-4F2C-41A6-8546-59CE91EBCB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A1A28D-4C97-4599-A623-70D6E8BAAF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A1A28D-4C97-4599-A623-70D6E8BAAF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A1A28D-4C97-4599-A623-70D6E8BAAF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A1A28D-4C97-4599-A623-70D6E8BAAF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABA074F-EFBE-4789-9B0D-2EB31692F836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABA074F-EFBE-4789-9B0D-2EB31692F836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABA074F-EFBE-4789-9B0D-2EB31692F836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABA074F-EFBE-4789-9B0D-2EB31692F836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60825A8-02D9-4901-B013-52025DA65C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60825A8-02D9-4901-B013-52025DA65C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60825A8-02D9-4901-B013-52025DA65C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60825A8-02D9-4901-B013-52025DA65C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E70A0682-14FA-4BDB-80CD-4C1CFC68BFBB} = {25DF3519-262D-40D5-B6C8-E95CC11AC555}
+		{F53081FF-CB6F-4619-A879-6A1811B27CC5} = {25DF3519-262D-40D5-B6C8-E95CC11AC555}
+		{B53587B6-5C5E-4E0B-BCB3-BD3A982E284C} = {25DF3519-262D-40D5-B6C8-E95CC11AC555}
+		{7E8C0049-B472-4B8F-886B-338068336D88} = {25DF3519-262D-40D5-B6C8-E95CC11AC555}
+		{9A9F748A-3DB7-4257-B9EF-17AE449E95B5} = {7E8C0049-B472-4B8F-886B-338068336D88}
+		{038CE191-538E-4DD1-9BED-B022677EBFE7} = {7E8C0049-B472-4B8F-886B-338068336D88}
+		{3C9BF863-46B5-4AAF-BDD9-46ACE5B9DB3C} = {7E8C0049-B472-4B8F-886B-338068336D88}
+		{2797004D-ADB0-4693-B6A7-90B1510B6A21} = {F53081FF-CB6F-4619-A879-6A1811B27CC5}
+		{8F13A8A2-1DD6-40ED-A1B2-70309B91FD06} = {F53081FF-CB6F-4619-A879-6A1811B27CC5}
+		{D33E83B6-1007-4DAF-97EC-422C8A9CAF4C} = {F53081FF-CB6F-4619-A879-6A1811B27CC5}
+		{63EE3464-08BB-4906-B0FE-9545FFC0F646} = {B53587B6-5C5E-4E0B-BCB3-BD3A982E284C}
+		{46413BF8-736F-4242-B6DB-03BBE0965697} = {B53587B6-5C5E-4E0B-BCB3-BD3A982E284C}
+		{218366D5-4D33-474C-A93E-30778F08B777} = {B53587B6-5C5E-4E0B-BCB3-BD3A982E284C}
+		{40B98B28-4F2C-41A6-8546-59CE91EBCB58} = {E70A0682-14FA-4BDB-80CD-4C1CFC68BFBB}
+		{C0A1A28D-4C97-4599-A623-70D6E8BAAF56} = {E70A0682-14FA-4BDB-80CD-4C1CFC68BFBB}
+		{BABA074F-EFBE-4789-9B0D-2EB31692F836} = {E70A0682-14FA-4BDB-80CD-4C1CFC68BFBB}
+		{284AE429-1BDC-4432-9C57-070076312EBD} = {25DF3519-262D-40D5-B6C8-E95CC11AC555}
+		{69AB3AAD-03D9-4221-9EA3-1C67B9D365B3} = {284AE429-1BDC-4432-9C57-070076312EBD}
+		{E60825A8-02D9-4901-B013-52025DA65C0D} = {284AE429-1BDC-4432-9C57-070076312EBD}
+		{3FB53A9F-E38C-4CB2-8B5C-F419F9A3F392} = {284AE429-1BDC-4432-9C57-070076312EBD}
+		{6A1F2F52-EA72-4472-81E5-D9FE8D2284E6} = {284AE429-1BDC-4432-9C57-070076312EBD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC6D8994-3975-4D4D-942A-DA27F49FF411}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN2019 - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

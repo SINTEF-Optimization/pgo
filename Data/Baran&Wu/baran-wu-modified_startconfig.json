@@ -1,0 +1,65 @@
+{
+    "switch_settings": [
+        {
+            "open": false,
+            "line_id": "switch1"
+        },
+        {
+            "open": false,
+            "line_id": "switch2"
+        },
+        {
+            "open": false,
+            "line_id": "switch4"
+        },
+        {
+            "open": false,
+            "line_id": "switch7"
+        },
+        {
+            "open": false,
+            "line_id": "switch9"
+        },
+        {
+            "open": false,
+            "line_id": "switch10"
+        },
+        {
+            "open": false,
+            "line_id": "switch11"
+        },
+        {
+            "open": false,
+            "line_id": "switch12"
+        },
+        {
+            "open": false,
+            "line_id": "switch15"
+        },
+        {
+            "open": true,
+            "line_id": "switch3"
+        },
+        {
+            "open": true,
+            "line_id": "switch5"
+        },
+        {
+            "open": true,
+            "line_id": "switch6"
+        },
+        {
+            "open": true,
+            "line_id": "switch8"
+        },
+        {
+            "open": true,
+            "line_id": "switch13"
+        },
+        {
+            "open": true,
+            "line_id": "switch14"
+        }
+    ],
+    "@schema_version": 1
+}

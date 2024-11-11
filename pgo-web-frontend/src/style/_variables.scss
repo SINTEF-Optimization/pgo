@@ -1,0 +1,44 @@
+// SINTEF-colors
+$sintef-blue: #003C65;
+
+$sintef-warm-gray: #ebebe6;
+
+$sintef-dark-yellow: rgba(200, 155, 20, 1);
+$sintef-mid-yellow: rgba(200, 155, 20, 0.5);
+$sintef-light-yellow: rgba(200, 155, 20, 0.25);
+
+$sintef-light-green: #cdfae1;
+$sintef-mid-green: #14B978;
+$sintef-dark-green: #004628;
+
+$sintef-dark-red: rgba(190, 60, 55, 1);
+$sintef-mid-red: rgba(190, 60, 55, .5);
+$sintef-light-red: rgba(190, 60, 55, .25);
+
+$sintef-dark-purple: rgba(120, 0, 80, 1);
+$sintef-mid-purple: rgba(120, 0, 80, .5);
+$sintef-light-purple: rgba(255, 143, 143, 0.25);
+
+// Other colors
+$text-middle-gray: #808080;
+$app-notification-color: rgba(219, 229, 241, 0.9);
+
+// Spacing
+$content-width-large: 1600px;
+$content-width-medium: 1400px;
+
+$screen-size-medium: 1920px;
+
+$navbar-spacing: 1rem;
+
+$app-panel-padding: 1.25rem;
+
+$app-notification-margin: 0.25rem;
+
+
+// Graph sizing
+// (the graph and minimap must have the same aspect ratio when using Sigma v1)
+$main-graph-width: 700px;
+$main-graph-height: 700px;
+$minimap-height: 290px;
+$minimap-width: 290px;

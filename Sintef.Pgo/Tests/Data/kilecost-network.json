@@ -1,0 +1,41 @@
+{
+    "nodes": [
+        {
+            "id": "Generator",
+            "type": "provider",
+            "v_gen": 10.0
+        },
+        {
+            "id": "Consumer",
+            "type": "consumer",
+            "consumer_type": "public"
+        },
+        {
+            "id": "Transition",
+            "type": "transition"
+        }
+    ],
+    "name": "Kile cost test",
+    "lines": [
+        {
+            "id": "1",
+            "source": "Generator",
+            "target": "Transition",
+            "r": 0.1,
+            "x": 0,
+            "switchable": true,
+            "breaker": true
+        },
+        {
+            "id": "2",
+            "source": "Transition",
+            "target": "Consumer",
+            "r": 0.1,
+            "x": 0,
+            "fault_frequency": 365,
+            "sectioning_time": "PT1H",
+            "repair_time": "PT2H"
+        }
+    ],
+    "@schema_version": 1
+}

@@ -1,0 +1,14 @@
+@import '~bulma/sass/utilities/initial-variables';
+
+$family-sans-serif:
+        "Fira Sans",
+        sans-serif;
+
+$dropdown-menu-min-width: 12rem;
+$primary: $sintef-mid-green;
+$warning: $sintef-dark-yellow;
+
+
+$box-padding: $app-panel-padding;
+$card-content-padding: $app-panel-padding;
+$card-radius: $radius-large;

@@ -1,0 +1,820 @@
+{
+    "nodes": [
+        {
+            "type": "provider",
+            "p_gen_max": 10,
+            "p_gen_min": 0,
+            "q_gen_max": 10,
+            "q_gen_min": -10,
+            "v_gen": 12.66,
+            "coordinates": [
+                0.8977957260667069,
+                0.536029119856813
+            ],
+            "id": "1"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.7132344612553924,
+                0.39577886332793794
+            ],
+            "id": "2"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.8110907565201929,
+                0.13327321517297486
+            ],
+            "id": "3"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.634861630760435,
+                0.0911655884400015
+            ],
+            "id": "4"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.41685611548853135,
+                0.07923499348606042
+            ],
+            "id": "5"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.19120943149654507,
+                0.018203457659438822
+            ],
+            "id": "6"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.00910619552358036,
+                0.1693320846610444
+            ],
+            "id": "7"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.13402707454199694,
+                0.3492904448374187
+            ],
+            "id": "8"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.38739119055826354,
+                0.3037611766631103
+            ],
+            "id": "9"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.48979674638009363,
+                0.5189806830359361
+            ],
+            "id": "10"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.555257244685379,
+                0.7722269051349582
+            ],
+            "id": "11"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.4036833410030904,
+                0.7724453085577836
+            ],
+            "id": "12"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.6785820762124782,
+                0.6313442509918469
+            ],
+            "id": "13"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.7609413647473334,
+                0.3869425235855935
+            ],
+            "id": "14"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.6119572829933089,
+                0.18519933595360055
+            ],
+            "id": "15"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.7165203209410714,
+                -0.041250694686412896
+            ],
+            "id": "16"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.7664922593185794,
+                -0.2888086387863533
+            ],
+            "id": "17"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.673542878310661,
+                -0.5289820361855596
+            ],
+            "id": "18"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.49721251278043843,
+                0.5602911094902201
+            ],
+            "id": "19"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.2487415507702199,
+                0.6261029685698188
+            ],
+            "id": "20"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.00146697720417695,
+                0.5737951093041905
+            ],
+            "id": "21"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                -0.15738440149501087,
+                0.7644828167260221
+            ],
+            "id": "22"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.8693980882370047,
+                -0.13628298454719626
+            ],
+            "id": "23"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.8216779190436329,
+                -0.40283790211600445
+            ],
+            "id": "24"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.6782908199744434,
+                -0.6326536656504105
+            ],
+            "id": "25"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.19400064260990693,
+                -0.2151842423098904
+            ],
+            "id": "26"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.25216007394219137,
+                -0.4296049088094387
+            ],
+            "id": "27"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.3451986209638601,
+                -0.6202426188186501
+            ],
+            "id": "28"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.4451884705243152,
+                -0.7764713634319831
+            ],
+            "id": "29"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.20598210703352926,
+                -0.9099994633710361
+            ],
+            "id": "30"
+        },
+        {
+            "type": "transition",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0.1,
+                -0.91
+            ],
+            "id": "30_1"
+        },
+        {
+            "type": "transition",
+            "v_min": 10.128,
+            "v_max": 15.192,
+            "coordinates": [
+                0,
+                -0.92
+            ],
+            "id": "30_2"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.05770120968251702,
+                -0.9397574915735161
+            ],
+            "id": "31"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.31123692950086174,
+                -0.8775996791462106
+            ],
+            "id": "32"
+        },
+        {
+            "consumer_type": "household",
+            "type": "consumer",
+            "v_min": 20,
+            "v_max": 25.31,
+            "coordinates": [
+                -0.5260238254161028,
+                -0.7357148794895727
+            ],
+            "id": "33"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 10,
+            "p_gen_min": 0,
+            "q_gen_max": 10,
+            "q_gen_min": -10,
+            "v_gen": 25.3,
+            "coordinates": [
+                -1,
+                -0.3324893865325356
+            ],
+            "id": "34"
+        }
+    ],
+    "transformers": [
+        {
+            "id": "transformer",
+            "connections": [
+                {
+                    "end_voltage": 12.65,
+                    "node_id": "30_1"
+                },
+                {
+                    "end_voltage": 25.3,
+                    "node_id": "30_2"
+                }
+            ],
+            "modes": [
+                {
+                    "source": "30_2",
+                    "target": "30_1",
+                    "operation": "fixed_ratio",
+                    "ratio": 2,
+                    "power_factor": 0.99
+                }
+            ]
+        }
+    ],
+    "name": "Baran-wu case",
+    "lines": [
+        {
+            "r": 0.0922,
+            "x": 0.047,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 81,
+            "source": "1",
+            "target": "2",
+            "id": "line0"
+        },
+        {
+            "r": 0.493,
+            "x": 0.2511,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 11,
+            "source": "2",
+            "target": "3",
+            "id": "line1"
+        },
+        {
+            "r": 0.164,
+            "x": 0.1565,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 98,
+            "source": "2",
+            "target": "19",
+            "id": "line2"
+        },
+        {
+            "id": "switch1",
+            "r": 0.366,
+            "x": 0.1864,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 80,
+            "source": "3",
+            "target": "4"
+        },
+        {
+            "r": 0.4512,
+            "x": 0.3083,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 47,
+            "source": "3",
+            "target": "23",
+            "id": "line4"
+        },
+        {
+            "r": 0.3811,
+            "x": 0.1941,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 56,
+            "source": "4",
+            "target": "5",
+            "id": "line5"
+        },
+        {
+            "id": "switch2",
+            "r": 0.819,
+            "x": 0.707,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 25,
+            "source": "5",
+            "target": "6"
+        },
+        {
+            "r": 0.1872,
+            "x": 0.6188,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 85,
+            "source": "6",
+            "target": "7",
+            "id": "line7"
+        },
+        {
+            "r": 0.203,
+            "x": 0.1034,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 13,
+            "source": "6",
+            "target": "26",
+            "id": "line8"
+        },
+        {
+            "id": "switch3",
+            "r": 0.7114,
+            "x": 0.2351,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 4,
+            "source": "7",
+            "target": "8"
+        },
+        {
+            "r": 1.03,
+            "x": 0.74,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 85,
+            "source": "8",
+            "target": "9",
+            "id": "line10"
+        },
+        {
+            "id": "switch4",
+            "r": 2,
+            "x": 2,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 13,
+            "source": "8",
+            "target": "21"
+        },
+        {
+            "r": 1.044,
+            "x": 0.74,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 55,
+            "source": "9",
+            "target": "10",
+            "id": "line12"
+        },
+        {
+            "id": "switch5",
+            "r": 2,
+            "x": 2,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 40,
+            "source": "9",
+            "target": "15"
+        },
+        {
+            "id": "switch6",
+            "r": 0.1966,
+            "x": 0.065,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 62,
+            "source": "10",
+            "target": "11"
+        },
+        {
+            "r": 0.3744,
+            "x": 0.1238,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 36,
+            "source": "11",
+            "target": "12",
+            "id": "line15"
+        },
+        {
+            "r": 1.468,
+            "x": 1.155,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 89,
+            "source": "12",
+            "target": "13",
+            "id": "line16"
+        },
+        {
+            "id": "switch7",
+            "r": 2,
+            "x": 2,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 64,
+            "source": "12",
+            "target": "22"
+        },
+        {
+            "id": "switch8",
+            "r": 0.5416,
+            "x": 0.7129,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 10,
+            "source": "13",
+            "target": "14"
+        },
+        {
+            "r": 0.591,
+            "x": 0.526,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 1,
+            "source": "14",
+            "target": "15",
+            "id": "line19"
+        },
+        {
+            "r": 0.7463,
+            "x": 0.545,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 57,
+            "source": "15",
+            "target": "16",
+            "id": "line20"
+        },
+        {
+            "r": 1.289,
+            "x": 1.721,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 72,
+            "source": "16",
+            "target": "17",
+            "id": "line21"
+        },
+        {
+            "id": "switch9",
+            "r": 0.7463,
+            "x": 0.545,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 57,
+            "source": "34",
+            "target": "17"
+        },
+        {
+            "r": 0.732,
+            "x": 0.574,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 45,
+            "source": "17",
+            "target": "18",
+            "id": "line23"
+        },
+        {
+            "id": "switch10",
+            "r": 0.5,
+            "x": 0.5,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 19,
+            "source": "18",
+            "target": "33"
+        },
+        {
+            "id": "switch11",
+            "r": 1.5042,
+            "x": 1.3554,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 77,
+            "source": "19",
+            "target": "20"
+        },
+        {
+            "r": 0.4095,
+            "x": 0.4784,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 10,
+            "source": "20",
+            "target": "21",
+            "id": "line26"
+        },
+        {
+            "r": 0.7089,
+            "x": 0.9373,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 66,
+            "source": "21",
+            "target": "22",
+            "id": "line27"
+        },
+        {
+            "id": "switch12",
+            "r": 0.898,
+            "x": 0.7091,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 72,
+            "source": "23",
+            "target": "24"
+        },
+        {
+            "r": 0.896,
+            "x": 0.7011,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 13,
+            "source": "24",
+            "target": "25",
+            "id": "line29"
+        },
+        {
+            "id": "switch13",
+            "r": 0.5,
+            "x": 0.5,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 18,
+            "source": "25",
+            "target": "29"
+        },
+        {
+            "r": 0.2842,
+            "x": 0.1447,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 85,
+            "source": "26",
+            "target": "27",
+            "id": "line31"
+        },
+        {
+            "id": "switch14",
+            "r": 1.059,
+            "x": 0.9337,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 27,
+            "source": "27",
+            "target": "28"
+        },
+        {
+            "r": 0.8042,
+            "x": 0.7006,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 28,
+            "source": "28",
+            "target": "29",
+            "id": "line33"
+        },
+        {
+            "r": 0.5075,
+            "x": 0.2585,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 70,
+            "source": "29",
+            "target": "30",
+            "id": "line34"
+        },
+        {
+            "r": 0.9744,
+            "x": 0.963,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 4,
+            "source": "30",
+            "target": "30_1",
+            "id": "line35"
+        },
+        {
+            "r": 0.9744,
+            "x": 0.963,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 4,
+            "source": "30_2",
+            "target": "31",
+            "id": "line36"
+        },
+        {
+            "id": "switch15",
+            "r": 0.3105,
+            "x": 0.3619,
+            "imax": 1000,
+            "switchable": true,
+            "switching_cost": 47,
+            "source": "31",
+            "target": "32"
+        },
+        {
+            "r": 0.341,
+            "x": 0.5302,
+            "imax": 1000,
+            "switchable": false,
+            "switching_cost": 74,
+            "source": "32",
+            "target": "33",
+            "id": "line38"
+        }
+    ],
+    "@schema_version": 1
+}

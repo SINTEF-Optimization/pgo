@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <!-- This project compiles documentation that is put in Sintef.Pgo.REST's www folder -->
+  
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="dotnet new tool-manifest --force" />
+    <Exec Command="dotnet tool update docfx" />
+    <Exec Command="dotnet tool run docfx docfx.json" />
+  </Target>
+
+</Project>

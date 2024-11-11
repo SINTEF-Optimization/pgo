@@ -1,0 +1,18 @@
+{
+    "period_solutions": [
+        {
+            "switch_settings": [
+                {
+                    "open": true,
+                    "line_id": "switch1"
+                },
+                {
+                    "open": true,
+                    "line_id": "switch2"
+                }
+            ],
+            "period": "periodname"
+        }
+    ],
+    "@schema_version": 1
+}

@@ -1,0 +1,5 @@
+# Set tabs as default whitespace
+[*.cs]
+indent_style = tab
+indent_size = tab
+tab_size = 4

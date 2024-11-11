@@ -1,0 +1,69 @@
+{
+    "nodes": [
+        {
+            "type": "provider",
+            "p_gen_max": 10.0,
+            "p_gen_min": 0.0,
+            "q_gen_max": 10.0,
+            "q_gen_min": -10.0,
+            "v_gen": 100,
+            "id": "1"
+        },
+        {
+            "type": "consumer",
+            "p_load": 0.1,
+            "q_load": 0.06,
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "id": "2"
+        },
+        {
+            "type": "consumer",
+            "p_load": 0.1,
+            "q_load": 0.06,
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "id": "3"
+        }
+    ],
+    "name": "Baran-wu case",
+    "lines": [
+        {
+            "id": "switch1",
+            "r": 0.366,
+            "x": 0.1864,
+            "length": 1.0,
+            "cross_section": 1.0,
+            "imax": 1000.0,
+            "switchable": true,
+            "switching_cost": 80,
+            "source": "1",
+            "target": "2"
+        },
+        {
+            "id": "line",
+            "r": 0.4512,
+            "x": 0.3083,
+            "length": 1.0,
+            "cross_section": 1.0,
+            "imax": 1000.0,
+            "switchable": false,
+            "switching_cost": 47,
+            "source": "3",
+            "target": "1"
+        },
+        {
+            "id": "switch2",
+            "r": 0.819,
+            "x": 0.707,
+            "length": 1.0,
+            "cross_section": 1.0,
+            "imax": 1000.0,
+            "switchable": true,
+            "switching_cost": 25,
+            "source": "3",
+            "target": "2"
+        }
+    ],
+    "@schema_version": 1
+}

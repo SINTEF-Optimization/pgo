@@ -1,0 +1,71 @@
+{
+    "graph": {
+      "name": "A provider, a transformer and a consumer"
+    },
+    "nodes": [
+      {
+        "id": "Source",
+        "type": "provider",
+        "v_gen": 22,
+        "p_gen_max": 1,
+        "p_gen_min": 0,
+        "q_gen_max": 1,
+        "q_gen_min": 0
+      },
+      {
+        "id": "Load",
+        "type": "consumer",
+        "v_min": 10,
+        "v_max": 12
+      },
+      {
+        "id": "Transformer primary",
+        "type": "transition",
+        "v_min": 20,
+        "v_max": 24
+      },
+      {
+        "id": "Transformer secondary",
+        "type": "transition",
+        "v_min": 10,
+        "v_max": 12
+      }
+    ],
+    "links": [
+      {
+        "id": "Source-Transformer line",
+        "source": "Source",
+        "target": "Transformer primary",
+        "r": 0.1,
+        "x": 0.1
+      },
+      {
+        "id": "Transformer-Load line",
+        "source": "Transformer secondary",
+        "target": "Load",
+        "r": 0.1,
+        "x": 0.1
+      }
+    ],
+    "transformers": [
+      {
+        "connections": [
+          {
+            "bus_id": "Transformer primary",
+            "end_voltage": 22
+          },
+          {
+            "bus_id": "Transformer secondary",
+            "end_voltage": 11
+          }
+        ],
+        "modes": [
+          {
+            "source": "Transformer primary",
+            "target": "Transformer secondary",
+            "operation": "automatic"
+          }
+        ]
+      }
+    ]
+  }

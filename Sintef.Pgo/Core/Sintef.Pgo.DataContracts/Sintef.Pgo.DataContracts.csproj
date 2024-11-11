@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Nuget package properties -->
+    <PackageId>Sintef.Pgo.DataContracts</PackageId>
+    <Version>1.2.2</Version>
+    <Authors>SINTEF Optimization</Authors>
+    <Description>A library for optimizing power network configuration</Description>
+    <Copyright>Copyright © SINTEF 2023</Copyright>
+
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Sintef.Scoop.Utilities" Version="1.8.2" />
+    <PackageReference Include="UnitsNet" Version="5.21.0" />
+  </ItemGroup>
+
+</Project>

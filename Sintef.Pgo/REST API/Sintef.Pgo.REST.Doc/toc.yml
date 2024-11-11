@@ -1,0 +1,6 @@
+- name: Power Grid Optimizer
+  href: /
+  homepage: /index.html
+- name: Api Documentation
+  href: /swagger/
+  homepage: /swagger/index.html

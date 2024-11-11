@@ -1,0 +1,48 @@
+{
+    "@schema_version": 1,
+    "periods": [
+        {
+            "start_time": "2019-10-01T00:00Z",
+            "end_time": "2019-10-02T00:00Z",
+            "id": "Day 1"
+        }
+    ],
+    "loads": [
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "810"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "850"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "816"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "818"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "832"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "844"
+        },
+        {
+            "p_loads": [ 90 ],
+            "q_loads": [ 10 ],
+            "node_id": "862"
+        }
+    ],
+    "@pgo_version": 1
+}

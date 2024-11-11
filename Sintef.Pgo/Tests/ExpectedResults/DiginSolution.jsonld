@@ -1,0 +1,324 @@
+{
+  "periodSolutions": [
+    {
+      "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "cim": "http://ucaiug.org/ns/CIM#",
+        "eu": "http://iec.ch/TC57/CIM100-European#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+      },
+      "@id": "urn:uuid:9f031e32-66e7-4ae3-ad69-bda4d69d51ac",
+      "@type": "dcat:Dataset",
+      "dcterms:generatedAtTime": {
+        "@value": "2022-09-06T00:00:00.0000000",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:creator": "SINTEF PGO",
+      "@graph": [
+        {
+          "@id": "urn:uuid:04355e33-02e4-42ed-8d88-96b0be7044a8",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:063fd50f-9b15-4b24-a59c-be21be7fd845",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:117beb83-cb8e-444f-a054-e98d1ca477e7",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:12156bb5-7a82-4e95-8ea4-2ff8573133fe",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:131a14f6-7032-499d-b691-f65bc52cc635",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:1404c232-d6aa-4ed9-855c-8c7ac383a8f5",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:1ac100c3-7a71-4b22-b32c-47fd73c3d01a",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:20605037-a626-4691-8601-89666564ff87",
+          "@type": "cim:LoadBreakSwitch",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:2714d85d-92e7-4f88-a488-f39e782a6298",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:296e7555-8ef5-4ad4-a85b-3111ae892a65",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:2a906e57-0892-4de8-89b2-56c273f8c09c",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:2bd7a004-6ad1-47fc-bb52-6f5ee1f94c31",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:2fb546e7-9e06-4356-a3ad-7e3756c34f6a",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:38cd8874-fb01-462c-8c85-95dac14fee9c",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:39a90500-8c87-4576-b912-32abf18a8d12",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:411847e0-02b3-49df-951a-f1cf780f4738",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:41e0788e-9dc5-4bf0-862b-f2a99e421602",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:46ae56a9-435f-4fad-aa91-015ef1dca930",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:48668646-105a-490d-aaad-3259b852aa23",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:55de4e32-8cb0-4602-9901-ec91e104b300",
+          "@type": "cim:LoadBreakSwitch",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:57b1462c-259c-426b-86f9-f6f6f2af9c5c",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:5bd4c12d-99d5-49d7-87fb-a346067c697e",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:652e1c63-50b0-4f5a-b88d-8f814a0cda4d",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:725505f7-df2a-41da-9428-0a9b7984817a",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:75f12fd9-2057-4b79-9f19-73736a0f2a6d",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:76335f11-64c3-474d-92fd-7ab11ed607e4",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:764a7252-9aae-4da4-a23b-6c770d8b16c1",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:7c60d1fd-fe74-4094-89f7-2d3949deaa3c",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:7e432a85-77b4-44f2-ae98-07134a1a5087",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:800c36a9-07be-45bd-9106-260cbd66ce4c",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:808643b7-4e47-4faa-b906-999d0f1fe32b",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:81f3131f-baed-442d-bf7a-3606832fc3e0",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": true
+        },
+        {
+          "@id": "urn:uuid:842aed4c-0828-4e7a-babc-ce724633a43d",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:85024669-7147-4a77-9a30-b773d8b10f58",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:86b80fe6-e846-415c-a74d-30abad315741",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:8aad5c29-6039-4321-8f8a-ad1c186dd145",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:93fb8ecd-7d8f-40b3-8777-be000fb8e0e3",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:9a717362-88c3-4b20-85a7-9adfb67c63ca",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:9b24ac8f-043c-4087-ac3b-a695c464f93d",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:9f3753d2-3a46-454b-8d14-f4f00743d48a",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:a2a20c81-78b5-40bc-81d1-14ed8ea03e12",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:a450fac1-80a9-cd4d-aa26-0223af980b17",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:a498f1fd-65f0-41df-83ee-29c92d075514",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:a8afc199-8a20-41d8-8ada-5261202610eb",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:a8f889e8-53f2-494b-97b9-c5dcbc1d17c7",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:b16294fe-269c-4f3d-b6af-4bc473c663d6",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:b63024f5-df5f-4d21-ba9d-97288bdabe97",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": true
+        },
+        {
+          "@id": "urn:uuid:b8b9b131-6eb7-41c7-899e-7003960b1a5f",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:ba0be174-8971-4820-a42b-db2c5a781e87",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:bf819ffc-270d-4025-bef8-db10ffb5b196",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:ce365fed-87da-da4c-b646-6d39ba7eb406",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:d4afd20b-a007-43f0-9736-4a868c4cc65a",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:dd41276d-9ea7-47a8-a0f3-65215c8225a5",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:e286272e-827c-4b12-83cb-6b3e91170e3e",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:e3b199ca-485b-4df8-99f0-fdd5e4f3ff73",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:e63a5023-05b9-4adf-bafd-a372b751a6ed",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:e832d4e7-1335-4773-b203-bf7035d29bc3",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:f64ec489-a926-4f4f-877b-102d4cd7fd2b",
+          "@type": "cim:Fuse",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:f7d8e580-296d-4c2a-b989-1eb4db7af387",
+          "@type": "cim:Breaker",
+          "cim:Switch.open": false
+        },
+        {
+          "@id": "urn:uuid:fd338915-3831-4cc5-8c55-af2b4c1c2bb8",
+          "@type": "cim:Disconnector",
+          "cim:Switch.open": false
+        }
+      ]
+    }
+  ]
+}

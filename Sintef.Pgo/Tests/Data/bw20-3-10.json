@@ -1,0 +1,6799 @@
+{
+    "nodes": [
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.242394958640025,
+                -0.014230400417095822
+            ],
+            "id": "transition_1"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.2425066424371736,
+                0.026131844472250563
+            ],
+            "id": "consumer_2"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.21737378599123003,
+                -0.0178454678358499
+            ],
+            "id": "transition_3"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.23914339635137377,
+                0.06680685534762482
+            ],
+            "id": "consumer_4"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.21353142620787427,
+                0.06385614031784986
+            ],
+            "id": "consumer_5"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.18509371926249346,
+                0.05967913601257725
+            ],
+            "id": "transition_6"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.18883503872804197,
+                -0.01879862442674487
+            ],
+            "id": "consumer_7"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.16931454602188714,
+                0.03508830729143376
+            ],
+            "id": "consumer_8"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.16986786047280122,
+                0.003671696426287244
+            ],
+            "id": "transition_9"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.23764399057861252,
+                0.10826157691989431
+            ],
+            "id": "transition_10"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2105153022784791,
+                0.11676875996667006
+            ],
+            "id": "transition_11"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.2005520477375929,
+                0.13601286652639635
+            ],
+            "id": "consumer_12"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.24562645265591918,
+                0.12692825710687705
+            ],
+            "id": "transition_13"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.28888944547991535,
+                0.1133612488849952
+            ],
+            "id": "consumer_14"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.3297607304954706,
+                0.10273912207047681
+            ],
+            "id": "consumer_15"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3699212458915579,
+                0.09446184643112367
+            ],
+            "id": "transition_16"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4096748142280493,
+                0.08869571324787488
+            ],
+            "id": "transition_17"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.4489973592198015,
+                0.0867003262549087
+            ],
+            "id": "consumer_18"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.48724447241576935,
+                0.09145190468024503
+            ],
+            "id": "transition_19"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5226373888787754,
+                0.10805795624056455
+            ],
+            "id": "transition_20"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5460473783237347,
+                0.08647304496059399
+            ],
+            "id": "transition_21"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.5745512546494304,
+                0.09748011642941865
+            ],
+            "id": "consumer_22"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6079898616920264,
+                0.10590249514166918
+            ],
+            "id": "transition_23"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.643682157990732,
+                0.10533056477351688
+            ],
+            "id": "consumer_24"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.6786892970194752,
+                0.10022767993250782
+            ],
+            "id": "consumer_25"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7097314619542378,
+                0.08483626015265684
+            ],
+            "id": "transition_26"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7219655360101468,
+                0.05355793317782126
+            ],
+            "id": "transition_27"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.6925232409327722,
+                0.035658034397682024
+            ],
+            "id": "consumer_28"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.657027458754672,
+                0.03747289209222885
+            ],
+            "id": "transition_29"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.622987394520447,
+                0.048501449302931064
+            ],
+            "id": "transition_30"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.592690738747573,
+                0.06727119022127337
+            ],
+            "id": "consumer_31"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2498174928726216,
+                0.15107761576353335
+            ],
+            "id": "transition_32"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.2635725351737138,
+                0.1882369016165282
+            ],
+            "id": "consumer_33"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.28373676498900485,
+                0.22197769024835
+            ],
+            "id": "consumer_34"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.28338987702044655,
+                0.26156734478250476
+            ],
+            "id": "transition_35"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 0.0001,
+            "q_gen_max": 0.0001,
+            "v_gen": 1,
+            "coordinates": [
+                0.12345871955234468,
+                0.14766560865751227
+            ],
+            "id": "provider_36"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.16142308285424353,
+                0.1412594005278316
+            ],
+            "id": "artificial_37"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.04833780706294678,
+                0.16106848643841656
+            ],
+            "id": "transition_38"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.08582492397638462,
+                0.15425594116630117
+            ],
+            "id": "artificial_39"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2901356693172492,
+                0.30048487687051634
+            ],
+            "id": "transition_40"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.28103136503195353,
+                0.3385364686077296
+            ],
+            "id": "transition_41"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.01088118266778372,
+                0.16800200920392172
+            ],
+            "id": "transition_42"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.27810368252473894,
+                0.37783552456095465
+            ],
+            "id": "consumer_43"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.24645243501224853,
+                0.39594336807513353
+            ],
+            "id": "consumer_44"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2187360707041844,
+                0.4194980157172093
+            ],
+            "id": "transition_45"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.30335095877809337,
+                0.40684447975318155
+            ],
+            "id": "transition_46"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.1933195842417235,
+                0.44609081946500373
+            ],
+            "id": "consumer_47"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.32630202703493144,
+                0.43749535648756205
+            ],
+            "id": "consumer_48"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.026622826030096098,
+                0.17485310739906212
+            ],
+            "id": "transition_49"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.24028101880362226,
+                -0.05475294655243683
+            ],
+            "id": "transition_50"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.3484129744149596,
+                0.4693108415715732
+            ],
+            "id": "consumer_51"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.23877048126699954,
+                -0.09399290593699952
+            ],
+            "id": "transition_52"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.0642164943117796,
+                0.18141212003288962
+            ],
+            "id": "consumer_53"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.1019285721639574,
+                0.18748665839329393
+            ],
+            "id": "transition_54"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.1690376915029347,
+                0.47432580245660494
+            ],
+            "id": "transition_55"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.14571172431908233,
+                0.5044532655976535
+            ],
+            "id": "transition_56"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.1397781561934516,
+                0.1928867846597085
+            ],
+            "id": "transition_57"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.17776595438433804,
+                0.19760169208490147
+            ],
+            "id": "transition_58"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2711635848755146,
+                -0.1113568988732031
+            ],
+            "id": "transition_59"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.2159107733356459,
+                0.20176908589294554
+            ],
+            "id": "transition_60"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.10955485417792517,
+                0.5112587077734442
+            ],
+            "id": "transition_61"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.302427932491145,
+                -0.12997093185910172
+            ],
+            "id": "consumer_62"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.33357850389036475,
+                -0.1505723037329486
+            ],
+            "id": "transition_63"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.32308488136183966,
+                -0.17874201791817898
+            ],
+            "id": "consumer_64"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.07672818212591122,
+                0.5268863731164809
+            ],
+            "id": "transition_65"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.2543202778557967,
+                0.20578594676971154
+            ],
+            "id": "transition_66"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.32687890340685943,
+                -0.21118813885880444
+            ],
+            "id": "consumer_67"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.0455570377559784,
+                0.5450201235460075
+            ],
+            "id": "transition_68"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.014614934422725915,
+                0.562836620150362
+            ],
+            "id": "transition_69"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.29352766925820395,
+                0.21127257279006464
+            ],
+            "id": "transition_70"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5532316297421801,
+                0.1258895360888793
+            ],
+            "id": "transition_71"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.34673588691306506,
+                -0.23856829731990112
+            ],
+            "id": "consumer_72"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.31677899621933037,
+                0.21257715865596108
+            ],
+            "id": "consumer_73"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3738837556024874,
+                -0.22958431465367474
+            ],
+            "id": "transition_74"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.3346986765767335,
+                0.49974663401297936
+            ],
+            "id": "consumer_75"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3692094631871273,
+                -0.19665773397316633
+            ],
+            "id": "transition_76"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.368586757454026,
+                -0.16645370737430232
+            ],
+            "id": "transition_77"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3509069217837626,
+                0.20377660951223486
+            ],
+            "id": "transition_78"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.32554777702069454,
+                0.18743921665976523
+            ],
+            "id": "consumer_79"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5238423962278623,
+                0.15237224535305394
+            ],
+            "id": "transition_80"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3286874636946526,
+                0.5329275746384897
+            ],
+            "id": "transition_81"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.38574273828645295,
+                0.19576673846408837
+            ],
+            "id": "transition_82"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.325418658240378,
+                0.5668829988543165
+            ],
+            "id": "transition_83"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.017052859507379267,
+                0.5785728910067321
+            ],
+            "id": "consumer_84"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.36081441147123827,
+                0.16804589789522545
+            ],
+            "id": "consumer_85"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.420977719676602,
+                0.1882613565556176
+            ],
+            "id": "consumer_86"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.490934461460469,
+                0.1691517709484289
+            ],
+            "id": "transition_87"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.4562506054949727,
+                0.18009703435442084
+            ],
+            "id": "consumer_88"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3980518493688179,
+                0.15036997197047544
+            ],
+            "id": "transition_89"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3215532677111138,
+                0.601084865654344
+            ],
+            "id": "transition_90"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.05001883774437396,
+                0.5906054965011086
+            ],
+            "id": "transition_91"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.4366178785048501,
+                0.13304872753443178
+            ],
+            "id": "consumer_92"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.3130737384830237,
+                0.6345574766199711
+            ],
+            "id": "consumer_93"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.32223261222710625,
+                0.30567984612446064
+            ],
+            "id": "consumer_94"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.47614006563453093,
+                0.11519043689523896
+            ],
+            "id": "transition_95"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.29966721955456543,
+                0.6663395100773071
+            ],
+            "id": "consumer_96"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5162689303372875,
+                0.09639453848088052
+            ],
+            "id": "transition_97"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.0840444374195504,
+                0.598657271238872
+            ],
+            "id": "transition_98"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2799406425556143,
+                0.6944736042877472
+            ],
+            "id": "transition_99"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2528075999179792,
+                0.7152756583725463
+            ],
+            "id": "transition_100"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.1187690146847108,
+                0.6025028868270862
+            ],
+            "id": "transition_101"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.35560022317762463,
+                0.3133301643545664
+            ],
+            "id": "transition_102"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5534485607328032,
+                0.07594528521343429
+            ],
+            "id": "transition_103"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.389917289900911,
+                0.32180982158735294
+            ],
+            "id": "transition_104"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5878638355634375,
+                0.053405940095616264
+            ],
+            "id": "consumer_105"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.15372299484496046,
+                0.6020906536978287
+            ],
+            "id": "transition_106"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.21966162624132526,
+                0.7231815598453323
+            ],
+            "id": "consumer_107"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.42490944928660657,
+                0.3304934266016334
+            ],
+            "id": "consumer_108"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.460378191845804,
+                0.3386455953925727
+            ],
+            "id": "consumer_109"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6198547286824956,
+                0.02883236820201983
+            ],
+            "id": "transition_110"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.18839687092534282,
+                0.597434604088018
+            ],
+            "id": "consumer_111"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.22223238252740327,
+                0.58852413247131
+            ],
+            "id": "consumer_112"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.19033014202973,
+                0.7060923090647379
+            ],
+            "id": "transition_113"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.6497443552622371,
+                0.0025064173493832323
+            ],
+            "id": "consumer_114"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4961141782373205,
+                0.34553268733848325
+            ],
+            "id": "transition_115"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.30448295846980056,
+                0.2465412910038717
+            ],
+            "id": "transition_116"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2544919793719041,
+                0.5751449641882331
+            ],
+            "id": "consumer_117"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2842498666987223,
+                0.5571107864952421
+            ],
+            "id": "consumer_118"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5500099057002342,
+                0.1431491379054764
+            ],
+            "id": "transition_119"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.5817864646804293,
+                0.168579733192665
+            ],
+            "id": "consumer_120"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3098034404687874,
+                0.533767273264207
+            ],
+            "id": "transition_121"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5319263085138538,
+                0.3502008750894235
+            ],
+            "id": "transition_122"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.31863654687822013,
+                0.2790821890064343
+            ],
+            "id": "transition_123"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.329761982846119,
+                0.5057700277343201
+            ],
+            "id": "transition_124"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5675551207612757,
+                0.35112618409833823
+            ],
+            "id": "transition_125"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.6022207614321269,
+                0.34620971580555615
+            ],
+            "id": "consumer_126"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6121549140958895,
+                0.19058578951133365
+            ],
+            "id": "transition_127"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.15516737373071104,
+                0.5390658145474273
+            ],
+            "id": "consumer_128"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6779639115838859,
+                -0.02517908639011379
+            ],
+            "id": "transition_129"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.15773802048456412,
+                0.5745253325135715
+            ],
+            "id": "transition_130"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.6332189567215963,
+                0.33224273813272087
+            ],
+            "id": "consumer_131"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3440635489661955,
+                0.47478623412642007
+            ],
+            "id": "transition_132"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.35231882529049674,
+                0.4418216231826291
+            ],
+            "id": "consumer_133"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6384493635260479,
+                0.21434701571885084
+            ],
+            "id": "transition_134"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3548676913759129,
+                0.40781627496116735
+            ],
+            "id": "transition_135"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6556592331471327,
+                0.3077728846917422
+            ],
+            "id": "transition_136"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.35412027250858413,
+                0.3731971637839162
+            ],
+            "id": "transition_137"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6570670540422044,
+                0.2428922186586451
+            ],
+            "id": "transition_138"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6639798440516567,
+                0.2756967212802402
+            ],
+            "id": "transition_139"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7052582420892746,
+                -0.05378774925729397
+            ],
+            "id": "transition_140"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.17120405391424068,
+                0.6779093620308335
+            ],
+            "id": "consumer_141"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7327475114869567,
+                -0.08414805163868556
+            ],
+            "id": "transition_142"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.7640424636045936,
+                -0.11231815841899985
+            ],
+            "id": "consumer_143"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.15856639771054407,
+                0.6098861805884345
+            ],
+            "id": "transition_144"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3360972723850986,
+                0.30931362722271677
+            ],
+            "id": "transition_145"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.35752708409542117,
+                0.33760093034886735
+            ],
+            "id": "transition_146"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.16141151337968085,
+                0.6448041009836629
+            ],
+            "id": "transition_147"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7877845818913034,
+                -0.14711705994961294
+            ],
+            "id": "transition_148"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.8067816978380092,
+                -0.18489199681332888
+            ],
+            "id": "consumer_149"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.8218434480367841,
+                -0.22441566256563714
+            ],
+            "id": "consumer_150"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.8334701696945429,
+                -0.2649677847530899
+            ],
+            "id": "consumer_151"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8420205326885825,
+                -0.306089508357355
+            ],
+            "id": "transition_152"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8477566152727346,
+                -0.34747436992755015
+            ],
+            "id": "transition_153"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8508618685322962,
+                -0.38890710350855145
+            ],
+            "id": "transition_154"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.851458561927931,
+                -0.43022500536188957
+            ],
+            "id": "consumer_155"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8496230069109213,
+                -0.4712923694143202
+            ],
+            "id": "transition_156"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.8453868517517331,
+                -0.5119845574979824
+            ],
+            "id": "consumer_157"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8387465012767767,
+                -0.55217420883896
+            ],
+            "id": "transition_158"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.829665423127931,
+                -0.5917203461771697
+            ],
+            "id": "transition_159"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8180879567098561,
+                -0.6304615558270774
+            ],
+            "id": "transition_160"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.8038845057141836,
+                -0.6681860640822571
+            ],
+            "id": "transition_161"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7870323475725244,
+                -0.70468331337083
+            ],
+            "id": "transition_162"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.7676087719758998,
+                -0.7397657285535423
+            ],
+            "id": "consumer_163"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7456086534148021,
+                -0.7731873876121578
+            ],
+            "id": "transition_164"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.7210008997441021,
+                -0.8046407362138802
+            ],
+            "id": "consumer_165"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6935599782041463,
+                -0.8335516231452409
+            ],
+            "id": "transition_166"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6634385180939161,
+                -0.8595747461355483
+            ],
+            "id": "transition_167"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.631028852559764,
+                -0.8826369040217018
+            ],
+            "id": "consumer_168"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5967402039894788,
+                -0.9027674064870062
+            ],
+            "id": "consumer_169"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5609934609129741,
+                -0.9201099613214471
+            ],
+            "id": "transition_170"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.21104433651266905,
+                -0.1213194068852494
+            ],
+            "id": "transition_171"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.18869259478597025,
+                -0.15179960647477042
+            ],
+            "id": "transition_172"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.17007666543156433,
+                -0.18461817442717185
+            ],
+            "id": "transition_173"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5240656209029749,
+                -0.9346888847983378
+            ],
+            "id": "transition_174"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.48618921059090875,
+                -0.9464969452998202
+            ],
+            "id": "transition_175"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.1530792887794603,
+                -0.21935549641142413
+            ],
+            "id": "transition_176"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.4475861709821993,
+                -0.9555362985130514
+            ],
+            "id": "transition_177"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.40846812929208376,
+                -0.9618148819215259
+            ],
+            "id": "transition_178"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3690389908501157,
+                -0.9653497660209186
+            ],
+            "id": "transition_179"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3294960071213165,
+                -0.9661605830672213
+            ],
+            "id": "transition_180"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.11787600162660547,
+                -0.22146107506534338
+            ],
+            "id": "consumer_181"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.29003204670494875,
+                -0.964274823864255
+            ],
+            "id": "transition_182"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.08447391473870755,
+                -0.22780029411697736
+            ],
+            "id": "transition_183"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2508368607659872,
+                -0.9597246611271779
+            ],
+            "id": "consumer_184"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 0.0001,
+            "q_gen_max": 0.0001,
+            "v_gen": 1,
+            "coordinates": [
+                0.018984421254835404,
+                -0.2429473289244761
+            ],
+            "id": "provider_185"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.05173249749799962,
+                -0.23549493197095944
+            ],
+            "id": "artificial_186"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.21209955226990615,
+                -0.9525428170039307
+            ],
+            "id": "consumer_187"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.17401080229726293,
+                -0.9427635067221474
+            ],
+            "id": "transition_188"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.13678165413867488,
+                -0.930369515810652
+            ],
+            "id": "transition_189"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 0.0001,
+            "q_gen_max": 0.0001,
+            "v_gen": 1,
+            "coordinates": [
+                -0.7068789119206672,
+                -0.13223801980931726
+            ],
+            "id": "provider_190"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.716078900779621,
+                -0.1053804196495801
+            ],
+            "id": "artificial_191"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.0474776806087434,
+                -0.25481001649184326
+            ],
+            "id": "consumer_192"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.014049085549145347,
+                -0.24948870859927788
+            ],
+            "id": "artificial_193"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.0813135867111859,
+                -0.2589654384827194
+            ],
+            "id": "consumer_194"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.10059649992252656,
+                -0.9154679112075371
+            ],
+            "id": "transition_195"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.06560178417247985,
+                -0.8982397479877945
+            ],
+            "id": "transition_196"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.7001472580663499,
+                -0.19152694353202024
+            ],
+            "id": "consumer_197"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.7037122126982941,
+                -0.1614353546936926
+            ],
+            "id": "artificial_198"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.031958973593974774,
+                -0.8787959539851026
+            ],
+            "id": "transition_199"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.11553973886881976,
+                -0.2623803257039818
+            ],
+            "id": "transition_200"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6934229602425003,
+                -0.221920428453044
+            ],
+            "id": "transition_201"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6829100772380178,
+                -0.2519405821433219
+            ],
+            "id": "transition_202"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.16507030698085645,
+                -0.2564723692393162
+            ],
+            "id": "transition_203"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6680959193062508,
+                -0.28068999458396615
+            ],
+            "id": "transition_204"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.15015840432482727,
+                -0.26589868060300526
+            ],
+            "id": "consumer_205"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.17419776441060322,
+                -0.29369632613929214
+            ],
+            "id": "consumer_206"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.6474625432792723,
+                -0.30603211177301903
+            ],
+            "id": "transition_207"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.623167339274219,
+                -0.32821423400431654
+            ],
+            "id": "transition_208"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5954024407640263,
+                -0.3462412191251243
+            ],
+            "id": "transition_209"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5654805697348435,
+                -0.3605263319507508
+            ],
+            "id": "consumer_210"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.00016692018159408816,
+                -0.8572377043201864
+            ],
+            "id": "consumer_211"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5339554964985231,
+                -0.37081145097169466
+            ],
+            "id": "transition_212"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.18522064954263623,
+                -0.27095279397092703
+            ],
+            "id": "transition_213"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5013505047208227,
+                -0.37674395103086283
+            ],
+            "id": "consumer_214"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.03060819319185009,
+                -0.8336660098736339
+            ],
+            "id": "transition_215"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.22060958952195958,
+                -0.2797597449220737
+            ],
+            "id": "consumer_216"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.3829118109819976,
+                0.4857714784824759
+            ],
+            "id": "transition_217"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.41263310358143773,
+                0.5090567624947134
+            ],
+            "id": "transition_218"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.46824313935285655,
+                -0.37772688891241585
+            ],
+            "id": "transition_219"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2392704819516792,
+                -0.24715641328680166
+            ],
+            "id": "consumer_220"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.43986414785247835,
+                0.5341796827762769
+            ],
+            "id": "transition_221"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.18270204670155896,
+                -0.3307394847588127
+            ],
+            "id": "transition_222"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.43534251506454086,
+                -0.37378984418499844
+            ],
+            "id": "transition_223"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.1904740300181461,
+                -0.36760835078999077
+            ],
+            "id": "consumer_224"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.19696717768480057,
+                -0.4043726984082031
+            ],
+            "id": "transition_225"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4653815174574265,
+                0.5599342540184143
+            ],
+            "id": "transition_226"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.20156581151367048,
+                -0.4411034115640029
+            ],
+            "id": "consumer_227"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.48959860848629666,
+                0.5858378665318199
+            ],
+            "id": "transition_228"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.40314930260232323,
+                -0.3656879065279859
+            ],
+            "id": "consumer_229"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.05919469056610629,
+                -0.8081856410647263
+            ],
+            "id": "transition_230"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.08575048587074391,
+                -0.7809052502822216
+            ],
+            "id": "consumer_231"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5127878918323154,
+                0.6116828288976235
+            ],
+            "id": "transition_232"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.5351810081418643,
+                0.6373597824020205
+            ],
+            "id": "consumer_233"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3718654723948503,
+                -0.35418787755263587
+            ],
+            "id": "transition_234"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.20371257492157976,
+                -0.47781275753948493
+            ],
+            "id": "transition_235"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2621121902662508,
+                -0.2185764324521875
+            ],
+            "id": "consumer_236"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.2029717372152824,
+                -0.5144254460156122
+            ],
+            "id": "transition_237"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.11009411248700483,
+                -0.7519399811629143
+            ],
+            "id": "transition_238"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.2870338343508986,
+                -0.19197249461850127
+            ],
+            "id": "transition_239"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2509849605591076,
+                -0.29313525560452963
+            ],
+            "id": "consumer_240"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.2814337203379969,
+                -0.30876111066739326
+            ],
+            "id": "transition_241"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.19907269167510808,
+                -0.550786901217976
+            ],
+            "id": "consumer_242"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.3129718445151565,
+                -0.16605123297157248
+            ],
+            "id": "consumer_243"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 0.0001,
+            "q_gen_max": 0.0001,
+            "v_gen": 1,
+            "coordinates": [
+                0.578198468419383,
+                0.6880965519964257
+            ],
+            "id": "provider_244"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5569392989813371,
+                0.6628349548911756
+            ],
+            "id": "artificial_245"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.34139034735992074,
+                -0.340219965266591
+            ],
+            "id": "transition_246"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.13203664539222965,
+                -0.7214141649962899
+            ],
+            "id": "transition_247"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6196432535652392,
+                0.7379752819080336
+            ],
+            "id": "transition_248"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5990670886849027,
+                0.7131444235388568
+            ],
+            "id": "artificial_249"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.19190068034693356,
+                -0.5866889501270843
+            ],
+            "id": "transition_250"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.1814791076234762,
+                -0.6219098566305785
+            ],
+            "id": "transition_251"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.3113929087245605,
+                -0.3247685958779149
+            ],
+            "id": "transition_252"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.16792265766520914,
+                -0.6562348984147542
+            ],
+            "id": "consumer_253"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.33920658532927006,
+                -0.13994425909632907
+            ],
+            "id": "consumer_254"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.36513873809101793,
+                -0.11298113868133465
+            ],
+            "id": "transition_255"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.15138065196840006,
+                -0.6894623996409948
+            ],
+            "id": "transition_256"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.39146476852819506,
+                0.3340480237866925
+            ],
+            "id": "consumer_257"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.4241879162634413,
+                0.3307768784033161
+            ],
+            "id": "transition_258"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.4546391186240604,
+                0.3193866866988023
+            ],
+            "id": "consumer_259"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.4798163183768971,
+                0.2981602972121956
+            ],
+            "id": "transition_260"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.39038751628507096,
+                -0.08481069586951816
+            ],
+            "id": "transition_261"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.21388230178018178,
+                -0.31599796585468143
+            ],
+            "id": "consumer_262"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6399688018459813,
+                0.7626200864240293
+            ],
+            "id": "transition_263"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.21106904255628622,
+                -0.35209771193287515
+            ],
+            "id": "transition_264"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.6601268861899645,
+                0.7870649748642468
+            ],
+            "id": "transition_265"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2105257101274612,
+                -0.3875513904748575
+            ],
+            "id": "consumer_266"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.4145134274343655,
+                -0.055114570744629644
+            ],
+            "id": "transition_267"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.6801334212056934,
+                0.8113412933259687
+            ],
+            "id": "consumer_268"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.4368300871970621,
+                -0.023525996839220756
+            ],
+            "id": "consumer_269"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.49810526181759945,
+                0.2696991294835483
+            ],
+            "id": "transition_270"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4036220486722771,
+                -0.18272565240580238
+            ],
+            "id": "transition_271"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.45685114442380176,
+                0.010111290708945564
+            ],
+            "id": "consumer_272"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5091509422478449,
+                0.23648081962130502
+            ],
+            "id": "consumer_273"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.21159004107548404,
+                -0.4224328560233672
+            ],
+            "id": "transition_274"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5129252682337438,
+                0.2002533830136247
+            ],
+            "id": "transition_275"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4301818739131349,
+                -0.21109295568559996
+            ],
+            "id": "transition_276"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.2138349550706929,
+                -0.4567605504751414
+            ],
+            "id": "consumer_277"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.21694765108203284,
+                -0.4905488647631896
+            ],
+            "id": "consumer_278"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.22068685414267453,
+                -0.5238130755407755
+            ],
+            "id": "transition_279"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.5101340676254887,
+                0.1622989911786008
+            ],
+            "id": "consumer_280"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.5018217898976461,
+                0.1232790851912805
+            ],
+            "id": "transition_281"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7000107121807474,
+                0.8354680392779569
+            ],
+            "id": "transition_282"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                -0.4740673952273816,
+                0.04594930104955141
+            ],
+            "id": "consumer_283"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7198188479788846,
+                0.8594248998612812
+            ],
+            "id": "transition_284"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.4889110183050461,
+                0.08372407576358021
+            ],
+            "id": "transition_285"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.45682263927160915,
+                -0.2344880927638708
+            ],
+            "id": "consumer_286"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7395941757533163,
+                0.8832060841812213
+            ],
+            "id": "transition_287"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4828150866680337,
+                -0.2567024330659749
+            ],
+            "id": "transition_288"
+        },
+        {
+            "type": "consumer",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "coordinates": [
+                0.7593033156225546,
+                0.9068577257347817
+            ],
+            "id": "consumer_289"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.7789166762655734,
+                0.9304184472110698
+            ],
+            "id": "transition_290"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.22487386187859745,
+                -0.5565555901173589
+            ],
+            "id": "transition_291"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5088245874119202,
+                -0.2778517942765271
+            ],
+            "id": "transition_292"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.798477084744931,
+                0.9538607658433254
+            ],
+            "id": "transition_293"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.8180927146893301,
+                0.9770949599228038
+            ],
+            "id": "transition_294"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.22933759687614041,
+                -0.5887576518132331
+            ],
+            "id": "transition_295"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.8378865861040165,
+                1
+            ],
+            "id": "transition_296"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                -0.23394652774425767,
+                -0.6203363607448806
+            ],
+            "id": "transition_297"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 0.0001,
+            "q_gen_max": 0.0001,
+            "v_gen": 1,
+            "coordinates": [
+                0.5606372233883252,
+                -0.3174337068481629
+            ],
+            "id": "provider_298"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.5348179400404421,
+                -0.2980888438954027
+            ],
+            "id": "artificial_299"
+        },
+        {
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "type": "transition",
+            "coordinates": [
+                0.4299506039105614,
+                -0.16998176911075247
+            ],
+            "id": "transition_300"
+        }
+    ],
+    "name": "Random network",
+    "lines": [
+        {
+            "id": "line_1",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_1",
+            "target": "consumer_2"
+        },
+        {
+            "id": "line_2",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_1",
+            "target": "transition_3"
+        },
+        {
+            "id": "line_51",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_1",
+            "target": "transition_50"
+        },
+        {
+            "id": "line_3",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_2",
+            "target": "consumer_4"
+        },
+        {
+            "id": "switch_6",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_3",
+            "target": "consumer_7"
+        },
+        {
+            "id": "line_4",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_4",
+            "target": "consumer_5"
+        },
+        {
+            "id": "line_10",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_4",
+            "target": "transition_10"
+        },
+        {
+            "id": "line_5",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_5",
+            "target": "transition_6"
+        },
+        {
+            "id": "line_7",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_6",
+            "target": "consumer_8"
+        },
+        {
+            "id": "line_8",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_7",
+            "target": "transition_9"
+        },
+        {
+            "id": "switch_9",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_8",
+            "target": "transition_9"
+        },
+        {
+            "id": "line_11",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_10",
+            "target": "transition_11"
+        },
+        {
+            "id": "line_33",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_10",
+            "target": "transition_32"
+        },
+        {
+            "id": "line_12",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_11",
+            "target": "consumer_12"
+        },
+        {
+            "id": "line_13",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_12",
+            "target": "transition_13"
+        },
+        {
+            "id": "line_37",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_12",
+            "target": "artificial_37"
+        },
+        {
+            "id": "switch_14",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_13",
+            "target": "consumer_14"
+        },
+        {
+            "id": "line_15",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_14",
+            "target": "consumer_15"
+        },
+        {
+            "id": "switch_16",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_15",
+            "target": "transition_16"
+        },
+        {
+            "id": "switch_17",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_16",
+            "target": "transition_17"
+        },
+        {
+            "id": "line_18",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_17",
+            "target": "consumer_18"
+        },
+        {
+            "id": "line_19",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_18",
+            "target": "transition_19"
+        },
+        {
+            "id": "line_20",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_19",
+            "target": "transition_20"
+        },
+        {
+            "id": "line_21",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_20",
+            "target": "transition_21"
+        },
+        {
+            "id": "line_122",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_20",
+            "target": "transition_119"
+        },
+        {
+            "id": "switch_22",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_21",
+            "target": "consumer_22"
+        },
+        {
+            "id": "switch_23",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_22",
+            "target": "transition_23"
+        },
+        {
+            "id": "line_31",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_22",
+            "target": "consumer_31"
+        },
+        {
+            "id": "line_72",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_22",
+            "target": "transition_71"
+        },
+        {
+            "id": "line_24",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_23",
+            "target": "consumer_24"
+        },
+        {
+            "id": "switch_25",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_24",
+            "target": "consumer_25"
+        },
+        {
+            "id": "line_26",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_25",
+            "target": "transition_26"
+        },
+        {
+            "id": "line_27",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_26",
+            "target": "transition_27"
+        },
+        {
+            "id": "line_28",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_27",
+            "target": "consumer_28"
+        },
+        {
+            "id": "switch_29",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_28",
+            "target": "transition_29"
+        },
+        {
+            "id": "switch_30",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_29",
+            "target": "transition_30"
+        },
+        {
+            "id": "line_32",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_30",
+            "target": "consumer_31"
+        },
+        {
+            "id": "line_34",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_32",
+            "target": "consumer_33"
+        },
+        {
+            "id": "line_35",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_33",
+            "target": "consumer_34"
+        },
+        {
+            "id": "line_36",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_34",
+            "target": "transition_35"
+        },
+        {
+            "id": "line_74",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_34",
+            "target": "consumer_73"
+        },
+        {
+            "id": "line_41",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_35",
+            "target": "transition_40"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_38",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_36",
+            "target": "artificial_37"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_39",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_36",
+            "target": "artificial_39"
+        },
+        {
+            "id": "line_40",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_38",
+            "target": "artificial_39"
+        },
+        {
+            "id": "line_43",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_38",
+            "target": "transition_42"
+        },
+        {
+            "id": "line_42",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_40",
+            "target": "transition_41"
+        },
+        {
+            "id": "switch_97",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_40",
+            "target": "consumer_94"
+        },
+        {
+            "id": "line_44",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_41",
+            "target": "consumer_43"
+        },
+        {
+            "id": "switch_50",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_42",
+            "target": "transition_49"
+        },
+        {
+            "id": "line_45",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_43",
+            "target": "consumer_44"
+        },
+        {
+            "id": "switch_47",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_43",
+            "target": "transition_46"
+        },
+        {
+            "id": "line_46",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_44",
+            "target": "transition_45"
+        },
+        {
+            "id": "line_48",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_45",
+            "target": "consumer_47"
+        },
+        {
+            "id": "line_49",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_46",
+            "target": "consumer_48"
+        },
+        {
+            "id": "line_56",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_47",
+            "target": "transition_55"
+        },
+        {
+            "id": "line_52",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_48",
+            "target": "consumer_51"
+        },
+        {
+            "id": "switch_54",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_49",
+            "target": "consumer_53"
+        },
+        {
+            "id": "switch_53",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_50",
+            "target": "transition_52"
+        },
+        {
+            "id": "switch_76",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_51",
+            "target": "consumer_75"
+        },
+        {
+            "id": "line_223",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_51",
+            "target": "transition_217"
+        },
+        {
+            "id": "line_60",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_52",
+            "target": "transition_59"
+        },
+        {
+            "id": "line_177",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_52",
+            "target": "transition_171"
+        },
+        {
+            "id": "line_55",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_53",
+            "target": "transition_54"
+        },
+        {
+            "id": "switch_58",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_54",
+            "target": "transition_57"
+        },
+        {
+            "id": "line_57",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_55",
+            "target": "transition_56"
+        },
+        {
+            "id": "line_62",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_56",
+            "target": "transition_61"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_131",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_56",
+            "target": "consumer_128"
+        },
+        {
+            "id": "line_59",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_57",
+            "target": "transition_58"
+        },
+        {
+            "id": "line_61",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_58",
+            "target": "transition_60"
+        },
+        {
+            "id": "line_63",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_59",
+            "target": "consumer_62"
+        },
+        {
+            "id": "line_67",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_60",
+            "target": "transition_66"
+        },
+        {
+            "id": "line_66",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_61",
+            "target": "transition_65"
+        },
+        {
+            "id": "line_64",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_62",
+            "target": "transition_63"
+        },
+        {
+            "id": "switch_65",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_63",
+            "target": "consumer_64"
+        },
+        {
+            "id": "switch_78",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_63",
+            "target": "transition_77"
+        },
+        {
+            "id": "line_68",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_64",
+            "target": "consumer_67"
+        },
+        {
+            "id": "switch_69",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_65",
+            "target": "transition_68"
+        },
+        {
+            "id": "line_71",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_66",
+            "target": "transition_70"
+        },
+        {
+            "id": "switch_73",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_67",
+            "target": "consumer_72"
+        },
+        {
+            "id": "switch_70",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_68",
+            "target": "transition_69"
+        },
+        {
+            "id": "line_86",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_69",
+            "target": "consumer_84"
+        },
+        {
+            "id": "line_80",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_70",
+            "target": "consumer_79"
+        },
+        {
+            "id": "switch_119",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_70",
+            "target": "transition_116"
+        },
+        {
+            "id": "line_81",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_71",
+            "target": "transition_80"
+        },
+        {
+            "id": "line_75",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_72",
+            "target": "transition_74"
+        },
+        {
+            "id": "switch_79",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_73",
+            "target": "transition_78"
+        },
+        {
+            "id": "line_77",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_74",
+            "target": "transition_76"
+        },
+        {
+            "id": "line_83",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_75",
+            "target": "transition_81"
+        },
+        {
+            "id": "switch_82",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_76",
+            "target": "transition_77"
+        },
+        {
+            "id": "switch_279",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_77",
+            "target": "transition_271"
+        },
+        {
+            "id": "switch_84",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_78",
+            "target": "transition_82"
+        },
+        {
+            "id": "line_87",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_79",
+            "target": "consumer_85"
+        },
+        {
+            "id": "line_89",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_80",
+            "target": "transition_87"
+        },
+        {
+            "id": "line_85",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_81",
+            "target": "transition_83"
+        },
+        {
+            "id": "line_88",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_82",
+            "target": "consumer_86"
+        },
+        {
+            "id": "switch_93",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_83",
+            "target": "transition_90"
+        },
+        {
+            "id": "switch_94",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_84",
+            "target": "transition_91"
+        },
+        {
+            "id": "line_92",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_85",
+            "target": "transition_89"
+        },
+        {
+            "id": "line_91",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_86",
+            "target": "consumer_88"
+        },
+        {
+            "id": "line_90",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_87",
+            "target": "consumer_88"
+        },
+        {
+            "id": "line_95",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_89",
+            "target": "consumer_92"
+        },
+        {
+            "id": "line_96",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_90",
+            "target": "consumer_93"
+        },
+        {
+            "id": "line_101",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_91",
+            "target": "transition_98"
+        },
+        {
+            "id": "switch_98",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_92",
+            "target": "transition_95"
+        },
+        {
+            "id": "switch_99",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_93",
+            "target": "consumer_96"
+        },
+        {
+            "id": "switch_105",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_94",
+            "target": "transition_102"
+        },
+        {
+            "id": "line_100",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_95",
+            "target": "transition_97"
+        },
+        {
+            "id": "line_102",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_96",
+            "target": "transition_99"
+        },
+        {
+            "id": "line_106",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_97",
+            "target": "transition_103"
+        },
+        {
+            "id": "line_104",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_98",
+            "target": "transition_101"
+        },
+        {
+            "id": "line_103",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_99",
+            "target": "transition_100"
+        },
+        {
+            "id": "line_110",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_100",
+            "target": "consumer_107"
+        },
+        {
+            "id": "line_109",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_101",
+            "target": "transition_106"
+        },
+        {
+            "id": "switch_107",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_102",
+            "target": "transition_104"
+        },
+        {
+            "id": "line_108",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_103",
+            "target": "consumer_105"
+        },
+        {
+            "id": "switch_111",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_104",
+            "target": "consumer_108"
+        },
+        {
+            "id": "line_113",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_105",
+            "target": "transition_110"
+        },
+        {
+            "id": "line_114",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_106",
+            "target": "consumer_111"
+        },
+        {
+            "id": "line_116",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_107",
+            "target": "transition_113"
+        },
+        {
+            "id": "line_112",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_108",
+            "target": "consumer_109"
+        },
+        {
+            "id": "line_118",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_109",
+            "target": "transition_115"
+        },
+        {
+            "id": "switch_117",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_110",
+            "target": "consumer_114"
+        },
+        {
+            "id": "line_115",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_111",
+            "target": "consumer_112"
+        },
+        {
+            "id": "line_120",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_112",
+            "target": "consumer_117"
+        },
+        {
+            "id": "line_145",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_113",
+            "target": "consumer_141"
+        },
+        {
+            "id": "line_132",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_114",
+            "target": "transition_129"
+        },
+        {
+            "id": "switch_125",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_115",
+            "target": "transition_122"
+        },
+        {
+            "id": "line_126",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_116",
+            "target": "transition_123"
+        },
+        {
+            "id": "line_121",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_117",
+            "target": "consumer_118"
+        },
+        {
+            "id": "line_124",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_118",
+            "target": "transition_121"
+        },
+        {
+            "id": "line_123",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_119",
+            "target": "consumer_120"
+        },
+        {
+            "id": "line_130",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_120",
+            "target": "transition_127"
+        },
+        {
+            "id": "line_127",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_121",
+            "target": "transition_124"
+        },
+        {
+            "id": "line_128",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_122",
+            "target": "transition_125"
+        },
+        {
+            "id": "switch_149",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_123",
+            "target": "transition_145"
+        },
+        {
+            "id": "switch_135",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_124",
+            "target": "transition_132"
+        },
+        {
+            "id": "switch_129",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_125",
+            "target": "consumer_126"
+        },
+        {
+            "id": "line_134",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_126",
+            "target": "consumer_131"
+        },
+        {
+            "id": "line_137",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_127",
+            "target": "transition_134"
+        },
+        {
+            "id": "line_133",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_128",
+            "target": "transition_130"
+        },
+        {
+            "id": "line_144",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_129",
+            "target": "transition_140"
+        },
+        {
+            "id": "line_148",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_130",
+            "target": "transition_144"
+        },
+        {
+            "id": "switch_139",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_131",
+            "target": "transition_136"
+        },
+        {
+            "id": "line_136",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_132",
+            "target": "consumer_133"
+        },
+        {
+            "id": "line_138",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_133",
+            "target": "transition_135"
+        },
+        {
+            "id": "line_141",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_134",
+            "target": "transition_138"
+        },
+        {
+            "id": "line_140",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_135",
+            "target": "transition_137"
+        },
+        {
+            "id": "line_142",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_136",
+            "target": "transition_139"
+        },
+        {
+            "id": "switch_152",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_137",
+            "target": "transition_146"
+        },
+        {
+            "id": "switch_143",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_138",
+            "target": "transition_139"
+        },
+        {
+            "id": "line_146",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_140",
+            "target": "transition_142"
+        },
+        {
+            "id": "line_151",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_141",
+            "target": "transition_147"
+        },
+        {
+            "id": "switch_147",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_142",
+            "target": "consumer_143"
+        },
+        {
+            "id": "line_196",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_142",
+            "target": "artificial_191"
+        },
+        {
+            "id": "line_154",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_143",
+            "target": "transition_148"
+        },
+        {
+            "id": "line_153",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_144",
+            "target": "transition_147"
+        },
+        {
+            "id": "switch_150",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_145",
+            "target": "transition_146"
+        },
+        {
+            "id": "line_264",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_146",
+            "target": "consumer_257"
+        },
+        {
+            "id": "line_155",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_148",
+            "target": "consumer_149"
+        },
+        {
+            "id": "line_156",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_149",
+            "target": "consumer_150"
+        },
+        {
+            "id": "line_157",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_150",
+            "target": "consumer_151"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_158",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_151",
+            "target": "transition_152"
+        },
+        {
+            "id": "switch_159",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_152",
+            "target": "transition_153"
+        },
+        {
+            "id": "switch_160",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_153",
+            "target": "transition_154"
+        },
+        {
+            "id": "line_161",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_154",
+            "target": "consumer_155"
+        },
+        {
+            "id": "switch_162",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_155",
+            "target": "transition_156"
+        },
+        {
+            "id": "switch_163",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_156",
+            "target": "consumer_157"
+        },
+        {
+            "id": "switch_164",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_157",
+            "target": "transition_158"
+        },
+        {
+            "id": "line_165",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_158",
+            "target": "transition_159"
+        },
+        {
+            "id": "line_166",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_159",
+            "target": "transition_160"
+        },
+        {
+            "id": "switch_167",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_160",
+            "target": "transition_161"
+        },
+        {
+            "id": "line_168",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_161",
+            "target": "transition_162"
+        },
+        {
+            "id": "line_169",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_162",
+            "target": "consumer_163"
+        },
+        {
+            "id": "line_170",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_163",
+            "target": "transition_164"
+        },
+        {
+            "id": "line_171",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_164",
+            "target": "consumer_165"
+        },
+        {
+            "id": "switch_172",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_165",
+            "target": "transition_166"
+        },
+        {
+            "id": "switch_173",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_166",
+            "target": "transition_167"
+        },
+        {
+            "id": "switch_174",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_167",
+            "target": "consumer_168"
+        },
+        {
+            "id": "line_175",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_168",
+            "target": "consumer_169"
+        },
+        {
+            "id": "line_176",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_169",
+            "target": "transition_170"
+        },
+        {
+            "id": "switch_180",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_170",
+            "target": "transition_174"
+        },
+        {
+            "id": "line_178",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_171",
+            "target": "transition_172"
+        },
+        {
+            "id": "line_179",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_172",
+            "target": "transition_173"
+        },
+        {
+            "id": "switch_182",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_173",
+            "target": "transition_176"
+        },
+        {
+            "id": "line_181",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_174",
+            "target": "transition_175"
+        },
+        {
+            "id": "switch_183",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_175",
+            "target": "transition_177"
+        },
+        {
+            "id": "line_187",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_176",
+            "target": "consumer_181"
+        },
+        {
+            "id": "switch_209",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_176",
+            "target": "transition_203"
+        },
+        {
+            "id": "line_184",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_177",
+            "target": "transition_178"
+        },
+        {
+            "id": "switch_185",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_178",
+            "target": "transition_179"
+        },
+        {
+            "id": "line_186",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_179",
+            "target": "transition_180"
+        },
+        {
+            "id": "switch_188",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_180",
+            "target": "transition_182"
+        },
+        {
+            "id": "line_189",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_181",
+            "target": "transition_183"
+        },
+        {
+            "id": "switch_190",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_182",
+            "target": "consumer_184"
+        },
+        {
+            "id": "line_191",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_183",
+            "target": "artificial_186"
+        },
+        {
+            "id": "line_193",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_184",
+            "target": "consumer_187"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_192",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_185",
+            "target": "artificial_186"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_198",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_185",
+            "target": "artificial_193"
+        },
+        {
+            "id": "switch_194",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_187",
+            "target": "transition_188"
+        },
+        {
+            "id": "switch_195",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_188",
+            "target": "transition_189"
+        },
+        {
+            "id": "switch_201",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_189",
+            "target": "transition_195"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_197",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_190",
+            "target": "artificial_191"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_203",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_190",
+            "target": "artificial_198"
+        },
+        {
+            "id": "line_199",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_192",
+            "target": "artificial_193"
+        },
+        {
+            "id": "line_200",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_192",
+            "target": "consumer_194"
+        },
+        {
+            "id": "line_206",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_194",
+            "target": "transition_200"
+        },
+        {
+            "id": "line_202",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_195",
+            "target": "transition_196"
+        },
+        {
+            "id": "switch_205",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_196",
+            "target": "transition_199"
+        },
+        {
+            "id": "switch_204",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_197",
+            "target": "artificial_198"
+        },
+        {
+            "id": "line_207",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_197",
+            "target": "transition_201"
+        },
+        {
+            "id": "line_217",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_199",
+            "target": "consumer_211"
+        },
+        {
+            "id": "switch_211",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_200",
+            "target": "consumer_205"
+        },
+        {
+            "id": "line_208",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_201",
+            "target": "transition_202"
+        },
+        {
+            "id": "line_210",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_202",
+            "target": "transition_204"
+        },
+        {
+            "id": "line_212",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_203",
+            "target": "consumer_206"
+        },
+        {
+            "id": "switch_213",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_204",
+            "target": "transition_207"
+        },
+        {
+            "id": "switch_219",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_205",
+            "target": "transition_213"
+        },
+        {
+            "id": "line_228",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_206",
+            "target": "transition_222"
+        },
+        {
+            "id": "line_214",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_207",
+            "target": "transition_208"
+        },
+        {
+            "id": "line_215",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_208",
+            "target": "transition_209"
+        },
+        {
+            "id": "line_216",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_209",
+            "target": "consumer_210"
+        },
+        {
+            "id": "line_218",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_210",
+            "target": "transition_212"
+        },
+        {
+            "id": "line_221",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_211",
+            "target": "transition_215"
+        },
+        {
+            "id": "line_220",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_212",
+            "target": "consumer_214"
+        },
+        {
+            "id": "switch_222",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_213",
+            "target": "consumer_216"
+        },
+        {
+            "id": "line_225",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_214",
+            "target": "transition_219"
+        },
+        {
+            "id": "line_236",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_215",
+            "target": "transition_230"
+        },
+        {
+            "id": "line_226",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_216",
+            "target": "consumer_220"
+        },
+        {
+            "id": "line_246",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_216",
+            "target": "consumer_240"
+        },
+        {
+            "id": "line_270",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_216",
+            "target": "consumer_262"
+        },
+        {
+            "id": "switch_224",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_217",
+            "target": "transition_218"
+        },
+        {
+            "id": "line_227",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_218",
+            "target": "transition_221"
+        },
+        {
+            "id": "line_229",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_219",
+            "target": "transition_223"
+        },
+        {
+            "id": "switch_242",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_220",
+            "target": "consumer_236"
+        },
+        {
+            "id": "line_232",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_221",
+            "target": "transition_226"
+        },
+        {
+            "id": "line_230",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_222",
+            "target": "consumer_224"
+        },
+        {
+            "id": "switch_235",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_223",
+            "target": "consumer_229"
+        },
+        {
+            "id": "line_231",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_224",
+            "target": "transition_225"
+        },
+        {
+            "id": "line_233",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_225",
+            "target": "consumer_227"
+        },
+        {
+            "id": "switch_234",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_226",
+            "target": "transition_228"
+        },
+        {
+            "id": "line_241",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_227",
+            "target": "transition_235"
+        },
+        {
+            "id": "switch_238",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_228",
+            "target": "transition_232"
+        },
+        {
+            "id": "line_240",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_229",
+            "target": "transition_234"
+        },
+        {
+            "id": "switch_237",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_230",
+            "target": "consumer_231"
+        },
+        {
+            "id": "line_244",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_231",
+            "target": "transition_238"
+        },
+        {
+            "id": "line_239",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_232",
+            "target": "consumer_233"
+        },
+        {
+            "id": "line_250",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_233",
+            "target": "artificial_245"
+        },
+        {
+            "id": "switch_252",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_234",
+            "target": "transition_246"
+        },
+        {
+            "id": "line_243",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_235",
+            "target": "transition_237"
+        },
+        {
+            "id": "line_245",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_236",
+            "target": "transition_239"
+        },
+        {
+            "id": "switch_248",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_237",
+            "target": "consumer_242"
+        },
+        {
+            "id": "line_253",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_238",
+            "target": "transition_247"
+        },
+        {
+            "id": "switch_249",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_239",
+            "target": "consumer_243"
+        },
+        {
+            "id": "line_247",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_240",
+            "target": "transition_241"
+        },
+        {
+            "id": "line_259",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_241",
+            "target": "transition_252"
+        },
+        {
+            "id": "line_256",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_242",
+            "target": "transition_250"
+        },
+        {
+            "id": "line_261",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_243",
+            "target": "consumer_254"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_251",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_244",
+            "target": "artificial_245"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_254",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_244",
+            "target": "artificial_249"
+        },
+        {
+            "id": "line_258",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_246",
+            "target": "transition_252"
+        },
+        {
+            "id": "line_263",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_247",
+            "target": "transition_256"
+        },
+        {
+            "id": "line_255",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_248",
+            "target": "artificial_249"
+        },
+        {
+            "id": "line_271",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_248",
+            "target": "transition_263"
+        },
+        {
+            "id": "line_257",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_250",
+            "target": "transition_251"
+        },
+        {
+            "id": "line_260",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_251",
+            "target": "consumer_253"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_265",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_253",
+            "target": "transition_256"
+        },
+        {
+            "id": "line_262",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_254",
+            "target": "transition_255"
+        },
+        {
+            "id": "switch_269",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_255",
+            "target": "transition_261"
+        },
+        {
+            "id": "line_266",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_257",
+            "target": "transition_258"
+        },
+        {
+            "id": "line_267",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_258",
+            "target": "consumer_259"
+        },
+        {
+            "id": "line_268",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_259",
+            "target": "transition_260"
+        },
+        {
+            "id": "switch_278",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_260",
+            "target": "transition_270"
+        },
+        {
+            "id": "switch_275",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_261",
+            "target": "transition_267"
+        },
+        {
+            "id": "line_272",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_262",
+            "target": "transition_264"
+        },
+        {
+            "id": "switch_273",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_263",
+            "target": "transition_265"
+        },
+        {
+            "id": "line_274",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_264",
+            "target": "consumer_266"
+        },
+        {
+            "id": "line_276",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_265",
+            "target": "consumer_268"
+        },
+        {
+            "id": "line_282",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_266",
+            "target": "transition_274"
+        },
+        {
+            "id": "line_277",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_267",
+            "target": "consumer_269"
+        },
+        {
+            "id": "switch_290",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_268",
+            "target": "transition_282"
+        },
+        {
+            "id": "line_280",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_269",
+            "target": "consumer_272"
+        },
+        {
+            "id": "line_281",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_270",
+            "target": "consumer_273"
+        },
+        {
+            "id": "line_284",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_271",
+            "target": "transition_276"
+        },
+        {
+            "id": "line_309",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_271",
+            "target": "transition_300"
+        },
+        {
+            "id": "switch_291",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_272",
+            "target": "consumer_283"
+        },
+        {
+            "id": "line_283",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_273",
+            "target": "transition_275"
+        },
+        {
+            "id": "line_285",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_274",
+            "target": "consumer_277"
+        },
+        {
+            "id": "switch_288",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_275",
+            "target": "consumer_280"
+        },
+        {
+            "id": "line_295",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_276",
+            "target": "consumer_286"
+        },
+        {
+            "id": "line_286",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_277",
+            "target": "consumer_278"
+        },
+        {
+            "id": "line_287",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_278",
+            "target": "transition_279"
+        },
+        {
+            "id": "line_300",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_279",
+            "target": "transition_291"
+        },
+        {
+            "id": "switch_289",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_280",
+            "target": "transition_281"
+        },
+        {
+            "id": "line_294",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_281",
+            "target": "transition_285"
+        },
+        {
+            "id": "switch_292",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_282",
+            "target": "transition_284"
+        },
+        {
+            "id": "switch_293",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_283",
+            "target": "transition_285"
+        },
+        {
+            "id": "line_296",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_284",
+            "target": "transition_287"
+        },
+        {
+            "id": "line_297",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_286",
+            "target": "transition_288"
+        },
+        {
+            "id": "line_298",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_287",
+            "target": "consumer_289"
+        },
+        {
+            "id": "switch_301",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_288",
+            "target": "transition_292"
+        },
+        {
+            "id": "line_299",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "consumer_289",
+            "target": "transition_290"
+        },
+        {
+            "id": "line_302",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_290",
+            "target": "transition_293"
+        },
+        {
+            "id": "line_304",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_291",
+            "target": "transition_295"
+        },
+        {
+            "id": "line_307",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_292",
+            "target": "artificial_299"
+        },
+        {
+            "id": "switch_303",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switchable": true,
+            "switching_cost": 1,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_293",
+            "target": "transition_294"
+        },
+        {
+            "id": "line_305",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_294",
+            "target": "transition_296"
+        },
+        {
+            "id": "line_306",
+            "r": 1,
+            "x": 0.5,
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "transition_295",
+            "target": "transition_297"
+        },
+        {
+            "breaker": true,
+            "id": "breaker_308",
+            "imax": 100,
+            "switching_cost": 0,
+            "fault_frequency": 0,
+            "sectioning_time": "PT0S",
+            "repair_time": "PT0S",
+            "source": "provider_298",
+            "target": "artificial_299"
+        }
+    ],
+    "@schema_version": 1
+}

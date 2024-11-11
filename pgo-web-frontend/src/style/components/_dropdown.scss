@@ -1,0 +1,43 @@
+.app-dropdown-action-btn {
+  padding: 1.25rem 0;
+}
+
+.row-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.app-dropdown-link {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 2rem;
+  padding-right: 1.25rem;
+
+  color: $grey-dark;
+
+  &:hover {
+    color: black;
+    background-color: whitesmoke;
+    cursor: pointer;
+  }
+
+  .app-dropdown-icon {
+    margin-left: -1.25rem;
+    margin-right: 0.25rem;
+    &.blue {
+      color: $link !important;
+    }
+  }
+}
+
+.action-btns-wrapper {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+
+  >*:not(:first-child) {
+    margin-left: 3px;
+  }
+}

@@ -1,0 +1,4 @@
+
+# These scripts are run by bash, also on Windows systems
+Scripts/*.sh  text eol=lf
+*.sh  text eol=lf

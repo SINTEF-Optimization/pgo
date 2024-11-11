@@ -1,0 +1,16 @@
+{
+    "nodes": [
+        {
+            "type": "provider",
+            "p_gen_max": 10.0,
+            "p_gen_min": 0.0,
+            "q_gen_max": 10.0,
+            "q_gen_min": -10.0,
+            "v_gen": 100,
+            "id": "1"
+        }
+    ],
+    "name": "Example",
+    "lines": [],
+    "@schema_version": 1
+}

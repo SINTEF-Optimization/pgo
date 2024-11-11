@@ -1,0 +1,9 @@
+/**/.vs/
+/packages/
+/**/obj/
+/**/bin/
+/**/Sintef.Pgo.REST/wwwroot/docfx/
+/**/Sintef.Pgo.REST.Doc/log.txt
+/**/*.csproj.user
+launchSettings.json
+dotnet-tools.json

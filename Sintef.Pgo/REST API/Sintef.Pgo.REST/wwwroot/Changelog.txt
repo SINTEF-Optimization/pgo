@@ -1,0 +1,6 @@
+﻿CHANGELOG for PGO
+=================
+
+Version 1.2.2
+
+ - First open source version. Older history is available only in the SINTEF internal repo.

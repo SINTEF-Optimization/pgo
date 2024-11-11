@@ -1,0 +1,31 @@
+{
+    "graph": {
+      "name": "A provider and a consumer"
+    },
+    "nodes": [
+      {
+        "id": "Source",
+        "type": "provider",
+        "v_gen": 22,
+        "p_gen_max": 1,
+        "p_gen_min": 0,
+        "q_gen_max": 1,
+        "q_gen_min": 0
+      },
+      {
+        "id": "Load",
+        "type": "consumer",
+        "v_min": 20,
+        "v_max": 24
+      }
+    ],
+    "links": [
+      {
+        "id": "line",
+        "source": "Source",
+        "target": "Load",
+        "r": 1,
+        "x": 1
+      }
+    ]
+  }

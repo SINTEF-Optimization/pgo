@@ -1,0 +1,21 @@
+{
+    "period_solutions": [
+        {
+            "switch_settings": [
+                {
+                    "line_id": "line8",
+                    "open": true
+                },
+                {
+                    "line_id": "line21",
+                    "open": false
+                },
+                {
+                    "line_id": "line15",
+                    "open": true
+                }
+            ],
+            "period": "Day 1"
+        }
+    ]
+}

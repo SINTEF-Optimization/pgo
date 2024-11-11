@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Debug;Release;Test</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JunitXml.TestLogger" Version="3.0.134" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.8" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\REST API\Sintef.Pgo.REST.Client\Sintef.Pgo.REST.Client.csproj" />
+    <ProjectReference Include="..\..\REST API\Sintef.Pgo.REST\Sintef.Pgo.REST.csproj" />
+    <ProjectReference Include="..\Sintef.Pgo.Core.Tests\Sintef.Pgo.Core.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

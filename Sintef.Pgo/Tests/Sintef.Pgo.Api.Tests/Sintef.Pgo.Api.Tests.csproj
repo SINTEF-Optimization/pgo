@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JunitXml.TestLogger" Version="3.0.134" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
+    <PackageReference Include="Sintef.Scoop.Kernel.TestUtils" Version="1.11.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\.NET API\Sintef.Pgo.Api.Factory\Sintef.Pgo.Api.Factory.csproj" />
+    <ProjectReference Include="..\..\.NET API\Sintef.Pgo.Api.Impl\Sintef.Pgo.Api.Impl.csproj" />
+    <ProjectReference Include="..\Sintef.Pgo.Core.Tests\Sintef.Pgo.Core.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SignalR Test page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">&nbsp;</div>
+            <div class="col-6">
+                SessionId...<input type="text" id="group-name" />
+                <input type="button" id="join-group" value="Join Session" />
+                <input type="button" id="leave-group" value="Leave Session" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">&nbsp;</div>
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="/js/solutionstatus.js"></script>
+</body>
+</html>

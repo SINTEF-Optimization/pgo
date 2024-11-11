@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;netstandard2.0;net472</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
+    <!-- Don't include internal doc in nuget package -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+    <!-- Nuget package properties -->
+    <PackageId>Sintef.Pgo.Core</PackageId>
+    <Version>1.2.2</Version>
+    <Authors>SINTEF Optimization</Authors>
+    <Description>A library for optimizing power network configuration</Description>
+    <Copyright>Copyright © SINTEF 2023</Copyright>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotNetRdf.Core" Version="3.0.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Sintef.Scoop.Kernel" Version="1.11.2" />
+    <PackageReference Include="UnitsNet" Version="5.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Sintef.Pgo.Core.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sintef.Pgo.DataContracts\Sintef.Pgo.DataContracts.csproj" />
+  </ItemGroup>
+
+</Project>

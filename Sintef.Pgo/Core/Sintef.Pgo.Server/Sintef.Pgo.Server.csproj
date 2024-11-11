@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net7.0</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
+    <!-- Don't include internal doc in nuget package -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+    <!-- Nuget package properties -->
+    <PackageId>Sintef.Pgo.Server</PackageId>
+    <Version>1.2.2</Version>
+    <Authors>SINTEF Optimization</Authors>
+    <Description>A library for optimizing power network configuration</Description>
+    <Copyright>Copyright © SINTEF 2023</Copyright>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sintef.Pgo.Core\Sintef.Pgo.Core.csproj" />
+  </ItemGroup>
+
+</Project>

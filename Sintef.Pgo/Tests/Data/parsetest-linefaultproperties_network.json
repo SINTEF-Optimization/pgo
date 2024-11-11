@@ -1,0 +1,41 @@
+{
+    "nodes": [
+        {
+            "type": "provider",
+            "p_gen_max": 10.0,
+            "p_gen_min": 0.0,
+            "q_gen_max": 10.0,
+            "q_gen_min": -10.0,
+            "v_gen": 100,
+            "id": "1"
+        },
+        {
+            "type": "consumer",
+            "consumer_type": "industry",
+            "p_load": 0.1,
+            "q_load": 0.06,
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "id": "2"
+        }
+    ],
+    "name": "Baran-wu case",
+    "lines": [
+        {
+            "id": "line",
+            "r": 0.0922,
+            "x": 0.047,
+            "length": 1.0,
+            "cross_section": 1.0,
+            "imax": 1000.0,
+            "switchable": false,
+            "switching_cost": 81,
+            "source": "1",
+            "target": "2",
+            "fault_frequency": "12.0",
+            "sectioning_time": "PT0H5M25S",
+            "repair_time": "PT6H0M0S"
+        }
+    ],
+    "@schema_version": 1
+}

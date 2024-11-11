@@ -1,0 +1,12 @@
+body {
+  background-color: $sintef-warm-gray;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+}
+

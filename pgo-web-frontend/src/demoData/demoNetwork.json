@@ -1,0 +1,654 @@
+{
+    "nodes": [
+        {
+            "type": "provider",
+            "p_gen_max": 1000000,
+            "v_gen": 220,
+            "coordinates": [
+                1,
+                0.5514998765457465
+            ],
+            "id": "800"
+        },
+        {
+            "type": "provider",
+            "p_gen_max": 1000000,
+            "v_gen": 220,
+            "coordinates": [
+                -0.39487832690903,
+                -0.05596518003369784
+            ],
+            "id": "888"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.8998694595991986,
+                0.5032464681484426
+            ],
+            "id": "802"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.8040719518787623,
+                0.44164208008854006
+            ],
+            "id": "806"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.7225612497219184,
+                0.35246268115706886
+            ],
+            "id": "808"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.6021959307760703,
+                0.3486054275946379
+            ],
+            "id": "812"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.48530153264037945,
+                0.33930769128803717
+            ],
+            "id": "814"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.1787135240508028,
+                0.6059253445788243
+            ],
+            "id": "820"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.14688001518295063,
+                0.7181137946075552
+            ],
+            "id": "822"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.14612093035977888,
+                0.27349614110688186
+            ],
+            "id": "824"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.05765470405005954,
+                0.3554659927552359
+            ],
+            "id": "826"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.0847972206558725,
+                0.1648732982118827
+            ],
+            "id": "828"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                0.00011051722266058244,
+                0.07849302374836518
+            ],
+            "id": "830"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.11098459318822983,
+                0.025833914104535515
+            ],
+            "id": "854"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.18946551299721098,
+                0.12243908422606162
+            ],
+            "id": "856"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.18118984344829175,
+                -0.07597306900022138
+            ],
+            "id": "852"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.49786974072284335,
+                0.014421234985951763
+            ],
+            "id": "890"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.323967589012222,
+                -0.2663258521558386
+            ],
+            "id": "858"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.43267059839097227,
+                -0.23188597831286362
+            ],
+            "id": "864"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.3675923046028547,
+                -0.39104832888041197
+            ],
+            "id": "834"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.4975718438976272,
+                -0.4184265615591045
+            ],
+            "id": "842"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.7328292839559911,
+                -0.4644575305888318
+            ],
+            "id": "846"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.8434884377129604,
+                -0.4883390150389333
+            ],
+            "id": "848"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.3043617911472413,
+                -0.5013268119490277
+            ],
+            "id": "860"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.27370077812065513,
+                -0.6214478676860914
+            ],
+            "id": "836"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.3505672903628002,
+                -0.7169838052369266
+            ],
+            "id": "840"
+        },
+        {
+            "type": "transition",
+            "coordinates": [
+                -0.14735535426625773,
+                -0.8162373342845586
+            ],
+            "id": "838"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                0.7953179661218248,
+                0.2530114884181327
+            ],
+            "id": "810"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                0.3662076252764602,
+                0.3286706740911741
+            ],
+            "id": "850"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                0.24220214358438327,
+                0.35972972050040763
+            ],
+            "id": "816"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                0.21207709875771077,
+                0.48811088428210403
+            ],
+            "id": "818"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                -0.2899317297717544,
+                -0.13972002467126338
+            ],
+            "id": "832"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                -0.6182569379738723,
+                -0.44154435240106804
+            ],
+            "id": "844"
+        },
+        {
+            "load": 100,
+            "type": "consumer",
+            "coordinates": [
+                -0.18739991339801795,
+                -0.7066671086407473
+            ],
+            "id": "862"
+        }
+    ],
+    "name": "IEEE34 case",
+    "lines": [
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "800",
+            "target": "802",
+            "id": "line0"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "888",
+            "target": "832",
+            "id": "line1"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "888",
+            "target": "890",
+            "id": "line2"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "802",
+            "target": "806",
+            "id": "line3"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "806",
+            "target": "808",
+            "id": "line4"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "808",
+            "target": "812",
+            "id": "line5"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "808",
+            "target": "810",
+            "id": "line6"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "812",
+            "target": "814",
+            "id": "line7"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": true,
+            "source": "814",
+            "target": "850",
+            "id": "line8"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "820",
+            "target": "818",
+            "id": "line9"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "820",
+            "target": "822",
+            "id": "line10"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "824",
+            "target": "816",
+            "id": "line11"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "824",
+            "target": "826",
+            "id": "line12"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "824",
+            "target": "828",
+            "id": "line13"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "828",
+            "target": "830",
+            "id": "line14"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": true,
+            "source": "830",
+            "target": "854",
+            "id": "line15"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "854",
+            "target": "856",
+            "id": "line16"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "854",
+            "target": "852",
+            "id": "line17"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "852",
+            "target": "832",
+            "id": "line18"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "858",
+            "target": "832",
+            "id": "line19"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "858",
+            "target": "864",
+            "id": "line20"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": true,
+            "source": "858",
+            "target": "834",
+            "id": "line21"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "834",
+            "target": "842",
+            "id": "line22"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "834",
+            "target": "860",
+            "id": "line23"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "842",
+            "target": "844",
+            "id": "line24"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "846",
+            "target": "844",
+            "id": "line25"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "846",
+            "target": "848",
+            "id": "line26"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "860",
+            "target": "836",
+            "id": "line27"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "836",
+            "target": "840",
+            "id": "line28"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "836",
+            "target": "862",
+            "id": "line29"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "838",
+            "target": "862",
+            "id": "line30"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "850",
+            "target": "816",
+            "id": "line31"
+        },
+        {
+            "length": 1,
+            "r": 0.7,
+            "x": 0.7,
+            "cross_section": 1,
+            "imax": 1000,
+            "switchable": false,
+            "source": "816",
+            "target": "818",
+            "id": "line32"
+        }
+    ],
+    "@schema_version": 1
+}

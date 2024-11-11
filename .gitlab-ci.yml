@@ -1,0 +1,100 @@
+# This file contains the GitLab pipeline definition for PGO.
+# It is not expected to work outside SINTEF's GitLab environment.
+
+# List of stages for jobs, and their order of execution
+stages:          
+  - build
+  - test
+  - publish
+
+
+# This job builds the entire solution (.NET)
+build-cs-job:       
+  stage: build
+  image: mcr.microsoft.com/dotnet/sdk:7.0
+  script:
+    - dotnet build "Sintef.Pgo.sln" -c Release
+
+
+# This job builds the web app
+build-js-job:       
+  stage: build
+  image: node:14
+  variables:
+    PGO_FRONTEND_BUILD_OUTPUT_DIR: $CI_PROJECT_DIR/Sintef.Pgo/REST API/Sintef.Pgo.REST/wwwroot
+  cache:
+    paths:
+      - pgo-web-frontend/.npm
+  script:
+    - cd pgo-web-frontend
+    - npm ci --cache .npm
+    - npm run build -- --no-clean
+
+
+# This job runs all tests (if build succeeds)
+unit-test-job:   
+  stage: test    
+  image: mcr.microsoft.com/dotnet/sdk:7.0
+  dependencies: 
+    - build-cs-job
+  script:
+    - 'dotnet test -c Release --logger "console;verbosity=normal" --logger:junit'
+  artifacts:
+    when: always  # save test results even when the task fails
+    expire_in: 1 year
+    paths:
+      - "**/TestResults.xml"
+    reports:
+        junit: "**/TestResults.xml"
+
+
+# This job publishes a Docker image with a tag that is the release number, e.g. 1.2.3
+# The job can be run manually in the publish stage.
+publish-docker-release-job:      
+  stage: publish 
+  when: manual
+  image: docker:20.10.16
+  tags:
+    - dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  services:
+    - docker:20.10.16-dind
+  dependencies: 
+    - build-js-job
+  before_script:
+    - docker info
+  script:
+    - apk update && apk upgrade && apk add bash git
+    - bash Scripts/Publish_docker.sh release-image
+
+
+# This job publishes a Docker image with a tag that is the commit hash
+# The job can be run manually in the publish stage.
+publish-docker-commit-job:      
+  stage: publish
+  when: manual
+  image: docker:20.10.16
+  tags:
+    - dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  services:
+    - docker:20.10.16-dind
+  dependencies: 
+    - build-js-job
+  before_script:
+    - docker info
+  script:
+    - apk update && apk upgrade && apk add bash git
+    - bash Scripts/Publish_docker.sh commit-image
+
+
+# This job publishes the .NET API as a nuget package.
+# The job can be run manually in the publish stage.
+publish-nuget-release-job:      
+  stage: publish
+  when: manual
+  image: mcr.microsoft.com/dotnet/sdk:7.0
+  script:
+    - bash Scripts/Publish_nuget.sh

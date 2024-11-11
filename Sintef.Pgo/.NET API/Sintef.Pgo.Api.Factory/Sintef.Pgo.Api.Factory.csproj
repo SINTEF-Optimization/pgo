@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <!-- Include doc in nuget package -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Nuget package properties -->
+    <PackageId>Sintef.Pgo.Api.Factory</PackageId>
+    <Version>1.2.2</Version>
+    <Authors>SINTEF Optimization</Authors>
+    <Description>A library for optimizing power network configuration</Description>
+    <Copyright>Copyright © SINTEF 2023</Copyright>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sintef.Pgo.Api.Impl\Sintef.Pgo.Api.Impl.csproj" />
+    <ProjectReference Include="..\Sintef.Pgo.Api\Sintef.Pgo.Api.csproj" />
+  </ItemGroup>
+
+</Project>

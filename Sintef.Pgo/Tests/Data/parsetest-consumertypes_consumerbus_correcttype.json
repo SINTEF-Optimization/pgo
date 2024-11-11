@@ -1,0 +1,14 @@
+{
+    "nodes": [
+        {
+            "type": "consumer",
+            "consumer_type": "industry",
+            "v_min": 0.8,
+            "v_max": 1.2,
+            "id": "1"
+        }
+    ],
+    "name": "Example",
+    "lines": [],
+    "@schema_version": 1
+}
