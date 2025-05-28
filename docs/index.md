@@ -1,3 +1,6 @@
+---
+title: Power Grid Optimizer
+---
 # Power Grid Optimizer
 
 
