@@ -1,0 +1,31 @@
+$link-color: #003c65;
+$body-heading-color: #143B64;
+$sidebar-color: #FBFBFA;
+$feedback-color: darken($sidebar-color, 3%);
+$nav-width: 25rem;
+
+img.logoimg {
+  width: 7rem;
+  align-self: flex-start;
+  padding-left: 1rem;
+}
+
+main a {
+    background-color: initial;
+    color: #003c65;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #14b978;
+    text-decoration-color: #14b978;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.1875rem;
+    transition: all .15s ease-in-out;
+}
+
+main a:hover {
+    background-color: #cdfae1;
+}
+
+main a:active {
+   background-color: initial;
+   color: #05814f;
+}
