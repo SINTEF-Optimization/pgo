@@ -25,7 +25,7 @@ An introduction to the PGO service may be found in the [background section](back
 
 
 ## The Web Application
-![image](assets/PgoCapture-600x384.jpg){: style="float: right; width: 15rem;"}
+![image](PgoCapture-600x384.jpg){: style="float: right; width: 15rem;"}
 
 This on-line web application provides a user interface to the PGO service. It uses the PGO service through the API mentioned above.
 
