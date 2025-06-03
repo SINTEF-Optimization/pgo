@@ -8,7 +8,7 @@
   
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="dotnet new tool-manifest --force" />
-    <Exec Command="dotnet tool update docfx" />
+    <Exec Command="dotnet tool update docfx --version 2.76.0" />
     <Exec Command="dotnet tool run docfx docfx.json" />
   </Target>
 
