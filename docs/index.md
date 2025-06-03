@@ -3,6 +3,10 @@ title: Home
 nav_order: 1
 ---
 
+# Power Grid Optimizer
+
+![bannerimage](images/forsyningssikkerhet_2.jpg)
+
 
 **The *Power Grid Optimizer* (PGO) is a software developed by SINTEF for optimizing the configuration of distribution grids.**
 
@@ -25,7 +29,7 @@ An introduction to the PGO service may be found in the [background section](back
 
 
 ## The Web Application
-![image](PgoCapture-600x384.jpg){: style="float: right; width: 15rem;"}
+![image](images/PgoCapture-600x384.jpg){: style="float: right; width: 15rem;"}
 
 This on-line web application provides a user interface to the PGO service. It uses the PGO service through the API mentioned above.
 

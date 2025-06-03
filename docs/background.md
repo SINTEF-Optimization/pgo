@@ -30,7 +30,7 @@ We expect that usage of the PGO may achieve significant savings and added grid r
 
 For a fast touch-and-feel introduction, please try out our [web application](https://pgosintef.azurewebsites.net/#/). This is a simple web-based user interface which you can use to access the PGO server and try out some grid configuration optimisation. The user manualfor the web application is [here](demo-client-user-manual.md).
 
-![image](PgoCapture-600x384.jpg)
+![image](images/PgoCapture-600x384.jpg)
 
 ### The API
 
@@ -44,7 +44,7 @@ The API is http-based (see Figure 2). Simply put, this API can be used programma
  * Upload any configuration that may have been otherwise produced outside the PGO, and have it evaluated in terms of power flow and configuration quality.
 
 
-| ![pgo_swagger-600x568.png](pgo_swagger-600x568.png) | 
+| ![pgo_swagger-600x568.png](images/pgo_swagger-600x568.png) | 
 |:--:| 
 | *The service comes with a complete on-line API reference documentation* |
 

@@ -9,7 +9,7 @@ Below you will find an overview of the various types of documentation that will 
 The following documentation is available for the PGO service:
 
  * [An introduction to the PGO model](introduction.md)
- * [Modelling examples](modelling.md)
+ * [Modelling examples](modelling-examples.md)
  * API documentation:
    * [Getting started using the API](api-getting-started.md)
    * [Full API reference](https://pgosintef.azurewebsites.net/swagger/index.html)

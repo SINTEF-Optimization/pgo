@@ -47,7 +47,7 @@ In addition, a start and end configuration may be provided, describing the state
 ## The models
 
 
-In the current version, PGO uses JSON-formatted data to communicate problem data and solutions (in the near future also CIM data communication will be supported). Details on the structure of the JSON data can be viewed under the Models header in the served API overview, see [getting started](api-getting.started.md). In this section we will describe the concepts more generally, leaving the technical details to the API documentation. In the [examples](modelling.md) we show some simple illustrations of how to express a problem on the JSON format.
+In the current version, PGO uses JSON-formatted data to communicate problem data and solutions (in the near future also CIM data communication will be supported). Details on the structure of the JSON data can be viewed under the Models header in the served API overview, see [getting started](api-getting.started.md). In this section we will describe the concepts more generally, leaving the technical details to the API documentation. In the [modelling examples](modelling-examples.md), we show some simple illustrations of how to express a problem on the JSON format.
 
 ### The power grid
 
