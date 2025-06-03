@@ -20,7 +20,7 @@ When first starting the web application, the screen will be all blank except for
 To try out the PGO web application without having to provide a PGO network file, click the menu item *Add the demo network*.
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="width: 30rem;"}
+![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="width: 15rem;"}
 
 When a network has successfully been loaded into PGO, additional items will appear on the screen:
 
@@ -82,7 +82,7 @@ The default optimization objectives are:
 
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="width: 30rem;"}
+![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="width: 20rem;"}
 
 When the *Stop optimization* button is clicked, the current best configuration will be loaded into the map view and can be inspected by moving around the map and clicking on elements for details.
 
