@@ -20,7 +20,7 @@ When first starting the web application, the screen will be all blank except for
 To try out the PGO web application without having to provide a PGO network file, click the menu item *Add the demo network*.
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="width: 30rem;"}
 
 When a network has successfully been loaded into PGO, additional items will appear on the screen:
 
@@ -30,12 +30,12 @@ When a network has successfully been loaded into PGO, additional items will appe
  * **Mini-map view** and **element details** are shown in the right-side column.
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app GUI overview](images/pgo_demo_ss2-1536x693.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app GUI overview](images/pgo_demo_ss2-1536x693.png){: style="width: 30rem;"}
 
 Clicking the *View network analysis* button will open a dialog window giving some basic information about the loaded network.
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app network analysis](images/pgo_demo_ss3-2-768x682.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app network analysis](images/pgo_demo_ss3-2-768x682.png){: style="width: 30rem;"}
 
 ### Setting up the scenario
 
@@ -47,7 +47,7 @@ Both the demand forecast and the optional starting configuration need to be conv
 
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app scenario creation](images/pgo_demo_ss6-1-600x424.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app scenario creation](images/pgo_demo_ss6-1-600x424.png){: style="width: 30rem;"}
 
 When a scenario has been successfully loaded into PGO, additional items will appear on the screen:
 
@@ -60,13 +60,13 @@ When a scenario has been successfully loaded into PGO, additional items will app
 
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app solution view](images/pgo_demo_ss7.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app solution view](images/pgo_demo_ss7.png){: style="width: 30rem;"}
 
 When the configuration is not yet feasible, the *Feasible* item in *Solution values* will contain a button for viewing the remaining feasibility issues. Clicking this button opens a detailed description of the feasibility issues.
 
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app constraint violations](images/pgo_demo_ss8-1.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app constraint violations](images/pgo_demo_ss8-1.png){: style="width: 30rem;"}
 
 ### Managing the optimization process
 
@@ -82,12 +82,12 @@ The default optimization objectives are:
 
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="width: 30rem;"}
 
 When the *Stop optimization* button is clicked, the current best configuration will be loaded into the map view and can be inspected by moving around the map and clicking on elements for details.
 
 {: style="text-align: center;"}
-![Screenshot of the PGO web app map view](images/pgo_demo_ss10-600x597.png){: style="width: 15rem;"}
+![Screenshot of the PGO web app map view](images/pgo_demo_ss10-600x597.png){: style="width: 30rem;"}
 
 The symbols have the following meaning:
 
