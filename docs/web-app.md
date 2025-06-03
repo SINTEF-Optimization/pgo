@@ -19,7 +19,8 @@ When first starting the web application, the screen will be all blank except for
 
 To try out the PGO web application without having to provide a PGO network file, click the menu item *Add the demo network*.
 
-![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="text-align: center; width: 15rem;"}
+{: style="text-align: center;"}
+![Screenshot of the PGO web app network selection](images/pgo_demo_ss1.png){: style="width: 15rem;"}
 
 When a network has successfully been loaded into PGO, additional items will appear on the screen:
 
@@ -28,12 +29,13 @@ When a network has successfully been loaded into PGO, additional items will appe
  * **Map view** is shown in the middle column. You can move around in the network and click buses and lines to see detailed information.
  * **Mini-map view** and **element details** are shown in the right-side column.
 
-![Screenshot of the PGO web app GUI overview](images/pgo_demo_ss2-1536x693.png){: style="text-align: center; width: 15rem;"}
+{: style="text-align: center;"}
+![Screenshot of the PGO web app GUI overview](images/pgo_demo_ss2-1536x693.png){: style="width: 15rem;"}
 
 Clicking the *View network analysis* button will open a dialog window giving some basic information about the loaded network.
 
-
-![Screenshot of the PGO web app network analysis](images/pgo_demo_ss3-2-768x682.png){: style="text-align: center; width: 15rem;"}
+{: style="text-align: center;"}
+![Screenshot of the PGO web app network analysis](images/pgo_demo_ss3-2-768x682.png){: style="width: 15rem;"}
 
 ### Setting up the scenario
 
@@ -43,7 +45,9 @@ If you want the configurations to be optimized for switching costs relative to s
 
 Both the demand forecast and the optional starting configuration need to be converted to the PGO JSON formats and uploaded through the dialog window that appears when clicking the *Add a new scenario menu* item in the scenario selection menu.
 
-![Screenshot of the PGO web app scenario creation](images/pgo_demo_ss6-1-600x424.png){: style="text-align: center; width: 15rem;"}
+
+{: style="text-align: center;"}
+![Screenshot of the PGO web app scenario creation](images/pgo_demo_ss6-1-600x424.png){: style="width: 15rem;"}
 
 When a scenario has been successfully loaded into PGO, additional items will appear on the screen:
 
@@ -54,11 +58,15 @@ When a scenario has been successfully loaded into PGO, additional items will app
    * **Optimization progress** chart shows how the best solution’s objective value is changing over time when the optimization is running.
  * **Period selector** menu in the middle column allows browsing through the demand forecast periods.
 
-![Screenshot of the PGO web app solution view](images/pgo_demo_ss7.png){: style="text-align: center; width: 15rem;"}
+
+{: style="text-align: center;"}
+![Screenshot of the PGO web app solution view](images/pgo_demo_ss7.png){: style="width: 15rem;"}
 
 When the configuration is not yet feasible, the *Feasible* item in *Solution values* will contain a button for viewing the remaining feasibility issues. Clicking this button opens a detailed description of the feasibility issues.
 
-![Screenshot of the PGO web app constraint violations](images/pgo_demo_ss8-1.png){: style="text-align: center; width: 15rem;"}
+
+{: style="text-align: center;"}
+![Screenshot of the PGO web app constraint violations](images/pgo_demo_ss8-1.png){: style="width: 15rem;"}
 
 ### Managing the optimization process
 
@@ -72,11 +80,14 @@ The default optimization objectives are:
  * Switching cost: a low weight is given to the cost of opening or closing a switch from one period to another. Note that a switching cost factor for each individual switch is given in the network data.
  * KILE cost: regulation of quality of supply.
 
-![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="text-align: center; width: 15rem;"}
+
+{: style="text-align: center;"}
+![Screenshot of the PGO web app solution values](images/pgo_demo_ss9.png){: style="width: 15rem;"}
 
 When the *Stop optimization* button is clicked, the current best configuration will be loaded into the map view and can be inspected by moving around the map and clicking on elements for details.
 
-![Screenshot of the PGO web app map view](images/pgo_demo_ss10-600x597.png){: style="text-align: center; width: 15rem;"}
+{: style="text-align: center;"}
+![Screenshot of the PGO web app map view](images/pgo_demo_ss10-600x597.png){: style="width: 15rem;"}
 
 The symbols have the following meaning:
 
