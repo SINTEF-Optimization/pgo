@@ -5,6 +5,7 @@ Power Grid Optimizer (PGO) is a software for power grid topology optimization. T
 ## License
 
 PGO is licensed under the GNU Lesser General Public License (LGPL). See the file [LICENSE](LICENSE).
+PGO also includes third party software that is distributed under other licenses. See the file [Licenses/README.md](Licenses/README.md).
 
 ## Getting started
 
