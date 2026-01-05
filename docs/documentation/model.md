@@ -4,29 +4,25 @@ nav_order: 1
 parent: Documentation
 ---
 
-# Introduction to the PGO model
-This text describes the configuration optimization problem and the models relied upon to solve it. First we will state the problem and the most important assumptions, then we discuss how this problem is modelled technically, in code.
+# The PGO model
+This text describes the configuration optimization problem and the models relied upon to solve it. For an overview of how to set up such a model in code, please see the [main PGO documentation page](index.md).
 
-## The problem
-An important problem a distribution network operator needs to solve is how to configure and operate the network. The Power Grid Optimizer aims to assist the operator in this respect, in particular with respect to the switch settings. A full set of switch settings and other choices (like transformer operation modes) will be referred to as a network configuration. A sequence of such configurations is referred to as a configuration schedule, or solution. The core problem in this manual is the Multiperiod Distribution Network Configuration Problem, or MDNCP:
+## The optimization problem
+An important problem a distribution network operator needs to solve is how to configure and operate the network. The Power Grid Optimizer aims to assist the operator in this respect, in particular with respect to the switch settings. A full set of switch settings and other choices (like transformer operation modes) will be referred to as a grid configuration. 
 
-*For a given power network and a periodized forecast, what is the optimal configuration schedule?*
+A time step (or periodized) sequence of such configurations is referred to as a configuration schedule, or solution. The core problem in this manual is the Multiperiod Distribution grid configuration Problem, or MDGCP:
 
-An optimal configuration schedule must satisfy certain conditions. Between periods, the changes required to the configuration must be doable in terms of resources and time, and for any particular period the configuration must provide the required power in a feasible manner.
+*For a given power network and a periodized demand forecast, what is the optimal configuration schedule?*
 
-A key assumption that the present software relies on is the following:
+An optimal configuration schedule must satisfy certain conditions. Between periods, the required changes to the configuration must be doable in terms of resources and time, and for any particular period the configuration must provide the required power in a feasible manner. The configuration must also satisfy constraints related to the resulting power flow (see below).
 
-*A legal configuration must be radial.*
+The present version of the software is limited to _radial_ grid configurations, with radiality understood to mean that every load must draw its power from exactly one source, and there can only be one path through the network from a given source to a given load.
 
-Here radiality is understood to mean that every load must draw its power from exactly one source, and there can only be one path through the network from a given source to a given load.
-
-In addition, the software supports the following constraints:
+In addition, the model supports the following constraints:
 
  * Voltage limits for consumers, lines, and transformers.
  * Current limits for lines.
  * Power capacities for substations.
-
-The above conditions together with the key assumption enforce that a solution is valid only if every load can draw the power requested.
 
 There are several ways in which one might measure solution quality. The software supports (weighted combinations of) the following quality measures:
 
@@ -35,25 +31,23 @@ There are several ways in which one might measure solution quality. The software
  * Total power loss.
  * Avoiding the current limit (i.e. one might want to operate at the most at 80% of the current limit for any given line).
 
-To set up an MDNCP, the user must provide at minimum the following two things:
+To set up an MDGCP, the user must provide at minimum the following two things:
 
  * A description of the power network.
  * A demand forecast.
 
-If the problem to be solved is a static one (“normaldele” in Norway) one sets up a forecast with only a single period, presumably based on aggregated/averaged data, and runs the model for this single period.
+If the problem to be solved is a static one (i.e. a _default configuration_; “normaldele” in Norway) one sets up a forecast with only a single period, presumably based on aggregated/averaged data, and runs the model for this single period.
 
 In addition, a start and end configuration may be provided, describing the state the network will be configured in just prior to and just after the time period for which the optimization is run. In the next section we describe the content of these models.
 
-## The models
-
-
-In the current version, PGO uses JSON-formatted data to communicate problem data and solutions (in the near future also CIM data communication will be supported). Details on the structure of the JSON data can be viewed under the Models header in the served API overview, see [getting started](api-getting.started.md). In this section we will describe the concepts more generally, leaving the technical details to the API documentation. In the [examples](modelling.md) we show some simple illustrations of how to express a problem on the JSON format.
+## Model concepts
+In this section we will describe the model concepts more generally, leaving the technical details to the API documentation. In the [modelling examples](./modelling_examples.md) we show some simple illustrations of how to express a problem on the PGO JSON format.
 
 ### The power grid
 
-The PGO software for network configuration does not need to consider every aspect of a power network to provide network configurations. Therefore, a model that is simplified “just enough” is used, representing the power network as a graph, most of whose edges correspond to real-world AC power lines[^1] and whose nodes come in three kinds:
+The PGO software for grid configuration does not need to consider every aspect of a power network to provide grid configurations. Therefore, a model that is simplified “just enough” is used, representing the power network as a graph, most of whose edges correspond to real-world AC power lines[^1] and whose nodes come in three kinds:
 
- * *Provider*: Node that provides power. How much power is drawn in a provider node is computed based on the provided demands and the network configuration.
+ * *Provider*: Node that provides power. How much power is drawn in a provider node is computed based on the provided demands and the grid configuration.
  * *Consumer*: Node that consumes power, of some kind. Consumers have power demands, and the demand is given separately to the rest of the data as a time series.
  * *Transition*: Nodes that are just connection points in the network. Here net injected power is assumed to equal net ejected power.
 
@@ -66,7 +60,6 @@ In addition, the model has a simplified concept of a **transformer**. A transfor
 
 #### Transformers, providers and consumers
 
-
 The description of “provider” and “consumer” nodes above is purposefully left vague. In the distribution network, both of these may be transformers – typically the provider nodes represent transformers that connect the high-voltage regional grid with the distribution grid. Often, it is also efficient to let an “aggregated” consumer node represent an aggregate of all consumers in a local low-voltage grid. That is, rather than including the low-voltage grid (and its input transformer) to the model, one can put an “aggregate” consumer in its place.
 
 The key point is that the internal workings of these provider and consumer nodes as transformers are not very relevant to the planning task at hand – the upstream transformers act only as sources of power with a particular voltage, while the downstream ones can represent aggregate demand in an area of the network. As long as we do not need a more detailed model, these simple provider/consumer concepts can be used.
@@ -75,8 +68,7 @@ However, some transformers are intermediate transformers in the distribution gri
 
 #### Reliability calculations for aggregate consumers
 
-
-Some grid realiability measures, such as the “cost of energy not delivered”, are computed based on the “type” (such as “agriculture” or “household”) of each consumer. Where a consumer in the model represents an aggregate of actual consumers as discussed above, and these consumers are of different types, it is possible to define a fraction of the total (aggregated) demand that comes from each of these types. See the API documentation for details.
+Some grid reliability measures, such as the “cost of energy not delivered”, are computed based on the “type” (such as “agriculture” or “household”) of each consumer. Where a consumer in the model represents an aggregate of actual consumers as discussed above, and these consumers are of different types, it is possible to define a fraction of the total (aggregated) demand that comes from each of these types. See the API documentation for details.
 
 ### Demand forecasts
 
@@ -87,7 +79,8 @@ Compared to the power grid the forecast is simpler to describe. It has two compo
 
 ## Further reading
 
-For more information, see also the list of [modelling examples](modelling.md), as well as the [API reference](https://pgosintef.azurewebsites.net/swagger/index.html) (requires login).
+For more information, see also the list of [modelling examples](modelling.md), as well as the [API reference](https://pgosintef.azurewebsites.net/swagger/index.html) (requires login). A full overview of PGO documentation can be found [here](./index.md).
 
-[^1]: One or several – if two or more are connected in series with no branching an equivalent representing line may be used internally. ↩
+
+[^1]: One or several – if two or more are connected in series with no branching an equivalent representing line may be used internally.
 
