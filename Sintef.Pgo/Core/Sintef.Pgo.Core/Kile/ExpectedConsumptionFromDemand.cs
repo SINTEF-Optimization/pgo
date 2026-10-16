@@ -13,14 +13,10 @@ namespace Sintef.Pgo.Core
 	public class ExpectedConsumptionFromDemand : ExpectedConsumptionProvider
 	{
 		/// <summary>
-		/// Data for each period, including the per-consumer demand
+		/// Data for each period, including the per-consumer demand, indexed by period index.
+		/// Entries for periods that were not given are null.
 		/// </summary>
 		private List<PeriodData> _allPeriodData;
-
-		/// <summary>
-		/// The period index of the first element on _allPeriodData
-		/// </summary>
-		private int _firstIndex;
 
 		/// <summary>
 		/// Initializes the consumption provider.
@@ -28,13 +24,18 @@ namespace Sintef.Pgo.Core
 		/// <param name="allPeriodData">Data for each period, including the per-consumer demand</param>
 		public ExpectedConsumptionFromDemand(IEnumerable<PeriodData> allPeriodData)
 		{
-			_allPeriodData = allPeriodData.ToList();
-			_firstIndex = allPeriodData.First().Period.Index;
+			_allPeriodData = new List<PeriodData>();
 
-			for (int i = 0; i < _allPeriodData.Count; ++i)
+			foreach (var data in allPeriodData)
 			{
-				if (_allPeriodData[i].Period.Index != _firstIndex + i)
-					throw new ArgumentException("Index mismatch in period data given to consumption estimator");
+				int index = data.Period.Index;
+				while (_allPeriodData.Count <= index)
+					_allPeriodData.Add(null);
+
+				if (_allPeriodData[index] != null)
+					throw new ArgumentException("Duplicate period index in period data given to consumption estimator");
+
+				_allPeriodData[index] = data;
 			}
 		}
 
@@ -45,10 +46,16 @@ namespace Sintef.Pgo.Core
 		/// </summary>
 		public override IEnumerable<PowerSpan> PowerSpans(Bus consumer, DateTime startTime)
 		{
-			int periodIndex = _allPeriodData.First(d => d.Period.EndTime > startTime).Period.Index - _firstIndex;
+			int periodIndex = _allPeriodData.First(d => d != null && d.Period.EndTime > startTime).Period.Index;
 
 			while (periodIndex < _allPeriodData.Count)
 			{
+				if (_allPeriodData[periodIndex] == null)
+				{
+					++periodIndex;
+					continue;
+				}
+
 				var period = _allPeriodData[periodIndex].Period;
 				yield return new PowerSpan()
 				{
