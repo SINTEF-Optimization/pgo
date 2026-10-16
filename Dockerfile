@@ -1,6 +1,8 @@
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
+# Since .NET 8, the ASP.NET images listen on port 8080 by default. Keep listening on port 80.
+ENV ASPNETCORE_HTTP_PORTS=80
 
 # Build webapp
 FROM node:14 AS build_webapp
@@ -13,7 +15,7 @@ RUN npm run build -- --no-clean
 RUN mv /webapp/index.html /webapp/index_webapp.html
 
 # Build Sintef.Pgo.REST
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY ["Sintef.Pgo/REST API/Sintef.Pgo.REST/", "Sintef.Pgo/REST API/Sintef.Pgo.REST/"]
 RUN dotnet restore "Sintef.Pgo/REST API/Sintef.Pgo.REST/Sintef.Pgo.REST.csproj"
@@ -26,7 +28,7 @@ COPY --from=build_webapp ["/webapp", "Sintef.Pgo/REST API/Sintef.Pgo.REST/wwwroo
 # Publish Sintef.Pgo.REST
 FROM build AS publish
 WORKDIR /src
-RUN dotnet publish "Sintef.Pgo/REST API/Sintef.Pgo.REST/Sintef.Pgo.REST.csproj" -c Release -f net7.0 -o /app/publish
+RUN dotnet publish "Sintef.Pgo/REST API/Sintef.Pgo.REST/Sintef.Pgo.REST.csproj" -c Release -f net10.0 -o /app/publish
 
 FROM base AS final
 WORKDIR /app
