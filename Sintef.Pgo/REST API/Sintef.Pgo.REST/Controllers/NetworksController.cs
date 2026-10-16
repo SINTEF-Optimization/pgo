@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -135,7 +134,6 @@ namespace Sintef.Pgo.REST.Controllers
 	/// <summary>
 	/// Thrown when a user quota is exceeded
 	/// </summary>
-	[Serializable]
 	internal class UserQuotaException : Exception
 	{
 		public UserQuotaException()
@@ -147,10 +145,6 @@ namespace Sintef.Pgo.REST.Controllers
 		}
 
 		public UserQuotaException(string message, Exception innerException) : base(message, innerException)
-		{
-		}
-
-		protected UserQuotaException(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 		}
 	}
