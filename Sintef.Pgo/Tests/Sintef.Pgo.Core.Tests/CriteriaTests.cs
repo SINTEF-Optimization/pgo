@@ -384,12 +384,10 @@ namespace Sintef.Pgo.Core.Test
 
 						var simplifiedCriterion = largeVoltageLimitMargin || !highBaseVoltage;
 
-						// the non-critical lines have vmax=inf so topology-based satisfaction will always be in use
-						Assert.AreEqual(true, lineConstraint.VoltageCheck.HaveUsedTopologyBasedSatisfaction);
+						// the non-critical lines have vmax=inf so the flow calculation will always be in use
 						Assert.AreEqual(!lineSatisfied && simplifiedCriterion, lineConstraint.VoltageCheck.HaveUsedTopologyBasedRefutation);
-						Assert.AreEqual(!(validPath || simplifiedCriterion), lineConstraint.VoltageCheck.HaveUsedFlowCalculation);
+						Assert.AreEqual(true, lineConstraint.VoltageCheck.HaveUsedFlowCalculation);
 
-						Assert.AreEqual(false, consumerConstraint.VoltageCheck.HaveUsedTopologyBasedSatisfaction);
 						Assert.AreEqual(!consumerSatisfied && simplifiedCriterion, consumerConstraint.VoltageCheck.HaveUsedTopologyBasedRefutation);
 						Assert.AreEqual(validPath || !simplifiedCriterion, consumerConstraint.VoltageCheck.HaveUsedFlowCalculation);
 					}
@@ -556,8 +554,7 @@ namespace Sintef.Pgo.Core.Test
 			Assert.IsTrue(criterion.IsSatisfied(solution));
 			Assert.AreEqual(0, criterion.Value(solution));
 
-			Assert.IsTrue(criterion.VoltageCheck.HaveUsedTopologyBasedSatisfaction);
-			Assert.IsFalse(criterion.VoltageCheck.HaveUsedFlowCalculation);
+			Assert.IsTrue(criterion.VoltageCheck.HaveUsedFlowCalculation);
 			Assert.IsFalse(criterion.VoltageCheck.HaveUsedTopologyBasedRefutation);
 
 			// Gen2's voltage is too high (1V)
@@ -576,6 +573,23 @@ namespace Sintef.Pgo.Core.Test
 			Assert.AreEqual(200, criterion.Value(solution));
 
 			Assert.IsTrue(criterion.VoltageCheck.HaveUsedTopologyBasedRefutation);
+		}
+
+		[TestMethod]
+		public void VoltageLimitsDetectVoltageRiseAboveGeneratorVoltage()
+		{
+			// A capacitive load makes the voltage rise above the generator voltage
+			NetworkBuilder builder = new NetworkBuilder();
+			builder.Add("Gen[generatorVoltage=22000] -- line[z=(0.5,10);vMax=23100] -- Consumer[vMaxV=23100;consumption=(100000,-3000000)]");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var constraints = solution.Problem.CriteriaSet.Constraints;
+			var consumerCriterion = constraints.OfType<ConsumerVoltageLimitsConstraint>().Single();
+			var lineCriterion = constraints.OfType<LineVoltageLimitsConstraint>().Single();
+
+			Assert.IsTrue(solution.SinglePeriodSolutions.Single().Flow(consumerCriterion.FlowProvider).Voltage(builder.Network.GetBus("Consumer")).Magnitude > 23100);
+			Assert.IsFalse(consumerCriterion.IsSatisfied(solution));
+			Assert.IsFalse(lineCriterion.IsSatisfied(solution));
 		}
 
 		/// <summary>

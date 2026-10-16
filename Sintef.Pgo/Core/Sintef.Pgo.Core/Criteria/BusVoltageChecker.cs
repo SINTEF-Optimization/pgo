@@ -9,9 +9,11 @@ namespace Sintef.Pgo.Core
 	/// <summary>
 	/// Checks for line and bus voltage limits, for use in LineVoltageLimitsConstraint and ConsumerVoltageLimitsConstraint.
 	/// The check functions will in general make use of the distflow calculations for the voltages on the network,
-	/// but will avoid using calling distflow calcs if the criterion is already satisfied or refuted based on the topology.
+	/// but will avoid using calling distflow calcs if the criterion is already refuted based on the topology.
 	/// The topological check uses the generator voltage at the top of the tree as a maximum voltage on all connected nodes,
 	/// and optionally takes a maximum loss factor assumption to calculate a minimum voltage on all connected nodes.
+	/// The topological check is not used to prove that the criterion is satisfied, since the voltage may rise above
+	/// the generator voltage, e.g. with negative reactive loads.
 	/// </summary>
 	public class BusVoltageChecker
 	{
@@ -22,10 +24,6 @@ namespace Sintef.Pgo.Core
 		/// </summary>
 		public double? AssumedMaxLossRatio { get; }
 
-		/// <summary>
-		/// The criterion has at least once been shown to be satisfied using only the voltage bound given by the generator which the line is attached to.
-		/// </summary>
-		public bool HaveUsedTopologyBasedSatisfaction { get; private set; } = false;
 		/// <summary>
 		/// The criterion has at least one been refuted using only the voltage bound given by the generator which the line is attached to,
 		/// combined with the max loss ratio assumption (AssumedMaxLossRatio).
@@ -51,11 +49,9 @@ namespace Sintef.Pgo.Core
 		/// </summary>
 		/// 
 		/// Topological range check:
-		/// The generator voltage and a maximum loss assumption is used to establish a topological voltage range, which 
-		/// is a safe overapproximation of the possible voltage range at all buses connected to the generator. If the 
-		/// voltage limits are satisfied at all points of the topological voltage range, there can be no violation, 
-		/// and NULL is returned. If the voltage limits are violated for every point inside the topological voltage 
-		/// range, the maximum penalty is returned. The maximum penalty is defined as the maximum generator voltage 
+		/// The generator voltage and a maximum loss assumption is used to establish a topological voltage range, which
+		/// approximates the possible voltage range at all buses connected to the generator. If the voltage limits
+		/// are violated for every point inside the topological voltage range, the maximum penalty is returned. The maximum penalty is defined as the maximum generator voltage 
 		/// for the whole network multiplied by the maximum loss factor (or 1.0 if no loss factor is given).
 		/// 
 		/// Full check:
@@ -74,13 +70,6 @@ namespace Sintef.Pgo.Core
 		{
 			var topoVoltageRangeMax = nominalVoltage.GetValueOrDefault();
 			var topoVoltageRangeMin = (AssumedMaxLossRatio is double loss) ? (nominalVoltage.GetValueOrDefault() * (1.0 - loss)) : -1.0;
-
-			if (vMin < topoVoltageRangeMin && vMax > topoVoltageRangeMax)
-			{
-				// we are guaranteed to be within range, no need to check flow
-				HaveUsedTopologyBasedSatisfaction = true;
-				return null;
-			}
 
 			if (vMax < topoVoltageRangeMin || vMin > topoVoltageRangeMax)
 			{
