@@ -33,7 +33,9 @@ namespace Sintef.Pgo.Core
 		private double _spanHours;
 
 		/// <summary>
-		/// The cached data, by [consumer bus index, start period index]
+		/// The cached data, by [consumer bus index, start period index].
+		/// Periods need not start at index 0, e.g. in a problem made from part of a longer horizon;
+		/// entries for absent periods are never used.
 		/// </summary>
 		private ConsumerAndPeriodData[,] _cachedData;
 
@@ -47,7 +49,7 @@ namespace Sintef.Pgo.Core
 		{
 			_consumptionProvider = consumptionProvider;
 
-			_cachedData = new ConsumerAndPeriodData[network.BusIndexBound, periods.Count()];
+			_cachedData = new ConsumerAndPeriodData[network.BusIndexBound, periods.Max(p => p.Index) + 1];
 
 			// Find the length of one power span, so we can check all other spans later
 			var consumer = network.Consumers.First();

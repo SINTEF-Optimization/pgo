@@ -45,9 +45,8 @@ namespace Sintef.Pgo.REST
 			IOptionsMonitor<CookieAuthenticationHandlerOptions> options,
 			ILoggerFactory logger,
 			UrlEncoder encoder,
-			ISystemClock clock,
 			IUserQoutaProvider qoutaProvider)
-			: base(options, logger, encoder, clock)
+			: base(options, logger, encoder)
 		{
 			_qoutaProvider = qoutaProvider;
 		}

@@ -11,7 +11,7 @@ stages:
 # This job builds the entire solution (.NET)
 build-cs-job:       
   stage: build
-  image: mcr.microsoft.com/dotnet/sdk:7.0
+  image: mcr.microsoft.com/dotnet/sdk:10.0
   script:
     - dotnet build "Sintef.Pgo.sln" -c Release
 
@@ -34,7 +34,7 @@ build-js-job:
 # This job runs all tests (if build succeeds)
 unit-test-job:   
   stage: test    
-  image: mcr.microsoft.com/dotnet/sdk:7.0
+  image: mcr.microsoft.com/dotnet/sdk:10.0
   dependencies: 
     - build-cs-job
   script:
@@ -95,6 +95,6 @@ publish-docker-commit-job:
 publish-nuget-release-job:      
   stage: publish
   when: manual
-  image: mcr.microsoft.com/dotnet/sdk:7.0
+  image: mcr.microsoft.com/dotnet/sdk:10.0
   script:
     - bash Scripts/Publish_nuget.sh
