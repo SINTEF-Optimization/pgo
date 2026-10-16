@@ -548,6 +548,61 @@ namespace Sintef.Pgo.Core.Test
 		}
 
 		[TestMethod]
+		public void ExpectedConsumptionCacheIsCorrectWhenPeriodIndicesDoNotStartAtZero()
+		{
+			Random random = new Random(1);
+			SetupProblemWithRandomData(random, periodCount: 3);
+
+			// The same demands in periods with indices 5, 6, 7, as in a problem made from part of a longer horizon
+			var shiftedData = _problem.AllPeriodData
+				.Select(d => new PeriodData(_network, d.Demands, new Period(d.Period.StartTime, d.Period.EndTime, d.Period.Index + 5)))
+				.ToList();
+
+			var consumer = _network.Consumers.First();
+			var consumptionProvider = new ExpectedConsumptionFromDemand(shiftedData);
+			var consumptionCache = new ExpectedConsumptionCache(_network, shiftedData.Select(d => d.Period), consumptionProvider);
+
+			foreach (var period in shiftedData.Select(d => d.Period))
+			{
+				for (int i = 0; i < 60 * 5; ++i)
+				{
+					var duration = TimeSpan.FromMinutes(i);
+
+					double expectedConsumption = consumptionProvider.EnergyConsumption(consumer, period, duration);
+					double cachedConsumption = consumptionCache.EnergyConsumption(consumer, period, duration);
+
+					Assert.AreEqual(expectedConsumption, cachedConsumption, 1e-7);
+				}
+			}
+		}
+
+		[TestMethod]
+		public void CachedKileObjectiveWorksForASinglePeriodWithNonzeroIndex()
+		{
+			// A single-period problem for the 8th period of a horizon, e.g. when periods are optimized one at a time
+			Random random = new Random(2);
+			SetupProblemWithRandomData(random, periodCount: 1);
+			var data = _problem.AllPeriodData.Single();
+			var shiftedData = new PeriodData(_network, data.Demands, new Period(data.Period.StartTime, data.Period.EndTime, 7));
+			var problem = new PgoProblem(shiftedData, new SimplifiedDistFlowProvider());
+
+			var faultProperties = LineFaultPropertiesProvider.RandomFor(_network, new Random(3));
+			var categories = ConsumerCategoryProvider.RandomFor(_network, new Random(4));
+			var cached = new KileCostObjective(_network, new[] { shiftedData.Period }, new ExpectedConsumptionFromDemand(new[] { shiftedData }),
+				faultProperties, categories, true);
+			var uncached = new KileCostObjective(_network, new[] { shiftedData.Period }, new ExpectedConsumptionFromDemand(new[] { shiftedData }),
+				faultProperties, categories, false);
+
+			var configuration = NetworkConfiguration.AllClosed(_network);
+			configuration.MakeRadial(random);
+			var solution = new PgoSolution(problem, new Dictionary<Period, NetworkConfiguration> { [shiftedData.Period] = configuration });
+
+			double expected = uncached.Value(solution);
+			Assert.IsTrue(expected > 0);
+			Assert.AreEqual(expected, cached.Value(solution), 1e-9 * expected);
+		}
+
+		[TestMethod]
 		public void KileObjectiveIsSetUpFromJson()
 		{
 			var network = IO.PgoJsonParser.ParseNetworkFromJsonFile(TestUtils.TestDataFile("kilecost-network.json"));
