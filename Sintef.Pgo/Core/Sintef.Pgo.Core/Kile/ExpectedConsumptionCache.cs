@@ -33,9 +33,15 @@ namespace Sintef.Pgo.Core
 		private double _spanHours;
 
 		/// <summary>
-		/// The cached data, by [consumer bus index, start period index]
+		/// The cached data, by [consumer bus index, start period index - <see cref="_firstPeriodIndex"/>]
 		/// </summary>
 		private ConsumerAndPeriodData[,] _cachedData;
+
+		/// <summary>
+		/// The index of the first period. Periods need not start at index 0, e.g. in a problem
+		/// made from part of a longer horizon.
+		/// </summary>
+		private int _firstPeriodIndex;
 
 		/// <summary>
 		/// Initializes the cache
@@ -48,6 +54,7 @@ namespace Sintef.Pgo.Core
 			_consumptionProvider = consumptionProvider;
 
 			_cachedData = new ConsumerAndPeriodData[network.BusIndexBound, periods.Count()];
+			_firstPeriodIndex = periods.First().Index;
 
 			// Find the length of one power span, so we can check all other spans later
 			var consumer = network.Consumers.First();
@@ -62,7 +69,7 @@ namespace Sintef.Pgo.Core
 		public double EnergyConsumption(Bus consumer, Period startPeriod, TimeSpan intervalLength)
 		{
 			// Look up data for the consumer and period
-			ConsumerAndPeriodData data = _cachedData[consumer.Index, startPeriod.Index];
+			ConsumerAndPeriodData data = _cachedData[consumer.Index, startPeriod.Index - _firstPeriodIndex];
 
 			double intervalHours = intervalLength.TotalHours;
 			int spanDataIndex = (int)(intervalHours / _spanHours);
@@ -135,7 +142,7 @@ namespace Sintef.Pgo.Core
 				IsComplete = spanData.Length < spanDataIndex + 2
 			};
 
-			_cachedData[consumer.Index, startPeriod.Index] = data;
+			_cachedData[consumer.Index, startPeriod.Index - _firstPeriodIndex] = data;
 
 			return data;
 		}
