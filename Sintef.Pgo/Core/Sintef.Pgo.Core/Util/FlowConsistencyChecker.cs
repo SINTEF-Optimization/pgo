@@ -132,8 +132,12 @@ namespace Sintef.Pgo.Core
 
 				var powerOut = bus.IncidentLines.Except(upstream).Select(line => flow.PowerFlow(bus, line)).ComplexSum();
 
+				// Put generation on the 'in' side and consumption on the 'out' side by the bus' role,
+				// not by the sign of the injection. A provider may absorb power and a consumer may export.
+				// Classifying by sign would then put two large, cancelling terms on the same side and
+				// make the relative error meaningless.
 				var injected = flow.PowerInjection(bus);
-				if (injected.Real > 0)
+				if (bus.IsProvider)
 					powerIn += injected;
 				else
 					powerOut -= injected; // Consumed

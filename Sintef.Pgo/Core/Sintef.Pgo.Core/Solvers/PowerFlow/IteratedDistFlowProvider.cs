@@ -313,7 +313,10 @@ namespace Sintef.Pgo.Core
 					// Normal line
 					var current = flow.Current(upstreamLine);
 					Complex powerLoss = upstreamLine.Impedance * current * Complex.Conjugate(current);
-					if (powerLoss.Real > power.Real)
+
+					// |loss| > |power| means |z I| > |V| at the downstream end, which does not happen in a valid solution.
+					// Note here that power can be positive or negative depending on the direction of power flow.
+					if (powerLoss.Magnitude > power.Magnitude)
 					{
 						flow.Status = FlowStatus.Failed;
 						flow.StatusDetails = "IteratedDistFlow diverged; power loss in line exceeds output power";
