@@ -29,8 +29,8 @@ namespace Sintef.Pgo.Core
 		#region Private data members
 
 		/// <summary>
-		/// Complex power demand for each consumer in the network. 
-		/// A demand is a non-negative number (active and reactive both).
+		/// Complex power demand for each consumer in the network.
+		/// Either component may be negative. A negative active demand is a net export.
 		/// </summary>
 		public Dictionary<Bus, Complex> _powerDemand;
 
@@ -95,14 +95,13 @@ namespace Sintef.Pgo.Core
 
 		/// <summary>
 		/// Sets the complex power demand of the given bus, in VA. Throws if the bus is not a consumer.
-		/// Throws an exception if the demand is negative (in either component, real or imaginary).
+		/// The demand may be negative, in either component. A negative active demand is a net
+		/// export, e.g. from local generation that exceeds the local load.
 		/// </summary>
 		public void SetPowerDemand(Bus bus, Complex demand)
 		{
 			if (bus.Type != BusTypes.PowerConsumer)
 				throw new InvalidOperationException("This bus is not a power consumer!");
-			if (demand.Real < 0)
-				throw new ArgumentException($"PowerDemands.SetPowerDemand: demand is negative: {demand}");
 			_powerDemand[bus] = demand;
 		}
 
