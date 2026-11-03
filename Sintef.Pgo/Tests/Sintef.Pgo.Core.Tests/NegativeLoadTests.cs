@@ -239,6 +239,234 @@ namespace Sintef.Pgo.Core.Test
 
 		#endregion
 
+		#region Automatic transformers
+
+		/// <summary>
+		/// Iterated DistFlow with exporters on either side of an automatic transformer, which holds its output
+		/// voltage whatever the direction of flow.
+		/// "downstream": exporters behind the transformer. Strong reverse flow, near zero active power
+		///   with a large reactive flow, slightly reverse active power, and forward flow.
+		/// "upstream": an exporter on the input side, behind a weak line. Strong export, demands summing to zero,
+		///   and an export that raises the transformer's input voltage about 9 percent above nominal.
+		/// The flow is exact and consistent, the output voltage stays at the output end voltage, the transformer
+		/// loss is positive, the generator supplies the demands plus all losses, and the solver converges in few iterations.
+		/// </summary>
+		[DataTestMethod]
+		[DataRow("downstream")]
+		[DataRow("upstream")]
+		[Timeout(30000)]
+		public void IteratedDistFlowWithAutomaticTransformer(string exporters)
+		{
+			var (builder, outputLine, periods) = AutomaticTransformerCase(exporters);
+			var network = builder.Network;
+
+			foreach (var (demands, k) in periods.Select((d, k) => (d, k)))
+			{
+				SetDemands(builder, demands);
+				string where = $"period {k}";
+
+				var flow = AssertExactAndConsistentFlow(builder.FlowProblem);
+
+				Assert.AreEqual(10500, flow.Voltage(network.GetBus("TS")).Magnitude, 1e-9, where);
+				Assert.IsTrue(flow.PowerLoss(outputLine) > 0, $"{where}: transformer loss {flow.PowerLoss(outputLine)}");
+
+				double demand = network.Consumers.Sum(b => builder.Demands.ActivePowerDemand(b));
+				double loss = network.Lines.Sum(l => flow.PowerLoss(l));
+				AssertRelative(demand + loss, flow.PowerInjection(network.GetBus("P")).Real, 1e-9, $"{where}: generation equals demand plus losses");
+
+				int iterations = int.Parse(flow.StatusDetails.Split(' ')[0]);
+				Assert.IsTrue(iterations < 50, $"{where}: {flow.StatusDetails}");
+			}
+		}
+
+		/// <summary>
+		/// SimplifiedDistFlow keeps the automatic transformer's output voltage under reverse flow and reports a
+		/// non-negative transformer loss. Its voltages are within 2 percent of Iterated DistFlow's. The largest error
+		/// is at the exporter on the weak line upstream of the transformer, with the largest export, and is the usual
+		/// error of the simplified model under heavy loading, not an effect of the transformer.
+		/// </summary>
+		[DataTestMethod]
+		[DataRow("downstream")]
+		[DataRow("upstream")]
+		public void SimplifiedDistFlowHandlesAutomaticTransformerWithExporters(string exporters)
+		{
+			var (builder, outputLine, periods) = AutomaticTransformerCase(exporters);
+			var network = builder.Network;
+
+			foreach (var (demands, k) in periods.Select((d, k) => (d, k)))
+			{
+				SetDemands(builder, demands);
+
+				var flow = new SimplifiedDistFlowProvider().ComputeFlow(builder.FlowProblem);
+				var exact = new IteratedDistFlowProvider(IteratedDistFlowProvider.DefaultOptions).ComputeFlow(builder.FlowProblem);
+
+				Assert.AreEqual(10500, flow.Voltage(network.GetBus("TS")).Magnitude, 1e-9);
+				Assert.IsTrue(flow.PowerLoss(outputLine) >= 0);
+				foreach (var bus in network.Buses.Where(b => !b.IsTransformer))
+					AssertRelative(exact.Voltage(bus).Magnitude, flow.Voltage(bus).Magnitude, 2e-2, $"period {k}: voltage at {bus.Name}");
+			}
+		}
+
+		/// <summary>
+		/// Returns a network with a provider P at 20 kV, a consumer A, and an automatic transformer (pf 0.98)
+		/// to 10.5 kV that feeds consumers E and F, and returns the transformer's connection line on the output side.
+		/// Also returns, for each period, the demands of A, E and F, in VA.
+		/// The output end voltage (10.5 kV) differs from what a fixed ratio would give, so the regulation is visible.
+		/// With <paramref name="exporters"/> "downstream", E exports; with "upstream", A exports, and the line
+		/// to A is weak.
+		/// </summary>
+		private static (NetworkBuilder builder, Line outputLine, Complex[][] periods) AutomaticTransformerCase(string exporters)
+		{
+			string z1 = exporters == "downstream" ? "(0.4, 0.3)" : "(4, 3)";
+			var builder = new NetworkBuilder();
+			builder.Add($"P[generatorVoltage=20000] -- L1[z={z1}] -- A[consumer] -- L4[z=(0.3, 0.2)] -- TP");
+			builder.Add("TS -- L2[z=(0.2, 0.15)] -- E[consumer] -- L3[z=(0.1, 0.1)] -- F[consumer]");
+			builder.AddBus("T[transformer; ends=(TP, TS); voltages=(20000, 10500); operation=auto; factor=0.98]");
+			var outputLine = builder.Network.Lines.Single(l => l.IsTransformerConnection && l.Endpoints.Any(b => b.Name == "TS"));
+
+			Complex[][] periodsMVA = exporters == "downstream"
+				? new[]
+				{
+					new Complex[] { new(0.4, 0.1), new(-3.0, 0.2), new(0.3, 0.1) },
+					new Complex[] { new(0.4, 0.1), new(-1.0, 0.0), new(1.0, 0.8) },
+					new Complex[] { new(0.4, 0.1), new(-1.02, 0.0), new(1.0, 0.8) },
+					new Complex[] { new(0.4, 0.1), new(0.5, 0.1), new(0.3, 0.1) },
+				}
+				: new[]
+				{
+					new Complex[] { new(-4.0, 0.1), new(0.5, 0.1), new(0.7, 0.2) },
+					new Complex[] { new(-1.2, -0.3), new(0.5, 0.1), new(0.7, 0.2) },
+					new Complex[] { new(-12.0, 0.0), new(0.5, 0.1), new(0.7, 0.2) },
+				};
+
+			return (builder, outputLine, periodsMVA.Select(p => p.Select(s => 1e6 * s).ToArray()).ToArray());
+		}
+
+		/// <summary>
+		/// Sets the demands of consumers A, E and F in a network from <see cref="AutomaticTransformerCase"/>
+		/// </summary>
+		private static void SetDemands(NetworkBuilder builder, Complex[] demands)
+		{
+			foreach (var (name, demand) in new[] { "A", "E", "F" }.Zip(demands))
+				builder.Demands.SetPowerDemand(builder.Network.GetBus(name), demand);
+		}
+
+		/// <summary>
+		/// LegalMove and DeltaValue agree with the full evaluation for the loss, voltage and line capacity criteria
+		/// when moves shift exporters between automatic transformers and reverse the flow through them
+		/// </summary>
+		[TestMethod]
+		public void CriteriaDeltasAreCorrectWithAutomaticTransformers()
+		{
+			var flowProvider = new SimplifiedDistFlowProvider();
+			var builder = AutomaticTransformerNetworkWithExporters(flowProvider);
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var moves = TestUtils.AllMovesFor(solution).ToList();
+			Assert.IsTrue(moves.Count > 3);
+
+			TestUtils.VerifyDeltaValue(new TotalLossObjective(flowProvider), moves, 1e-9);
+
+			var voltage = new ConsumerVoltageLimitsConstraint(flowProvider, 0.3);
+			TestUtils.VerifyLegalMove(voltage, moves);
+			TestUtils.VerifyDeltaValue(voltage, moves, 1e-9);
+
+			TestUtils.VerifyDeltaValue(new LineCapacityCriterion(flowProvider), moves, 1e-9);
+		}
+
+		/// <summary>
+		/// Returns a builder with two automatic transformers that feed a meshed secondary network with
+		/// exporters, and an exporter on the input side of transformer T1
+		/// </summary>
+		private static NetworkBuilder AutomaticTransformerNetworkWithExporters(IFlowProvider flowProvider)
+		{
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("G1[generatorVoltage=20000; generationCapacity=(150000,1e9)] -- line1[z=(2,1)] -- X[consumption=(-50000,10000); vMinV=19000; vMaxV=20100] -- line2 -- T1_in");
+			builder.Add("T1_out -- line3[closed; iMax=5] -- C1[consumption=(30000,5000); vMinV=10000; vMaxV=11000] -- line4[closed] -- C2[consumption=(-80000,0); vMinV=10000; vMaxV=10600] -- line5[open] -- C3[consumption=(-60000,20000); vMinV=9500; vMaxV=10050]");
+			builder.Add("C3 -- line6[closed; iMax=5] -- C4[consumption=(20000,0); vMinV=9500; vMaxV=10500] -- line7[closed; iMax=5] -- T2_out");
+			builder.Add("C1 -- line8[open] -- C4");
+			builder.Add("C2 -- line9[open] -- C4");
+			builder.Add("T2_in -- line10 -- G2[generatorVoltage=20000; generationCapacity=(100000,1e9)]");
+			builder.AddBus("T1[transformer; ends=(T1_in,T1_out); voltages=(20000,10500); operation=auto; factor=0.98]");
+			builder.AddBus("T2[transformer; ends=(T2_in,T2_out); voltages=(20000,10000); operation=auto; factor=0.95]");
+			return builder;
+		}
+
+		#endregion
+
+		#region Overvoltage
+
+		/// <summary>
+		/// An exporter at the end of a weak line raises the voltage above its upper limit. The voltage is
+		/// checked against v_max with the computed flow.
+		/// </summary>
+		[DataTestMethod]
+		[DataRow(FlowApproximation.IteratedDF)]
+		[DataRow(FlowApproximation.SimplifiedDF)]
+		public void OvervoltageFromExportIsAViolation(FlowApproximation approximation)
+		{
+			var flowProvider = Utils.CreateFlowProvider(approximation);
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("G[generatorVoltage=20000] -- l1[z=(8,4)] -- A[consumption=(-3000000,0); vMinV=19000; vMaxV=21000]");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var constraint = new ConsumerVoltageLimitsConstraint(flowProvider, 0.3);
+			var flow = solution.SinglePeriodSolutions.Single().Flow(flowProvider);
+			double voltage = flow.Voltage(builder.Network.GetBus("A")).Magnitude;
+
+			Assert.IsTrue(voltage > 21000, $"Voltage {voltage}");
+			Assert.IsFalse(constraint.IsSatisfied(solution));
+			Assert.AreEqual(voltage - 21000, constraint.Value(solution), 1e-6);
+			Assert.IsTrue(constraint.VoltageCheck.HaveUsedFlowCalculation);
+		}
+
+		/// <summary>
+		/// LegalMove and DeltaValue of the consumer voltage constraint agree with the full check
+		/// when a move connects an exporter through a weak line
+		/// </summary>
+		[TestMethod]
+		public void OvervoltageDeltasAreCorrect()
+		{
+			var flowProvider = new SimplifiedDistFlowProvider();
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("G1[generatorVoltage=20000] -- l1[z=(0.5,0.3); closed] -- A[consumption=(-3000000,0); vMinV=19000; vMaxV=21000]");
+			builder.Add("A -- l2[z=(8,4); open] -- B[consumption=(100000,0); vMinV=19000; vMaxV=21000] -- l3[z=(0.5,0.3)] -- G2[generatorVoltage=20000]");
+			builder.Add("A -- l5[z=(0.2,0.1); open] -- G2");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var periodSolution = solution.SinglePeriodSolutions.Single();
+			var moves = new List<Move>();
+			foreach (Line switchToClose in periodSolution.OpenSwitches.ToList())
+			{
+				var neighbourhood = new CloseSwitchAndOpenOtherNeighbourhood(switchToClose, periodSolution.Period);
+				neighbourhood.Init(solution);
+				moves.AddRange(neighbourhood);
+			}
+
+			var constraint = new ConsumerVoltageLimitsConstraint(flowProvider, 0.3);
+
+			TestUtils.VerifyLegalMove(constraint, moves);
+			TestUtils.VerifyDeltaValue(constraint, moves, 1e-9);
+		}
+
+		/// <summary>
+		/// An overvoltage from export is a violation also when the consumer's lower voltage limit is very low
+		/// (here 0, the default). BusVoltageChecker does not assume that the voltage stays below nominal.
+		/// </summary>
+		[TestMethod]
+		public void OvervoltageIsAViolationAlsoWithALowLowerLimit()
+		{
+			var flowProvider = new IteratedDistFlowProvider(IteratedDistFlowProvider.DefaultOptions);
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("G[generatorVoltage=20000] -- l1[z=(8,4)] -- A[consumption=(-3000000,0); vMinV=0; vMaxV=21000]");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var constraint = new ConsumerVoltageLimitsConstraint(flowProvider, 0.3);
+
+			Assert.IsFalse(constraint.IsSatisfied(solution));
+		}
+
+		#endregion
+
 		#region Utilities
 
 		/// <summary>
