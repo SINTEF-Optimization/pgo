@@ -467,6 +467,96 @@ namespace Sintef.Pgo.Core.Test
 
 		#endregion
 
+		#region KILE
+
+		/// <summary>
+		/// KILE uses the net load truncated at zero, per consumer and period. An exporting consumer
+		/// costs nothing (rather than a negative cost, which would reward disconnecting it).
+		/// </summary>
+		[DataTestMethod]
+		[DataRow(true)]
+		[DataRow(false)]
+		public void KileCostUsesNetLoadTruncatedAtZero(bool cacheExpectedConsumption)
+		{
+			Random random = new Random(3);
+			var (problem, signedData, truncatedData) = RandomProblemWithExporters(random);
+			var network = problem.Network;
+
+			var faultProperties = LineFaultPropertiesProvider.RandomFor(network, new Random(4));
+			var categories = ConsumerCategoryProvider.RandomFor(network, new Random(5));
+			var periods = problem.Periods.ToList();
+			var signedObjective = new KileCostObjective(network, periods, new ExpectedConsumptionFromDemand(signedData), faultProperties, categories, cacheExpectedConsumption);
+			var truncatedObjective = new KileCostObjective(network, periods, new ExpectedConsumptionFromDemand(truncatedData), faultProperties, categories, cacheExpectedConsumption);
+
+			for (int i = 0; i < 5; ++i)
+			{
+				var solution = problem.RadialSolution(random);
+
+				double signedValue = signedObjective.Value(solution);
+				double truncatedValue = truncatedObjective.Value(solution);
+
+				Assert.IsTrue(signedValue >= 0, $"KILE cost {signedValue} is negative");
+				Assert.AreEqual(truncatedValue, signedValue, 1e-9 * truncatedValue);
+			}
+		}
+
+		/// <summary>
+		/// The KILE delta value agrees with the full value when some consumers export
+		/// </summary>
+		[TestMethod]
+		public void KileCostDeltaIsCorrectWithExporters()
+		{
+			Random random = new Random(6);
+			var (problem, signedData, _) = RandomProblemWithExporters(random);
+			var network = problem.Network;
+
+			var objective = new KileCostObjective(network, problem.Periods.ToList(), new ExpectedConsumptionFromDemand(signedData),
+				LineFaultPropertiesProvider.RandomFor(network, new Random(7)), ConsumerCategoryProvider.RandomFor(network, new Random(8)), true);
+
+			var solution = problem.RadialSolution(random);
+			var moves = TestUtils.AllMovesFor(solution);
+			Assert.IsTrue(moves.Any());
+
+			TestUtils.VerifyDeltaValue(objective, moves, tolerance: 1e-10);
+		}
+
+		/// <summary>
+		/// Returns a random problem with 4 periods in which every second consumer exports in odd periods, and
+		/// the period data with signed demands and with the demands truncated at zero.
+		/// The problem uses the signed demands.
+		/// </summary>
+		private static (PgoProblem problem, List<PeriodData> signedData, List<PeriodData> truncatedData) RandomProblemWithExporters(Random random)
+		{
+			var network = TestUtils.SmallRandomNetwork(random);
+			var problem = TestUtils.ProblemWithRandomDemands(network, random, periodCount: 4);
+
+			var consumers = network.Consumers.ToList();
+			var signedData = new List<PeriodData>();
+			var truncatedData = new List<PeriodData>();
+			foreach (var (data, k) in problem.AllPeriodData.Select((d, k) => (d, k)))
+			{
+				var signed = new PowerDemands(data.Demands);
+				var truncated = new PowerDemands(data.Demands);
+				for (int i = 0; i < consumers.Count; i += 2)
+				{
+					if (k % 2 == 1)
+					{
+						var demand = data.Demands.PowerDemand(consumers[i]);
+						signed.SetPowerDemand(consumers[i], new Complex(-2 * demand.Real - 1000, demand.Imaginary));
+						truncated.SetPowerDemand(consumers[i], new Complex(0, demand.Imaginary));
+					}
+				}
+				signedData.Add(new PeriodData(network, signed, data.Period));
+				truncatedData.Add(new PeriodData(network, truncated, data.Period));
+			}
+			Assert.IsTrue(signedData.Any(d => consumers.Any(c => d.Demands.ActivePowerDemand(c) < 0)), "No negative demand");
+
+			var signedProblem = new PgoProblem(signedData, new SimplifiedDistFlowProvider(), "exporters");
+			return (signedProblem, signedData, truncatedData);
+		}
+
+		#endregion
+
 		#region Utilities
 
 		/// <summary>
