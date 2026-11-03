@@ -98,8 +98,8 @@ namespace Sintef.Pgo.Core
 		{
 			if (flow.NetworkConfig.TransformerModeForOutputLine(line) is Transformer.Mode mode)
 			{
-				var loss = flow.PowerFlow(line.Transformer.Bus, line) * (1 - mode.PowerFactor);
-				return loss.Real;
+				var transformerBus = line.Transformer.Bus;
+				return mode.Loss(flow.PowerFlow(transformerBus, line), flow.PowerFlow(line.OtherEnd(transformerBus), line));
 			}
 			else
 			{

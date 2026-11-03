@@ -136,13 +136,13 @@ namespace Sintef.Pgo.Core
 					{
 						// This line was downstream before the move. Subtract the old power loss
 						var oldMode = transformer.ModeFor(oldUpstream, delta.Line);
-						powerLoss -= delta.OldPowerFlowFrom(bus).Real * (1 - oldMode.PowerFactor);
+						powerLoss -= oldMode.Loss(delta.OldPowerFlowFrom(bus), delta.OldPowerFlowFrom(delta.Line.OtherEnd(bus)));
 					}
 					if (delta.Line != newUpstream)
 					{
 						// This line is downstream after the move. Add the new power loss
 						var newMode = transformer.ModeFor(newUpstream, delta.Line);
-						powerLoss += delta.NewPowerFlowFrom(bus).Real * (1 - newMode.PowerFactor);
+						powerLoss += newMode.Loss(delta.NewPowerFlowFrom(bus), delta.NewPowerFlowFrom(delta.Line.OtherEnd(bus)));
 					}
 				}
 			}

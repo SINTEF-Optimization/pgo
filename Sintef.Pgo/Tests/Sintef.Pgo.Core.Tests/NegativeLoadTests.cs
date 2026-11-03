@@ -134,6 +134,111 @@ namespace Sintef.Pgo.Core.Test
 
 		#endregion
 
+		#region Transformer loss under reverse flow
+
+		/// <summary>
+		/// An exporter behind a transformer. With E exporting, the flow through the transformer is reversed;
+		/// with E consuming, it is forward. The transformer loss is (1 - pf) times the power that enters the
+		/// transformer, in both directions, so it is positive, and the generator supplies the demands plus all losses.
+		/// </summary>
+		[DataTestMethod]
+		[DataRow(-1.5e6, DisplayName = "reverse flow")]
+		[DataRow(0.5e6, DisplayName = "forward flow")]
+		public void IteratedDistFlowWithFlowThroughTransformer(double exporterDemand)
+		{
+			var (builder, outputLine) = ExporterBehindTransformer(exporterDemand);
+			var network = builder.Network;
+
+			var flow = AssertExactAndConsistentFlow(builder.FlowProblem);
+
+			Assert.IsTrue(flow.PowerLoss(outputLine) > 0, $"transformer loss {flow.PowerLoss(outputLine)}");
+
+			double demand = network.Consumers.Sum(b => builder.Demands.ActivePowerDemand(b));
+			double loss = network.Lines.Sum(l => flow.PowerLoss(l));
+			AssertRelative(demand + loss, flow.PowerInjection(network.GetBus("P")).Real, 1e-9, "generation equals demand plus losses");
+		}
+
+		/// <summary>
+		/// SimplifiedDistFlow ignores the transformer loss in the flow, but reports it as
+		/// (1 - pf) times the power through the transformer. That must be positive under reverse flow too.
+		/// </summary>
+		[DataTestMethod]
+		[DataRow(-1.5e6, DisplayName = "reverse flow")]
+		[DataRow(0.5e6, DisplayName = "forward flow")]
+		public void SimplifiedDistFlowTransformerLossIsPositive(double exporterDemand)
+		{
+			var (builder, outputLine) = ExporterBehindTransformer(exporterDemand);
+			var transformerBus = outputLine.Transformer.Bus;
+
+			var flow = new SimplifiedDistFlowProvider().ComputeFlow(builder.FlowProblem);
+
+			double throughput = flow.PowerFlow(transformerBus, outputLine).Real;
+			Assert.AreEqual(0.02 * Math.Abs(throughput), flow.PowerLoss(outputLine), 1e-9 * Math.Abs(throughput));
+			Assert.IsTrue(flow.PowerLoss(outputLine) > 0);
+		}
+
+		/// <summary>
+		/// Returns a network with a provider P at 20 kV, a fixed ratio transformer (pf 0.98) to 10 kV, and two
+		/// consumers E and F behind it. E has the given active demand and F consumes 0.3 MW. Also returns the
+		/// transformer's connection line on the output side.
+		/// </summary>
+		private static (NetworkBuilder builder, Line outputLine) ExporterBehindTransformer(double exporterDemand)
+		{
+			var builder = new NetworkBuilder();
+			builder.Add("P[generatorVoltage=20000] -- L1[z=(0.4, 0.3)] -- TP");
+			builder.Add("TS -- L2[z=(0.2, 0.15)] -- E[consumer]");
+			builder.Add("TS -- L3[z=(0.1, 0.1)] -- F[consumption=(3e5, 1e5)]");
+			builder.AddBus("T[transformer; ends=(TP, TS); voltages=(20000, 10000); operation=fixed; factor=0.98]");
+			builder.Demands.SetPowerDemand(builder.Network.GetBus("E"), new Complex(exporterDemand, 1e5));
+
+			var outputLine = builder.Network.Lines.Single(l => l.IsTransformerConnection && l.Endpoints.Any(b => b.Name == "TS"));
+			return (builder, outputLine);
+		}
+
+		/// <summary>
+		/// A move that sends an export through a transformer with a lower power factor
+		/// increases the total loss. The delta value agrees, and the loss is positive before and after.
+		/// </summary>
+		[TestMethod]
+		public void TotalLossDeltaIsCorrectForExportThroughTransformers()
+		{
+			var flowProvider = new SimplifiedDistFlowProvider();
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("N1[generatorVoltage=11000] -- l1[closed] -- N_T1_in");
+			builder.Add("N_T1_out -- l3[closed] -- Join");
+			builder.AddBus("Transformer1[transformer; ends=(N_T1_in, N_T1_out); voltages=(11000,220); operation=fixed; factor=0.9]");
+
+			builder.Add("N2[generatorVoltage=11000] -- l2[closed] -- N_T2_in");
+			builder.Add("N_T2_out -- l4[open] -- Join");
+			builder.AddBus("Transformer2[transformer; ends=(N_T2_in, N_T2_out); voltages=(11000,220); operation=fixed; factor=0.8]");
+
+			builder.Add("Join -- l5 -- Exporter[consumption=(-10000,0)]");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var objective = new TotalLossObjective(flowProvider);
+			var move = solution.SwapMove("l3", "l4");
+
+			double before = objective.Value(solution);
+			double delta = objective.DeltaValue(move);
+			move.Apply(true);
+			double after = objective.Value(solution);
+
+			// Losses in MWh over the period
+			double hours = solution.SinglePeriodSolutions.Single().Period.Length.TotalHours;
+			double lineLossMWh = builder.Network.Lines.Where(l => !l.IsTransformerConnection)
+				.Sum(l => solution.SinglePeriodSolutions.Single().Flow(flowProvider).PowerLoss(l)) * hours / 1e6;
+
+			Assert.IsTrue(before > 0);
+			Assert.IsTrue(after > 0);
+			Assert.AreEqual(after - before, delta, 1e-12);
+
+			// Transformer loss goes from 10% to 20% of the 10 kW export
+			Assert.AreEqual(0.2 * 10000 * hours / 1e6, after - lineLossMWh, 1e-12);
+			Assert.AreEqual(1000 * hours / 1e6, delta, 1e-6 * 1000 * hours / 1e6 + Math.Abs(lineLossMWh));
+		}
+
+		#endregion
+
 		#region Utilities
 
 		/// <summary>

@@ -82,12 +82,14 @@ namespace Sintef.Pgo.Core
 				lossStat.Add(line, flow.PowerLoss(line), loss);
 			}
 
-			// Check that real power loss is calculated correctly for transformers
+			// Check that real power loss is calculated correctly for transformers.
+			// S is the power entering the transformer: at the transformer bus under forward flow,
+			// at the output bus under reverse flow.
 			var transformerLossStat = new Statistic("PowerLossTransformer", "TransformerLoss = Re( S*(1-c) )");
 			foreach (var line in network.Lines.Where(l => l.IsTransformerConnection))
 			{
 				if (!(flow.NetworkConfig.TransformerModeForOutputLine(line) is Transformer.Mode mode)) continue;
-				var S = flow.PowerFlow(line.Transformer.Bus, line);
+				var (S, _) = TransformerInAndOut(line, mode);
 				var flowValue = flow.PowerLoss(line);
 				var eqnValue = (S * (1 - mode.PowerFactor)).Real;
 				transformerLossStat.Add(line, flowValue, eqnValue);
@@ -112,10 +114,8 @@ namespace Sintef.Pgo.Core
 			foreach (var line in network.Lines.Where(l => l.IsTransformerConnection))
 			{
 				if (!(flow.NetworkConfig.TransformerModeForOutputLine(line) is Transformer.Mode mode)) continue;
-				var S = flow.PowerFlow(line.Transformer.Bus, line);
-				var lhs = -flow.PowerFlow(mode.OutputBus, line);
-				var rhs = S * mode.PowerFactor;
-				transformerLineBalance.Add(line, lhs, rhs);
+				var (sIn, sOut) = TransformerInAndOut(line, mode);
+				transformerLineBalance.Add(line, sOut, sIn * mode.PowerFactor);
 			}
 
 			// Check power balance at each bus
@@ -157,6 +157,23 @@ namespace Sintef.Pgo.Core
 				noCurrentStat, currentStat, lossStat, lineBalanceStat, nodeBalanceStat,
 				transformerLossStat, transformerVoltageStat, transformerLineBalance,
 			};
+		}
+
+		/// <summary>
+		/// For a transformer output line, returns the power entering the transformer and the power leaving it.
+		/// Under forward flow (positive active power from the transformer bus into the line), power enters at the
+		/// transformer bus and leaves at the output bus. Under reverse flow, it enters at the output bus and leaves
+		/// at the transformer bus.
+		/// </summary>
+		private (Complex sIn, Complex sOut) TransformerInAndOut(Line line, Transformer.Mode mode)
+		{
+			var fromTransformer = _flow.PowerFlow(line.Transformer.Bus, line);
+			var fromOutput = _flow.PowerFlow(mode.OutputBus, line);
+
+			if (fromTransformer.Real >= 0)
+				return (fromTransformer, -fromOutput);
+			else
+				return (fromOutput, -fromTransformer);
 		}
 
 		/// <summary>

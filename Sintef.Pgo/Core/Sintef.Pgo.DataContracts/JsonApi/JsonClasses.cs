@@ -517,6 +517,9 @@ namespace Sintef.Pgo.DataContracts
 		/// <summary>
 		/// The mode's power factor, which is a measure of power loss. The output power is assumed to equal PowerFactor * Input Power.
 		/// Consequently, the tranformer loss (active and reactive) is (1 - PowerFactor) * Input Power. 
+		/// When active power flows from the target to the source (reverse flow, e.g. because consumers on the
+		/// target side export), the power arriving at the source side is PowerFactor times the power entering
+		/// at the target side, so the loss is (1 - PowerFactor) times the power entering the transformer in both directions.
 		/// If not given, 1.0 is used (i.e. the transformer is lossless).
 		/// </summary>
 		[DefaultValue(1.0)]

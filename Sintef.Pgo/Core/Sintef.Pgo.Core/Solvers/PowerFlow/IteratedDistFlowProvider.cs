@@ -326,9 +326,15 @@ namespace Sintef.Pgo.Core
 				{
 					if (!bus.IsTransformer)
 					{
-						// Transformer output line
+						// Transformer output line. The power leaving the transformer is the power
+						// factor times the power entering it. Under forward flow, the power delivered
+						// to the output bus leaves the transformer. Under reverse flow (the subtree
+						// exports), power enters at the output bus and leaves at the transformer bus.
 						var mode = configuration.TransformerModeForOutputLine(upstreamLine);
-						power /= mode.PowerFactor;
+						if (power.Real >= 0)
+							power /= mode.PowerFactor;
+						else
+							power *= mode.PowerFactor;
 					}
 				}
 				else
