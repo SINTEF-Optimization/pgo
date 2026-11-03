@@ -379,6 +379,66 @@ namespace Sintef.Pgo.Core.Test
 		}
 
 		/// <summary>
+		/// A short optimization on a network with automatic transformers, where the flow through the
+		/// transformers changes direction between periods, completes. Iterated DistFlow converges for
+		/// the best solution in every period, and every objective component is non-negative.
+		/// </summary>
+		[TestMethod]
+		public void OptimizerRunsWithAutomaticTransformersAndExporters()
+		{
+			var builder = AutomaticTransformerNetworkWithExporters(new SimplifiedDistFlowProvider());
+			var network = builder.Network;
+
+			// Period 0 has the builder's demands. In period 1 all exports are three times larger,
+			// in period 2 every consumer draws a load, and in period 3 the demands sum to zero.
+			var periodData = builder.RepeatedPeriodData(4).ToList();
+			var consumers = network.Consumers.ToList();
+			for (int k = 1; k < 4; ++k)
+			{
+				var demands = new PowerDemands(periodData[k].Demands);
+				foreach (var consumer in consumers)
+				{
+					var demand = demands.PowerDemand(consumer);
+					if (k == 1 && demand.Real < 0)
+						demands.SetPowerDemand(consumer, new Complex(3 * demand.Real, demand.Imaginary));
+					if (k == 2)
+						demands.SetPowerDemand(consumer, new Complex(Math.Abs(demand.Real), demand.Imaginary));
+				}
+				if (k == 3)
+				{
+					double sum = demands.Sum.Real;
+					var last = consumers.Last();
+					demands.SetPowerDemand(last, demands.PowerDemand(last) - sum);
+					Assert.AreEqual(0, demands.Sum.Real, 1e-6);
+				}
+				periodData[k] = new PeriodData(network, demands, periodData[k].Period);
+			}
+
+			var problem = new PgoProblem(periodData, new SimplifiedDistFlowProvider(), "automatic");
+			var parameters = new OptimizerParameters
+			{
+				Algorithm = AlgorithmType.RuinAndRecreate,
+				SimpleMPSolverSolverTimeOut = TimeSpan.FromSeconds(1)
+			};
+			var solution = new PgoSolution(problem);
+			IOptimizer optimizer = new ConfigOptimizerFactory(new NetworkManager(problem.Network))
+				.CreateOptimizer(parameters, solution, problem.CriteriaSet, new OptimizerEnvironment());
+			var best = (PgoSolution)new OptimizerRunner(optimizer, parameters.SimpleMPSolverSolverTimeOut).Optimize(solution);
+
+			var objective = (AggregateObjective)problem.CriteriaSet.Objective;
+			foreach (var component in objective.Components)
+				Assert.IsTrue(component.Value(best) >= 0, $"{component} is negative: {component.Value(best)}");
+
+			var iterated = new IteratedDistFlowProvider(IteratedDistFlowProvider.DefaultOptions);
+			foreach (var periodSolution in best.SinglePeriodSolutions)
+			{
+				var flow = periodSolution.Flow(iterated);
+				Assert.AreEqual(FlowStatus.Exact, flow.Status, $"period {periodSolution.Period.Index}: {flow.StatusDetails}");
+				Assert.IsTrue(network.Buses.Where(b => !b.IsTransformer).All(b => double.IsFinite(flow.Voltage(b).Magnitude)));
+			}
+		}
+
+		/// <summary>
 		/// Returns a builder with two automatic transformers that feed a meshed secondary network with
 		/// exporters, and an exporter on the input side of transformer T1
 		/// </summary>
@@ -619,6 +679,57 @@ namespace Sintef.Pgo.Core.Test
 			// Opening l2 makes G2 absorb 900 W > 700 W; opening l4 makes G1 absorb 900 W < 1000 W
 			TestUtils.VerifyLegalMove(constraint, moves);
 			TestUtils.VerifyDeltaValue(constraint, moves, 1e-9);
+		}
+
+		#endregion
+
+		#region Session checks and optimization
+
+		/// <summary>
+		/// The input analysis at session creation compares the magnitude of the total net demand with the
+		/// magnitude of the total generation capacity. A net export within the capacity passes. A net export
+		/// larger than the capacity is reported, consistent with the capacity limiting power in both directions.
+		/// </summary>
+		[TestMethod]
+		public void SessionAnalysisHandlesNetExport()
+		{
+			var (network, demands) = BaranWuWithExport(k => true);
+			var problem = new PgoProblem(new PeriodData(network, demands, Period.Default), new SimplifiedDistFlowProvider());
+			Assert.IsTrue(problem.AllPeriodData.Single().Demands.Sum.Real < 0);
+
+			var (ok, description) = problem.AnalyseDemandsCurrentsAndVoltages(network);
+			Assert.IsTrue(ok, description);
+
+			network.Providers.Single().GenerationCapacity = new Complex(1e6, 1e6);
+			(ok, description) = problem.AnalyseDemandsCurrentsAndVoltages(network);
+			Assert.IsFalse(ok);
+			StringAssert.Contains(description, "total generation capacity");
+		}
+
+		/// <summary>
+		/// The optimizer assumes a lower bound of zero on the objective. With exporting consumers every
+		/// objective component stays non-negative, and a short optimization runs without errors.
+		/// </summary>
+		[TestMethod]
+		public void OptimizerRunsWithExportersAndObjectiveIsNonNegative()
+		{
+			Random random = new Random(9);
+			var (problem, _, _) = RandomProblemWithExporters(random);
+
+			var parameters = new OptimizerParameters
+			{
+				Algorithm = AlgorithmType.RuinAndRecreate,
+				SimpleMPSolverSolverTimeOut = TimeSpan.FromSeconds(1)
+			};
+			var solution = new PgoSolution(problem);
+			IOptimizer optimizer = new ConfigOptimizerFactory(new NetworkManager(problem.Network))
+				.CreateOptimizer(parameters, solution, problem.CriteriaSet, new OptimizerEnvironment());
+			var best = (PgoSolution)new OptimizerRunner(optimizer, parameters.SimpleMPSolverSolverTimeOut).Optimize(solution);
+
+			var objective = (AggregateObjective)problem.CriteriaSet.Objective;
+			foreach (var component in objective.Components)
+				Assert.IsTrue(component.Value(best) >= 0, $"{component} is negative: {component.Value(best)}");
+			Assert.IsTrue(objective.Value(best) >= 0);
 		}
 
 		#endregion
