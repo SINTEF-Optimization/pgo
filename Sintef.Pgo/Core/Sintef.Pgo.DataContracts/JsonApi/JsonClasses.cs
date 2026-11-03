@@ -814,6 +814,9 @@ namespace Sintef.Pgo.DataContracts
 		/// <summary>
 		/// The power injected into various lines. Keyed by originating node,
 		/// and for each node a list of targets with the power injected into the line is provided. Given in MW.
+		/// Each line is listed under the node where active power enters it, so the active power is not negative.
+		/// When power flows back toward a provider, e.g. because consumers export, the originating node is the
+		/// line's downstream end.
 		/// </summary>
 		[JsonProperty(PropertyName = "injected_power")]
 		public Dictionary<string, List<OutgoingPower>> Powers;

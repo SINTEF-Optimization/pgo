@@ -39,6 +39,35 @@ namespace Sintef.Pgo.Core.Test
 			Assert.AreEqual(new Complex(-100, 10), builder.Demands.PowerDemand(builder.Network.GetBus("Consumer")));
 		}
 
+		/// <summary>
+		/// In the flows of a JSON solution, each line is presented from the end where active power enters it,
+		/// and the reported power is the power injected there. Under reverse flow this is the downstream end.
+		/// In Baran-Wu with every consumer exporting, every line has reverse flow.
+		/// </summary>
+		[TestMethod]
+		public void JsonSolutionReportsPowerInjectedAtTheSendingEnd()
+		{
+			var (network, demands) = BaranWuWithExport(k => true);
+			var flowProvider = new IteratedDistFlowProvider(IteratedDistFlowProvider.DefaultOptions);
+			var solution = new PgoSolution(new PgoProblem(new PeriodData(network, demands, Period.Default), flowProvider));
+			var flow = solution.SinglePeriodSolutions.Single().Flow(flowProvider);
+
+			var reported = IO.PgoJsonParser.ConvertToJson(solution, flowProvider).Flows.Single();
+
+			var entries = reported.Powers.SelectMany(kv => kv.Value.Select(p => (from: network.GetBus(kv.Key), power: p))).ToList();
+			Assert.AreEqual(network.Lines.Count(), entries.Count);
+			foreach (var (from, power) in entries)
+			{
+				var line = network.GetLine(power.LineId);
+				Assert.IsTrue(power.ActivePower > 0, $"line {line.Name}");
+				Assert.AreEqual(flow.PowerFlow(from, line).Real / 1e6, power.ActivePower, 1e-12, $"line {line.Name}");
+				Assert.AreEqual(flow.PowerLoss(line) / 1e6, power.PowerLoss, 1e-12, $"line {line.Name}");
+			}
+
+			// The line from the provider (bus 1) to bus 2 carries power from bus 2 back to the provider
+			Assert.IsTrue(reported.Powers["2"].Any(p => p.Target == "1"));
+		}
+
 		#endregion
 
 		#region Iterated DistFlow with export
