@@ -126,6 +126,11 @@ namespace Sintef.Pgo.Core
 
 			SetInitialVoltageAndCurrent(flow, generator);
 
+			// The convergence tolerance is relative to the total absolute demand in the tree.
+			// The generator power is not a useful scale, since exports may cancel the load so
+			// that the generator power is near or exactly zero.
+			double tolerance = _options.ConvergenceTolerance * TotalAbsoluteDemand(flow.NetworkConfig, generator, demands);
+
 			Complex prevGeneratorPower = 0;
 			int iteration = 0;
 
@@ -135,6 +140,13 @@ namespace Sintef.Pgo.Core
 				{
 					flow.Status = FlowStatus.Approximate;
 					flow.StatusDetails = "Max iterations reached";
+					break;
+				}
+
+				if (iteration == _options.IterationLimit)
+				{
+					flow.Status = FlowStatus.Failed;
+					flow.StatusDetails = "IteratedDistFlow did not converge within the iteration limit";
 					break;
 				}
 
@@ -149,24 +161,35 @@ namespace Sintef.Pgo.Core
 				// Check for convergence
 
 				Complex generatorPower = flow.PowerInjection(generator);
+				double change = (generatorPower - prevGeneratorPower).Magnitude;
 
-				double relativeChange = 0;
-				if (generatorPower != 0)
-					relativeChange = ((generatorPower - prevGeneratorPower) / generatorPower).Magnitude;
+				if (change.IsNanOrInfinity())
+					throw new Exception("The change in generator power is not a real number");
 
-				if (relativeChange.IsNanOrInfinity())
-					throw new Exception("Relative change is not a real number");
-
-				if (relativeChange < 1e-10)
+				// The first iteration has nothing to compare with: its line losses are computed from
+				// the initial zero currents. Require at least two iterations.
+				if (iteration > 1 && change <= tolerance)
 					// The change in this iteration was small. Accept the solution for this generator.
 					flow.Status = FlowStatus.Exact;
 
 				prevGeneratorPower = generatorPower;
-
-				//Console.WriteLine(generatorPower);
 			}
 
 			return iteration;
+		}
+
+		/// <summary>
+		/// Returns the sum of the magnitudes of the consumer demands in the tree under <paramref name="generator"/>
+		/// </summary>
+		private static double TotalAbsoluteDemand(NetworkConfiguration configuration, Bus generator, PowerDemands demands)
+		{
+			double total = 0;
+			configuration.Traverse(generator, topDownAction: bus =>
+			{
+				if (bus.IsConsumer)
+					total += demands.PowerDemand(bus).Magnitude;
+			});
+			return total;
 		}
 
 		/// <summary>
@@ -303,9 +326,15 @@ namespace Sintef.Pgo.Core
 				{
 					if (!bus.IsTransformer)
 					{
-						// Transformer output line
+						// Transformer output line. The power leaving the transformer is the power
+						// factor times the power entering it. Under forward flow, the power delivered
+						// to the output bus leaves the transformer. Under reverse flow (the subtree
+						// exports), power enters at the output bus and leaves at the transformer bus.
 						var mode = configuration.TransformerModeForOutputLine(upstreamLine);
-						power /= mode.PowerFactor;
+						if (power.Real >= 0)
+							power /= mode.PowerFactor;
+						else
+							power *= mode.PowerFactor;
 					}
 				}
 				else
@@ -313,7 +342,10 @@ namespace Sintef.Pgo.Core
 					// Normal line
 					var current = flow.Current(upstreamLine);
 					Complex powerLoss = upstreamLine.Impedance * current * Complex.Conjugate(current);
-					if (powerLoss.Real > power.Real)
+
+					// |loss| > |power| means |z I| > |V| at the downstream end, which does not happen in a valid solution.
+					// Note here that power can be positive or negative depending on the direction of power flow.
+					if (powerLoss.Magnitude > power.Magnitude)
 					{
 						flow.Status = FlowStatus.Failed;
 						flow.StatusDetails = "IteratedDistFlow diverged; power loss in line exceeds output power";
@@ -430,6 +462,22 @@ namespace Sintef.Pgo.Core
 			/// and sets <see cref="FlowStatus.Approximate"/>.
 			/// </summary>
 			public int MaxIterations { get; set; } = int.MaxValue;
+
+			/// <summary>
+			/// If the solver has not converged after this many iterations, it stops
+			/// and sets <see cref="FlowStatus.Failed"/>.
+			/// Convergence normally takes well below 100 iterations, so reaching the limit
+			/// means that the iteration diverges or oscillates.
+			/// If <see cref="MaxIterations"/> is smaller, that limit applies instead.
+			/// </summary>
+			public int IterationLimit { get; set; } = 10_000;
+
+			/// <summary>
+			/// The solver has converged when the generator power changes by at most this
+			/// tolerance times the total absolute demand in the generator's tree, from one
+			/// iteration to the next.
+			/// </summary>
+			public double ConvergenceTolerance { get; set; } = 1e-12;
 		}
 
 		#endregion

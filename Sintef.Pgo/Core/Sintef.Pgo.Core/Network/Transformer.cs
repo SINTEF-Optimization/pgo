@@ -215,6 +215,8 @@ namespace Sintef.Pgo.Core
 
 			/// <summary>
 			/// The estimate of the loss in the transformer. PowerFactor * InputPower = OutputPower.
+			/// Under reverse flow (active power flowing from the output bus to the input bus), the power arriving
+			/// at the input bus is PowerFactor times the power entering at the output bus.
 			/// </summary>
 			public double PowerFactor { get; }
 
@@ -222,6 +224,22 @@ namespace Sintef.Pgo.Core
 			/// This mode is the inverse copy of another mode that was added as a bidirectional mode.
 			/// </summary>
 			public bool DerivedFromBidirectionalMode { get; }
+
+			/// <summary>
+			/// Returns the (real) power loss in the transformer, in W, given the power flowing into the
+			/// output line at its two ends.
+			/// 
+			/// The loss is (1 - <see cref="PowerFactor"/>) times the active power that enters the line.
+			/// Under forward flow, power enters at the transformer bus. Under reverse flow (e.g. when consumers
+			/// downstream of the transformer export), power enters at the output bus. The loss is therefore
+			/// non-negative in both directions.
+			/// </summary>
+			/// <param name="powerFromTransformerBus">The power flowing from the transformer bus into the output line</param>
+			/// <param name="powerFromOutputBus">The power flowing from the output bus into the output line</param>
+			public double Loss(Complex powerFromTransformerBus, Complex powerFromOutputBus)
+			{
+				return (1 - PowerFactor) * Math.Max(powerFromTransformerBus.Real, powerFromOutputBus.Real);
+			}
 
 			/// <summary>
 			/// 

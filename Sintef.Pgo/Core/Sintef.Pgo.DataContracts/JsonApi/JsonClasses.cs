@@ -296,6 +296,8 @@ namespace Sintef.Pgo.DataContracts
 
 		/// <summary>
 		/// Max active generation in MW. Default value is infinity. Used only for providers.
+		/// The limit applies to the magnitude of the active power, so it also limits the power that the
+		/// provider absorbs when consumers export.
 		/// </summary>
 		[JsonProperty(PropertyName = "p_gen_max")]
 		[DefaultValue(double.PositiveInfinity)]
@@ -517,6 +519,9 @@ namespace Sintef.Pgo.DataContracts
 		/// <summary>
 		/// The mode's power factor, which is a measure of power loss. The output power is assumed to equal PowerFactor * Input Power.
 		/// Consequently, the tranformer loss (active and reactive) is (1 - PowerFactor) * Input Power. 
+		/// When active power flows from the target to the source (reverse flow, e.g. because consumers on the
+		/// target side export), the power arriving at the source side is PowerFactor times the power entering
+		/// at the target side, so the loss is (1 - PowerFactor) times the power entering the transformer in both directions.
 		/// If not given, 1.0 is used (i.e. the transformer is lossless).
 		/// </summary>
 		[DefaultValue(1.0)]
@@ -606,6 +611,7 @@ namespace Sintef.Pgo.DataContracts
 
 		/// <summary>
 		/// Active loads per period, in MW. Same order as the <see cref="Period"/>s are listed in the <see cref="Demand"/>.
+		/// A negative value is a net export from the consumer, e.g. when local generation exceeds the local load.
 		/// </summary>
 		[JsonProperty(PropertyName = "p_loads")]
 		[JsonRequired]
@@ -809,6 +815,9 @@ namespace Sintef.Pgo.DataContracts
 		/// <summary>
 		/// The power injected into various lines. Keyed by originating node,
 		/// and for each node a list of targets with the power injected into the line is provided. Given in MW.
+		/// Each line is listed under the node where active power enters it, so the active power is not negative.
+		/// When power flows back toward a provider, e.g. because consumers export, the originating node is the
+		/// line's downstream end.
 		/// </summary>
 		[JsonProperty(PropertyName = "injected_power")]
 		public Dictionary<string, List<OutgoingPower>> Powers;

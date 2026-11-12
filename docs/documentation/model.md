@@ -77,6 +77,19 @@ Compared to the power grid the forecast is simpler to describe. It has two compo
  * A list of periods, which are named intervals in time. These are presumed to be consecutive.
  * For every consumer, the forecasted power demand in each period. Note that it is possible to omit active and/or reactive power demand for a consumer, but if a demand is given, it must be given for each period.
 
+#### Negative demand (net export)
+
+In the JSON input, the active demand of a consumer may be negative. A negative active demand is a net export, for example from a consumer whose local generation exceeds its local load in a period. The reactive demand may have either sign. The CIM input still requires a positive active load for every consumer.
+
+With net export, power may flow in either direction in a line, and a provider may absorb power. The model handles this as follows.
+
+ * *Power flow.* The DistFlow equations hold for either direction of flow. The loss in a line is positive in both directions, and the voltage rises along a line that carries power back toward the provider. Iterated DistFlow measures convergence relative to the total absolute demand of the consumers fed by each provider, so it also converges when exports cancel the load. If it has not converged after an iteration limit, the flow gets status `failed`.
+ * *Voltage limits.* Export can raise a voltage above the generator voltage. Upper voltage limits are checked against the computed flow.
+ * *Transformers.* The loss is (1 - power factor) times the power that enters the transformer, at whichever side active power enters. An automatic transformer holds its output voltage in both directions of flow.
+ * *Substation capacity.* The active generation capacity of a provider (`p_gen_max`) limits the magnitude of the active power through it, so it also limits the power that the provider absorbs. The minimum generation (`p_gen_min`) is not used.
+ * *KILE.* The expected energy not delivered uses the net demand truncated at zero, per consumer and period. An exporting consumer has no KILE cost in that period. This understates the cost for a consumer whose own generation also stops during an outage, since only the net demand is known.
+ * *Reported flows.* In the flows of a solution, each line is reported from the end where active power enters it, with the power injected there. A line with reverse flow is therefore listed under its downstream node.
+
 ## Further reading
 
 For more information, see also the list of [modelling examples](modelling.md), as well as the [API reference](https://pgosintef.azurewebsites.net/swagger/index.html) (requires login). A full overview of PGO documentation can be found [here](./index.md).

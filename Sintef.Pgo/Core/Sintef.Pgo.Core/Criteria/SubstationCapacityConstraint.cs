@@ -12,6 +12,8 @@ namespace Sintef.Pgo.Core
 {
 	/// <summary>
 	/// Constraint representing generation capacities (real power) of the substations. 
+	/// The capacity limits the active power through the provider in both directions: a provider
+	/// may also absorb power, when consumers export, and a transformer rating applies both ways.
 	/// In relaxed form, the penalty of violating this constraint is proportional to the violation
 	/// squared (for "fairness" among sub stations).
 	/// 
@@ -71,7 +73,7 @@ namespace Sintef.Pgo.Core
 
 			foreach (var provider in sol.Network.Providers)
 			{
-				if (flow.PowerInjection(provider).Real > provider.ActiveGenerationCapacity)
+				if (Math.Abs(flow.PowerInjection(provider).Real) > provider.ActiveGenerationCapacity)
 				{
 					return false;
 				}
@@ -93,7 +95,7 @@ namespace Sintef.Pgo.Core
 				foreach (var provider in sol.Problem.Network.Providers)
 				{
 					double newInjection = NewInjection(swapMove, provider);
-					if (newInjection > provider.ActiveGenerationCapacity)
+					if (Math.Abs(newInjection) > provider.ActiveGenerationCapacity)
 					{
 						return false;
 					}
@@ -129,7 +131,7 @@ namespace Sintef.Pgo.Core
 
 				foreach (var provider in sol.Problem.Network.Providers)
 				{
-					if (powerFlow.PowerInjection(provider).Real > provider.ActiveGenerationCapacity)
+					if (Math.Abs(powerFlow.PowerInjection(provider).Real) > provider.ActiveGenerationCapacity)
 					{
 						stringBuilder.AppendLine($"Period {periodSolution.Period.StartTime}: Capacity of Provider {provider.Name} is exceeded");
 					}
@@ -165,7 +167,8 @@ namespace Sintef.Pgo.Core
 
 		/// <summary>
 		/// The value is the sum of excess injection at providers, squared for each provider,
-		/// and then summed over all period solutions.
+		/// and then summed over all period solutions. The excess is the amount by which the magnitude
+		/// of the active injection exceeds the capacity.
 		/// </summary>
 		/// <param name="solution"></param>
 		/// <returns></returns>
@@ -194,10 +197,10 @@ namespace Sintef.Pgo.Core
 				{
 					double cap = provider.ActiveGenerationCapacity;
 					double oldInjection = oldFlow.PowerInjection(provider).Real;
-					double oldPenalty = Math.Pow(Math.Max(oldInjection - cap, 0.0), 2.0);
+					double oldPenalty = Math.Pow(Math.Max(Math.Abs(oldInjection) - cap, 0.0), 2.0);
 
 					double newInjection = NewInjection(swapMove, provider);
-					double newPenalty = Math.Pow(Math.Max(newInjection - cap, 0.0), 2.0);
+					double newPenalty = Math.Pow(Math.Max(Math.Abs(newInjection) - cap, 0.0), 2.0);
 
 					penalty += newPenalty - oldPenalty;
 
@@ -231,7 +234,7 @@ namespace Sintef.Pgo.Core
 		/// <returns></returns>
 		private static double Penalty(Bus provider, IPowerFlow flow)
 		{
-			double powerInjection = flow.PowerInjection(provider).Real;
+			double powerInjection = Math.Abs(flow.PowerInjection(provider).Real);
 			double activeGenerationCapacity = provider.ActiveGenerationCapacity;
 
 			if (powerInjection <= activeGenerationCapacity)

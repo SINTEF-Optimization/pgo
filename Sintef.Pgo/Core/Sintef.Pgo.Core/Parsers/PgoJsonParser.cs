@@ -569,8 +569,12 @@ namespace Sintef.Pgo.Core.IO
 					Fail($"Node '{load.NodeId}': The reactive loads is null");
 				if (load.ReactiveLoads.Count != demands.Periods.Count)
 					Fail($"Node '{load.NodeId}': The number of reactive loads does not equal the number of periods");
-				if (load.ActiveLoads.Any(l => l < 0))
-					Fail($"Node '{load.NodeId}': Active loads may not be negative");
+				// Negative active loads are allowed. They represent a net export from the consumer,
+				// e.g. when local generation exceeds the local load.
+				if (load.ActiveLoads.Any(l => double.IsNaN(l) || double.IsInfinity(l)))
+					Fail($"Node '{load.NodeId}': Active loads must be finite numbers");
+				if (load.ReactiveLoads.Any(l => double.IsNaN(l) || double.IsInfinity(l)))
+					Fail($"Node '{load.NodeId}': Reactive loads must be finite numbers");
 			}
 
 			if (demands.Loads.Select(l => l.NodeId).TryFindDuplicate(out string id))
@@ -1066,26 +1070,20 @@ namespace Sintef.Pgo.Core.IO
 			{
 				var (upstream, downstream) = (line.Node1, line.Node2);
 
-				// Compute power and current
+				// Prefer presenting the line in upstream->downstream direction,
+				if (periodSolution.NetConfig.UpstreamBus(upstream) == downstream)
+					(upstream, downstream) = (downstream, upstream);
+
+				// but most important: present the line from the end where active power enters it.
+				// Under reverse flow, e.g. when consumers export, this is the downstream end.
+				if (computedFlow.PowerFlow(upstream, line).Real < 0)
+					(upstream, downstream) = (downstream, upstream);
+
+				// Compute power and current. The power is the power injected into the line at the
+				// presented upstream end, so the power arriving at the other end is power minus loss.
 				var power = computedFlow.PowerFlow(upstream, line);
 				var current = computedFlow.Current(line);
 				var loss = computedFlow.PowerLoss(line);
-
-				// Prefer presenting the line in upstream->downstream direction,
-				if (periodSolution.NetConfig.UpstreamBus(upstream) == downstream)
-				{
-					(upstream, downstream) = (downstream, upstream);
-					power = -power;
-					current = -current;
-				}
-
-				// but most important: Choose upstream node to get positive real power
-				if (power.Real < 0)
-				{
-					(upstream, downstream) = (downstream, upstream);
-					power = -power;
-					current = -current;
-				}
 
 				powerFlow.Currents.AddOrNew(upstream.Name, new OutgoingCurrent
 				{

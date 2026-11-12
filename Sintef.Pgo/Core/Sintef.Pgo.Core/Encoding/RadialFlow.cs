@@ -209,7 +209,12 @@ namespace Sintef.Pgo.Core
 				{
 					if (NetworkConfig.TransformerModeForOutputLine(line) is Transformer.Mode mode)
 					{
-						ejectedPower *= mode.PowerFactor;
+						// The power leaving the transformer is the power factor times the power entering it.
+						// Under reverse flow, power enters at the output bus and leaves at the transformer bus.
+						if (ejectedPower.Real >= 0)
+							ejectedPower *= mode.PowerFactor;
+						else
+							ejectedPower /= mode.PowerFactor;
 					}
 				}
 				else

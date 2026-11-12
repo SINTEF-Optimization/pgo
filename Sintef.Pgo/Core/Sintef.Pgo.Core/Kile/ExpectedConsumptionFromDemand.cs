@@ -41,8 +41,13 @@ namespace Sintef.Pgo.Core
 
 		/// <summary>
 		/// Presents the demands given for each period as a sequence of
-		/// spans of constant power consumption for the given 
-		/// <paramref name="consumer"/>, from <paramref name="startTime"/> onward
+		/// spans of constant power consumption for the given
+		/// <paramref name="consumer"/>, from <paramref name="startTime"/> onward.
+		///
+		/// A negative active demand (a net export) is truncated at zero, so the
+		/// expected consumption is never negative. This understates the energy not
+		/// supplied for a prosumer, whose local generation also stops during an outage,
+		/// but only the net load is known.
 		/// </summary>
 		public override IEnumerable<PowerSpan> PowerSpans(Bus consumer, DateTime startTime)
 		{
@@ -61,7 +66,7 @@ namespace Sintef.Pgo.Core
 				{
 					Start = period.StartTime,
 					Length = period.Length,
-					ActivePower = _allPeriodData[periodIndex].Demands.ActivePowerDemand(consumer),
+					ActivePower = Math.Max(0, _allPeriodData[periodIndex].Demands.ActivePowerDemand(consumer)),
 					IsLast = (periodIndex == _allPeriodData.Count - 1)
 				};
 

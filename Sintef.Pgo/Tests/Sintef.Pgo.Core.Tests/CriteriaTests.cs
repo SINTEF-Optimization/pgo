@@ -258,6 +258,67 @@ namespace Sintef.Pgo.Core.Test
 		[TestMethod]
 		public void TestDeltaTotalLossAndSimplifiedDistFlow() => TestDeltaValues<TotalLossObjective>(new SimplifiedDistFlowProvider(), 1E-9);
 
+		/// <summary>
+		/// Tests delta value calculations for the total loss objective, with SimplifiedDistFlow,
+		/// when some consumers export.
+		/// </summary>
+		[TestMethod]
+		public void TestDeltaTotalLossAndSimplifiedDistFlowWithExporters()
+			=> TestDeltaValues<TotalLossObjective>(new SimplifiedDistFlowProvider(), 1E-9, BaranWuWithExporters());
+
+		/// <summary>
+		/// Tests delta value calculations for the line capacity objective when some consumers export.
+		/// </summary>
+		[TestMethod]
+		public void TestDeltaLineCapacityAndSimplifiedDistFlowWithExporters()
+		{
+			var periodData = BaranWuWithExporters(g => g.Lines.Do(l => l.CurrentLimit = 15));
+
+			TestDeltaValues<LineCapacityCriterion>(new SimplifiedDistFlowProvider(), 1E-9, periodData);
+		}
+
+		/// <summary>
+		/// Tests delta value calculations for the consumer voltage limits (as objective), with SimplifiedDistFlow,
+		/// when some consumers export and voltages rise above the upper limit.
+		/// </summary>
+		[TestMethod]
+		public void TestDeltaVoltageLimitsAndSimplifiedDistFlowWithExporters()
+		{
+			var periodData = BaranWuWithExporters();
+			double generatorVoltage = periodData.Network.Providers.Min(p => p.GeneratorVoltage);
+
+			TestDeltaValues<ConsumerVoltageLimitsConstraint>(new SimplifiedDistFlowProvider(), 1E-9, periodData,
+				modify: crit =>
+				{
+					IFlowProvider flowProvider = _flowProviders[FlowApproximation.SimplifiedDF];
+					CriteriaSet myCrit = crit.WithProvider(flowProvider);
+					(myCrit.Objective as AggregateObjective).AddComponent(new ConsumerVoltageLimitsConstraint(flowProvider, 0.3), 1);
+					periodData.Network.Consumers.Do(c => { c.VMin = 0.8 * generatorVoltage; c.VMax = 1.0005 * generatorVoltage; });
+					return myCrit;
+				},
+				allMovesMayBeNeutral: "SwapSwitchStatusMove");
+		}
+
+		/// <summary>
+		/// Returns the single period modified Baran-Wu problem with every third consumer exporting:
+		/// its active demand is -1.5 times the original value.
+		/// </summary>
+		private PeriodData BaranWuWithExporters(Action<PowerGrid> modifyAction = null)
+		{
+			var data = TestUtils.CreateModifiedBaranWuCase(modifyAction);
+			var demands = new PowerDemands(data.Demands);
+			int i = 0;
+			foreach (var consumer in data.Network.Consumers)
+			{
+				if (i++ % 3 == 0)
+				{
+					var demand = demands.PowerDemand(consumer);
+					demands.SetPowerDemand(consumer, new Complex(-1.5 * demand.Real, demand.Imaginary));
+				}
+			}
+			return new PeriodData(data.Network, demands, data.Period);
+		}
+
 
 		/// <summary>
 		/// Tests delta value calculations for the voltage limits constraint (as objective), with SimplifiedDistFlow.

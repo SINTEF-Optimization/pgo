@@ -493,6 +493,93 @@ namespace Sintef.Pgo.Core.Test
 			VerifyFlowDelta("l5", "l4");
 		}
 
+		[TestMethod]
+		public void FlowDeltasAreCorrectForTestNetworkWithExporters()
+		{
+			// The small test network, with three of the seven consumers exporting
+			_builder.Add("N1[generator] -- L1[closed] -- N2[consumption=(1,0)] -- L2[closed] -- N3[consumption=(-3,0.5)] -- L3[closed] -- N4[consumption=(1,0)]");
+			_builder.Add("N4 -- L4[closed] -- N5[consumption=(-2,0)] -- L5[closed] -- N6[consumption=(1,0)] -- L6[open] -- N1");
+			_builder.Add("N1 -- Lx[open] -- N5");
+			_builder.Add("N3 -- Ly[open] -- N6");
+			_builder.Add("N4 -- Lz[open] -- N2");
+			_builder.Add("N10[generator] -- L10[closed] -- N11[consumption=(-4,0)] -- L11[closed] -- N12[consumption=(1,0)]");
+			_builder.Add("N2 -- La[open] -- N10");
+			_builder.Add("N3 -- Lb[open] -- N11");
+			_builder.Add("N4 -- Lc[open] -- N12");
+
+			PgoSolution solution = _builder.SinglePeriodSolution;
+			PeriodSolution perSol = solution.SinglePeriodSolutions.Single();
+			Assert.IsTrue(perSol.IsRadial);
+			Assert.IsTrue(perSol.ComputeFlow(solution.Problem.FlowProvider));
+
+			foreach (var lineToClose in perSol.OpenSwitches.ToList())
+			{
+				CloseSwitchAndOpenOtherNeighbourhood nh = new CloseSwitchAndOpenOtherNeighbourhood(lineToClose, perSol.Period);
+				nh.Init(solution);
+
+				VerifyFlowDelta(nh.Cast<SwapSwitchStatusMove>());
+			}
+		}
+
+		[TestMethod]
+		public void FlowDeltasAreCorrectForTransformersSwitchWithExporter()
+		{
+			_builder.Add("N1[generatorVoltage=11000] -- l1[closed] -- N_T1_in");
+			_builder.Add("N_T1_out -- l3 -- Join");
+			_builder.AddBus("Transformer1[transformer; ends=(N_T1_in, N_T1_out); voltages=(11000,220); operation=fixed; factor=0.9]");
+
+			_builder.Add("N2[generatorVoltage=11000] -- l2[open] -- N_T2_in");
+			_builder.Add("N_T2_out -- l4 -- Join");
+			_builder.AddBus("Transformer2[transformer; ends=(N_T2_in, N_T2_out); voltages=(11000,220); operation=fixed; factor=0.8]");
+
+			_builder.Add("Join -- l5 -- Exporter[consumption=(-10000,0)]");
+
+			VerifyFlowDelta("l1", "l2");
+		}
+
+		[TestMethod]
+		public void FlowDeltasAreCorrectForThreeTransformersSwitchWithExporters()
+		{
+			_builder.Add("G1[generatorVoltage=11000] -- line1 -- T1_in");
+			_builder.Add("T1_out -- line2 -- C1[consumption=(7000,0)] -- line3[closed] -- C2[consumption=(-8000,0)] -- line4 -- T2_in");
+			_builder.Add("T2_out -- line5 -- C3[consumption=(-9000,0)] -- line6[open] -- C4[consumption=(10000,0)] -- line7 -- T3_out");
+			_builder.Add("T3_in -- line8 -- G2[generatorVoltage=11000]");
+			_builder.AddBus("T1[transformer; ends=(T1_in,T1_out); voltages=(11000,22000); operation=fixed; factor=0.9]");
+			_builder.AddBus("T2[transformer; ends=(T2_in,T2_out); voltages=(21000,22000); operation=fixed; factor=0.8]");
+			_builder.AddBus("T3[transformer; ends=(T3_in,T3_out); voltages=(11000,22000); operation=fixed; factor=0.7]");
+
+			VerifyFlowDelta("line3", "line6");
+		}
+
+		[TestMethod]
+		public void FlowDeltasAreCorrectForAutomaticTransformersWithExporters()
+		{
+			// Two automatic transformers feed a meshed secondary network with exporters. A third exporter sits
+			// on the input side of transformer T1. Moves shift the exporters between the transformers and
+			// reverse the flow through them.
+			_builder.Add("G1[generatorVoltage=20000] -- line1 -- X[consumption=(-50000,10000)] -- line2 -- T1_in");
+			_builder.Add("T1_out -- line3[closed] -- C1[consumption=(30000,5000)] -- line4[closed] -- C2[consumption=(-80000,0)] -- line5[open] -- C3[consumption=(-60000,20000)]");
+			_builder.Add("C3 -- line6[closed] -- C4[consumption=(20000,0)] -- line7[closed] -- T2_out");
+			_builder.Add("C1 -- line8[open] -- C4");
+			_builder.Add("C2 -- line9[open] -- C4");
+			_builder.Add("T2_in -- line10 -- G2[generatorVoltage=20000]");
+			_builder.AddBus("T1[transformer; ends=(T1_in,T1_out); voltages=(20000,10500); operation=auto; factor=0.98]");
+			_builder.AddBus("T2[transformer; ends=(T2_in,T2_out); voltages=(20000,10000); operation=auto; factor=0.95]");
+
+			PgoSolution solution = _builder.SinglePeriodSolution;
+			PeriodSolution perSol = solution.SinglePeriodSolutions.Single();
+			Assert.IsTrue(perSol.IsRadial);
+			Assert.IsTrue(perSol.ComputeFlow(solution.Problem.FlowProvider));
+
+			foreach (var lineToClose in perSol.OpenSwitches.ToList())
+			{
+				CloseSwitchAndOpenOtherNeighbourhood nh = new CloseSwitchAndOpenOtherNeighbourhood(lineToClose, perSol.Period);
+				nh.Init(solution);
+
+				VerifyFlowDelta(nh.Cast<SwapSwitchStatusMove>());
+			}
+		}
+
 		private void VerifyFlowDelta(string switchToOpen, string switchToClose)
 		{
 			PgoSolution mpSol = _builder.SinglePeriodSolution;

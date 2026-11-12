@@ -1,6 +1,18 @@
 ﻿CHANGELOG for PGO
 =================
 
+ - Consumers may have a negative active load (a net export) in the JSON input. Power may then flow
+   back toward the providers. See "Negative demand (net export)" in the model documentation.
+ - The active generation capacity of a provider (p_gen_max) also limits the active power that the provider absorbs.
+ - KILE uses the net load truncated at zero, so an exporting consumer has no KILE cost.
+ - The transformer loss is positive in both directions of flow.
+ - In the flows of a solution, the active and reactive power reported for a line is the power injected at the
+   end where active power enters it. Before, a line presented against its defined direction showed the power
+   arriving at the other end.
+ - Iterated DistFlow has an iteration limit (default 10 000), after which the flow status is 'failed'.
+   Its convergence test is relative to the total absolute demand.
+ - Active and reactive loads that are not finite numbers are rejected with an error message.
+
 Version 1.2.2
 
  - First open source version. Older history is available only in the SINTEF internal repo.
