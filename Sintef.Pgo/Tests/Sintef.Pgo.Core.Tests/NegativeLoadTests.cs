@@ -352,8 +352,9 @@ namespace Sintef.Pgo.Core.Test
 		}
 
 		/// <summary>
-		/// LegalMove and DeltaValue agree with the full evaluation for the loss, voltage and line capacity criteria
-		/// when moves shift exporters between automatic transformers and reverse the flow through them
+		/// LegalMove and DeltaValue agree with the full evaluation for the loss, voltage, line capacity and provider
+		/// capacity criteria when moves shift exporters between automatic transformers and reverse the flow
+		/// through them
 		/// </summary>
 		[TestMethod]
 		public void CriteriaDeltasAreCorrectWithAutomaticTransformers()
@@ -369,6 +370,10 @@ namespace Sintef.Pgo.Core.Test
 			var voltage = new ConsumerVoltageLimitsConstraint(flowProvider, 0.3);
 			TestUtils.VerifyLegalMove(voltage, moves);
 			TestUtils.VerifyDeltaValue(voltage, moves, 1e-9);
+
+			var capacity = new SubstationCapacityConstraint(flowProvider);
+			TestUtils.VerifyLegalMove(capacity, moves);
+			TestUtils.VerifyDeltaValue(capacity, moves, 1e-9);
 
 			TestUtils.VerifyDeltaValue(new LineCapacityCriterion(flowProvider), moves, 1e-9);
 		}
@@ -553,6 +558,67 @@ namespace Sintef.Pgo.Core.Test
 
 			var signedProblem = new PgoProblem(signedData, new SimplifiedDistFlowProvider(), "exporters");
 			return (signedProblem, signedData, truncatedData);
+		}
+
+		#endregion
+
+		#region Provider capacity
+
+		/// <summary>
+		/// The capacity limits the active power through the provider in both directions.
+		/// In Baran-Wu with every consumer exporting, the provider absorbs the export less the losses.
+		/// </summary>
+		[TestMethod]
+		public void ProviderCapacityLimitsAbsorbedPower()
+		{
+			var (network, demands) = BaranWuWithExport(k => true);
+			var flowProvider = new IteratedDistFlowProvider(IteratedDistFlowProvider.DefaultOptions);
+			var problem = new PgoProblem(new PeriodData(network, demands, Period.Default), flowProvider);
+			var solution = new PgoSolution(problem);
+			var provider = network.Providers.Single();
+			var constraint = new SubstationCapacityConstraint(flowProvider);
+
+			double export = -network.Consumers.Sum(b => demands.ActivePowerDemand(b));
+			double absorbed = -solution.SinglePeriodSolutions.Single().Flow(flowProvider).PowerInjection(provider).Real;
+			Assert.IsTrue(0 < absorbed && absorbed < export, $"absorbed {absorbed}, export {export}");
+
+			provider.ActiveGenerationCapacity = 1.1 * absorbed;
+			Assert.IsTrue(constraint.IsSatisfied(solution));
+			Assert.AreEqual(0, constraint.Value(solution));
+
+			double capacity = 0.9 * absorbed;
+			provider.ActiveGenerationCapacity = capacity;
+			Assert.IsFalse(constraint.IsSatisfied(solution));
+			Assert.AreEqual(Math.Pow(absorbed - capacity, 2), constraint.Value(solution), 1e-6 * Math.Pow(absorbed - capacity, 2));
+			StringAssert.Contains(constraint.Reason(solution), "Capacity of Provider");
+		}
+
+		/// <summary>
+		/// LegalMove and DeltaValue agree with the full check when moves change the power absorbed by providers
+		/// </summary>
+		[TestMethod]
+		public void ProviderCapacityDeltasAreCorrectForAbsorbedPower()
+		{
+			var flowProvider = new SimplifiedDistFlowProvider();
+			var builder = new NetworkBuilder(flowProvider);
+			builder.Add("G1[generatorVoltage=1000; generationCapacity=(1000,1e9)] -- l1 -- A[consumption=(-300,0)] -- l2[closed] -- B[consumption=(-300,0)]");
+			builder.Add("B -- l3[open] -- C[consumption=(-300,0)] -- l4[closed] -- D[consumption=(-300,0)] -- l5 -- G2[generatorVoltage=1000; generationCapacity=(700,1e9)]");
+
+			PgoSolution solution = builder.SinglePeriodSolution;
+			var periodSolution = solution.SinglePeriodSolutions.Single();
+			var moves = new List<Move>();
+			foreach (Line switchToClose in periodSolution.OpenSwitches.ToList())
+			{
+				var neighbourhood = new CloseSwitchAndOpenOtherNeighbourhood(switchToClose, periodSolution.Period);
+				neighbourhood.Init(solution);
+				moves.AddRange(neighbourhood);
+			}
+
+			var constraint = new SubstationCapacityConstraint(flowProvider);
+
+			// Opening l2 makes G2 absorb 900 W > 700 W; opening l4 makes G1 absorb 900 W < 1000 W
+			TestUtils.VerifyLegalMove(constraint, moves);
+			TestUtils.VerifyDeltaValue(constraint, moves, 1e-9);
 		}
 
 		#endregion

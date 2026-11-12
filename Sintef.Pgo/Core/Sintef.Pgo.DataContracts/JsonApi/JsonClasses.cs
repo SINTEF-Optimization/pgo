@@ -296,6 +296,8 @@ namespace Sintef.Pgo.DataContracts
 
 		/// <summary>
 		/// Max active generation in MW. Default value is infinity. Used only for providers.
+		/// The limit applies to the magnitude of the active power, so it also limits the power that the
+		/// provider absorbs when consumers export.
 		/// </summary>
 		[JsonProperty(PropertyName = "p_gen_max")]
 		[DefaultValue(double.PositiveInfinity)]
