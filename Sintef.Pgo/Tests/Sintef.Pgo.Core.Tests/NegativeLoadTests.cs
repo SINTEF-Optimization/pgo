@@ -40,6 +40,25 @@ namespace Sintef.Pgo.Core.Test
 		}
 
 		/// <summary>
+		/// The JSON input accepts a negative active load. Baran-Wu's demands are read, the active load of
+		/// bus 2 is made negative, and the demands are parsed.
+		/// </summary>
+		[TestMethod]
+		public void JsonDemandsWithNegativeActiveLoadAreParsed()
+		{
+			var network = IO.PgoJsonParser.ParseNetworkFromJsonFile(TestUtils.TestDataFile("baran-wu.json"));
+			var input = Newtonsoft.Json.JsonConvert.DeserializeObject<DataContracts.Demand>(
+				System.IO.File.ReadAllText(TestUtils.TestDataFile("baran-wu_forecast.json")));
+			input.Loads.Single(l => l.NodeId == "2").ActiveLoads = new List<double> { -0.1 };
+
+			var demands = IO.PgoJsonParser.ParseDemands(network, input).Single().Demands;
+
+			Assert.AreEqual(-0.1e6, demands.ActivePowerDemand(network.GetBus("2")), 1e-6);
+			Assert.AreEqual(0.06e6, demands.PowerDemand(network.GetBus("2")).Imaginary, 1e-6);
+			Assert.AreEqual(0.09e6, demands.ActivePowerDemand(network.GetBus("3")), 1e-6);
+		}
+
+		/// <summary>
 		/// In the flows of a JSON solution, each line is presented from the end where active power enters it,
 		/// and the reported power is the power injected there. Under reverse flow this is the downstream end.
 		/// In Baran-Wu with every consumer exporting, every line has reverse flow.

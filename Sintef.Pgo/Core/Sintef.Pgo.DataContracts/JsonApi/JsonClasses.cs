@@ -611,6 +611,7 @@ namespace Sintef.Pgo.DataContracts
 
 		/// <summary>
 		/// Active loads per period, in MW. Same order as the <see cref="Period"/>s are listed in the <see cref="Demand"/>.
+		/// A negative value is a net export from the consumer, e.g. when local generation exceeds the local load.
 		/// </summary>
 		[JsonProperty(PropertyName = "p_loads")]
 		[JsonRequired]

@@ -352,11 +352,14 @@ namespace Sintef.Pgo.Core.Test
 			bad.Add(() => { loads1.ActiveLoads = null; }, "The active loads is null");
 			bad.Add(() => { loads1.ActiveLoads.Add(1); }, "Error in the demands: Node 'Consumer1': The number of active loads does not equal the number of periods");
 			good.Add(() => { loads1.ActiveLoads[0] = 0; }, "Zero active load");
-			bad.Add(() => { loads1.ActiveLoads[0] = -1; }, "Error in the demands: Node 'Consumer1': Active loads may not be negative");
+			good.Add(() => { loads1.ActiveLoads[0] = -1; }, "Negative active load");
+			bad.Add(() => { loads1.ActiveLoads[0] = double.NaN; }, "Error in the demands: Node 'Consumer1': Active loads must be finite numbers");
+			bad.Add(() => { loads1.ActiveLoads[0] = double.NegativeInfinity; }, "Error in the demands: Node 'Consumer1': Active loads must be finite numbers");
 			bad.Add(() => { loads1.ReactiveLoads = null; }, "The reactive loads is null");
 			bad.Add(() => { loads1.ReactiveLoads.Add(1); }, "Error in the demands: Node 'Consumer1': The number of reactive loads does not equal the number of periods");
 			good.Add(() => { loads1.ReactiveLoads[0] = 0; }, "Zero reactive load");
 			good.Add(() => { loads1.ReactiveLoads[0] = -1; }, "Negative reactive load");
+			bad.Add(() => { loads1.ReactiveLoads[0] = double.PositiveInfinity; }, "Error in the demands: Node 'Consumer1': Reactive loads must be finite numbers");
 
 			// Add switch settings
 

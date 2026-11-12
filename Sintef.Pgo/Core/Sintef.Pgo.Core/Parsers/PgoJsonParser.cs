@@ -569,8 +569,12 @@ namespace Sintef.Pgo.Core.IO
 					Fail($"Node '{load.NodeId}': The reactive loads is null");
 				if (load.ReactiveLoads.Count != demands.Periods.Count)
 					Fail($"Node '{load.NodeId}': The number of reactive loads does not equal the number of periods");
-				if (load.ActiveLoads.Any(l => l < 0))
-					Fail($"Node '{load.NodeId}': Active loads may not be negative");
+				// Negative active loads are allowed. They represent a net export from the consumer,
+				// e.g. when local generation exceeds the local load.
+				if (load.ActiveLoads.Any(l => double.IsNaN(l) || double.IsInfinity(l)))
+					Fail($"Node '{load.NodeId}': Active loads must be finite numbers");
+				if (load.ReactiveLoads.Any(l => double.IsNaN(l) || double.IsInfinity(l)))
+					Fail($"Node '{load.NodeId}': Reactive loads must be finite numbers");
 			}
 
 			if (demands.Loads.Select(l => l.NodeId).TryFindDuplicate(out string id))
