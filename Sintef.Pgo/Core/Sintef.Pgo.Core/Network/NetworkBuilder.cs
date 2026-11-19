@@ -701,6 +701,7 @@ namespace Sintef.Pgo.Core
 			Complex impedance = DefaultImpedance;
 			bool? isOpen = null;
 			bool isBreaker = false;
+			double? switchingCost = null;
 
 			double iMax = 100;
 			double vMax = double.PositiveInfinity;
@@ -738,6 +739,11 @@ namespace Sintef.Pgo.Core
 						isBreaker = true;
 						break;
 
+					case "switchingCost":
+
+						switchingCost = value.ParseInvariantDouble();
+						break;
+
 					case "iMax":
 
 						iMax = value.ParseInvariantDouble();
@@ -770,7 +776,9 @@ namespace Sintef.Pgo.Core
 
 			// Create the line
 			bool isSwitchable = (isOpen != null);
-			var line = _network.AddLine(from.Name, to.Name, impedance, iMax, vMax, isSwitchable, isBreaker: isBreaker, name: name);
+			if (switchingCost != null && !isSwitchable)
+				throw new ArgumentException("switchingCost is valid only for a switchable line (open or closed)");
+			var line = _network.AddLine(from.Name, to.Name, impedance, iMax, vMax, isSwitchable, switchingCost ?? 0, isBreaker, name);
 
 			if (isSwitchable)
 				_lineIsOpen[line] = isOpen.Value;

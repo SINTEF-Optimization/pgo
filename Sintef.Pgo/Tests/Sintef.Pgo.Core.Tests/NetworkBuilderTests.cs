@@ -192,6 +192,16 @@ namespace Sintef.Pgo.Core.Test
 		}
 
 		[TestMethod]
+		public void CanSpecifySwitchingCost()
+		{
+			_builder.Add("N1 -- Line1[closed; switchingCost=2.5] -- N2 -- Line2[open] -- N3");
+
+			Assert.AreEqual(2.5, _builder.Network.GetLine("Line1").SwitchingCost);
+			Assert.AreEqual(0, _builder.Network.GetLine("Line2").SwitchingCost);
+			TestUtils.AssertException(() => _builder.Add("N3 -- Line3[switchingCost=1] -- N4"), requiredInMessage: "switchable");
+		}
+
+		[TestMethod]
 		public void CanSpecifyBreaker()
 		{
 			_builder.Add("N1 -- Line[breaker] -- N2 -- Line2 -- N3");
