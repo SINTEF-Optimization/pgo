@@ -181,7 +181,7 @@ namespace Sintef.Pgo.Core
 		/// Returns the total switching cost between the two given switch settings.
 		/// If <paramref name="otherSettings"/> is null, returns 0.
 		/// </summary>
-		private double SwitchingCost(SwitchSettings settings, SwitchSettings otherSettings)
+		internal static double SwitchingCost(SwitchSettings settings, SwitchSettings otherSettings)
 		{
 			if (otherSettings == null)
 				return 0;
